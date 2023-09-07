@@ -1,8 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import CoverPage from './Components/Pages/CoverPage';
 
-function App() {
-  
+export default function App() {
+	return (
+		<div>
+			<CoverPage/>
+		</div>
+	);
 }
-
-export default App;
