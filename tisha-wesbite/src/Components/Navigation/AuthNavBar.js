@@ -15,7 +15,6 @@ import AdbIcon from '@mui/icons-material/Adb';
 
 const pages = ['About', 'Books', 'Events', 'Contact'];
 const AuthSettings = ['Profile', 'Cart', 'Logout'];
-const NotAuthSettings = ['Login', 'Signup'];
 const Books = ['Book 1', 'Book 2', 'Book 3'];
 
 function AuthNavBar() {
