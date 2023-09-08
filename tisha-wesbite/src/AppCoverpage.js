@@ -5,6 +5,6 @@ import NotAuthNavBar from './Components/Navigation/NotAuthNavBar'
 
 export default function AppCoverpage() {
   return (
-    <div><NotAuthNavBar/></div>
+    <div><AuthNavBar/></div>
   )
 }

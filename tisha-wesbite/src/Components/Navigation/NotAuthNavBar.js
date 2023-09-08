@@ -115,8 +115,8 @@ function NotAuthNavBar() {
 					<Box
 						sx={{
 							flexGrow: 1,
-							display: { xs: 'none', md: 'flex', justifyContent: 'flex-end' },
-							marginRight: 4,
+							display: { xs: 'none', md: 'flex', justifyContent: 'center' },
+							
 						}}
 					>
 						{pages.map((page) => (
@@ -130,7 +130,7 @@ function NotAuthNavBar() {
 						))}
 					</Box>
 
-					<Box sx={{ flexGrow: 0 }}>
+					{/* <Box sx={{ flexGrow: 0 }}>
 						<Tooltip title="Open settings">
 							<IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
 								<Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
@@ -158,7 +158,7 @@ function NotAuthNavBar() {
 								</MenuItem>
 							))}
 						</Menu>
-					</Box>
+					</Box> */}
 				</Toolbar>
 			</Container>
 		</AppBar>

@@ -38,7 +38,7 @@ function AuthNavBar() {
 
 	return (
 		<AppBar position="static" sx={{ backgroundColor: 'black' }}>
-			<Container maxWidth="xl">
+			<Container maxWidth="l">
 				<Toolbar>
 					<Typography
 						variant="h6"
@@ -46,19 +46,25 @@ function AuthNavBar() {
 						component="a"
 						href="/"
 						sx={{
-							mr: 2,
+							mr: 1,
 							display: { xs: 'none', md: 'flex' },
 							fontFamily: 'monospace',
 							fontWeight: 700,
 							letterSpacing: '.3rem',
 							color: 'inherit',
 							textDecoration: 'none',
+							
+	
 						}}
 					>
 						Tisha Griffin
 					</Typography>
-
-					<Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+					<Box
+						sx={{
+							flexGrow: 1,
+							display: { xs: 'flex', md: 'none' },
+						}}
+					>
 						<IconButton
 							size="large"
 							aria-label="account of current user"
@@ -69,6 +75,7 @@ function AuthNavBar() {
 						>
 							<MenuIcon />
 						</IconButton>
+
 						<Menu
 							id="menu-appbar"
 							anchorEl={anchorElNav}
@@ -94,6 +101,7 @@ function AuthNavBar() {
 							))}
 						</Menu>
 					</Box>
+
 					<Typography
 						variant="h5"
 						noWrap
@@ -105,7 +113,7 @@ function AuthNavBar() {
 							flexGrow: 1,
 							fontFamily: 'monospace',
 							fontWeight: 700,
-							letterSpacing: '.3rem',
+							letterSpacing: '.1px',
 							color: 'inherit',
 							textDecoration: 'none',
 						}}
@@ -115,8 +123,12 @@ function AuthNavBar() {
 					<Box
 						sx={{
 							flexGrow: 1,
-							display: { xs: 'none', md: 'flex', justifyContent: 'flex-end' },
-							marginRight: 4,
+							display: {
+								xs: 'none',
+								md: 'flex',
+								justifyContent: 'space-evenly',
+								
+							},
 						}}
 					>
 						{pages.map((page) => (
@@ -130,7 +142,7 @@ function AuthNavBar() {
 						))}
 					</Box>
 
-					<Box sx={{ flexGrow: 0 }}>
+					{/* <Box sx={{ flexGrow: 0 }}>
 						<Tooltip title="Open settings">
 							<IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
 								<Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
@@ -158,7 +170,7 @@ function AuthNavBar() {
 								</MenuItem>
 							))}
 						</Menu>
-					</Box>
+					</Box> */}
 				</Toolbar>
 			</Container>
 		</AppBar>
