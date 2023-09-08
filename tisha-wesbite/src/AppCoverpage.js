@@ -1,10 +1,13 @@
-import React from 'react'
-import AuthNavBar from './Components/Navigation/AuthNavBar'
-import NotAuthNavBar from './Components/Navigation/NotAuthNavBar'
+import React from 'react';
+import AuthNavBar from './Components/Navigation/AuthNavBar';
+import Homepage from './Pages/Homepage';
 
 
 export default function AppCoverpage() {
-  return (
-    <div><AuthNavBar/></div>
-  )
+	return (
+		<div>
+			<AuthNavBar />
+			<Homepage />
+		</div>
+	);
 }
