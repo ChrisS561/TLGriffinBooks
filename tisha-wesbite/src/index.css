@@ -24,7 +24,9 @@ code {
 
 .author-Picture{ 
  display: flex;
- height: 45rem;
- margin-right: 5rem;
+ height: 50%;
+ margin-left: 14%;
+ margin-bottom: 20%;
+
 
 }

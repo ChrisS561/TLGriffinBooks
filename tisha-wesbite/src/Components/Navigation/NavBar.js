@@ -7,11 +7,8 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import { common } from '@mui/material/colors';
 
 const pages = ['About', 'Books', 'Events', 'Contact'];
@@ -51,7 +48,7 @@ function NavBar() {
 						sx={{
 							mr: 1,
 							display: { xs: 'none', md: 'flex' },
-							fontFamily: 'monospace',
+							fontFamily: 'Playfair Display',
 							fontWeight: 700,
 							letterSpacing: '.3rem',
 							color: common.black,
@@ -97,7 +94,7 @@ function NavBar() {
 						>
 							{pages.map((page) => (
 								<MenuItem key={page} onClick={handleCloseNavMenu}>
-									<Typography textAlign="center">{page}</Typography>
+									<Typography sx={{fontFamily: "inter"}} textAlign="center">{page}</Typography>
 								</MenuItem>
 							))}
 						</Menu>
@@ -112,7 +109,7 @@ function NavBar() {
 							mr: 2,
 							display: { xs: 'flex', md: 'none' },
 							flexGrow: 1,
-							fontFamily: 'monospace',
+							fontFamily: 'Playfair Display',
 							fontWeight: 700,
 							letterSpacing: '.1px',
 							color: 'common.black',
@@ -135,7 +132,7 @@ function NavBar() {
 							<Button
 								key={page}
 								onClick={handleCloseNavMenu}
-								sx={{ my: 2, color: 'black', display: 'block', fontSize: 16 }}
+								sx={{ my: 2, color: 'black', display: 'block', fontSize: 16, fontFamily: "inter" }}
 							>
 								{page}
 							</Button>
