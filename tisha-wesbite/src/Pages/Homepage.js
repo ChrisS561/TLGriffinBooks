@@ -1,19 +1,13 @@
 import React from 'react';
 import background from '../Images/background.jpg';
-import { Box, Button, Typography } from '@mui/material';
+import { Box, Button, ThemeProvider, Typography } from '@mui/material';
 import '../index.css';
 import AuthorPicture from './AuthorPicture';
 
-// const styles = {
-// 	backgroundImage: `url(${background})`,
-// 	backgroundSize: 'cover',
-// 	backgroundPosition: 'center',
-// 	backgroundRepeat: 'no-repeat',
-// 	height: '100vh',
-// 	width: '100vw',
-// };
+
 
 export default function Homepage() {
+
 	//Standard is 1440
 	console.log(window.innerWidth);
 	return (
@@ -27,8 +21,22 @@ export default function Homepage() {
 			}}
 		>
 			<AuthorPicture />
-			<Box style={{ width: '30%', marginRight: '14%' }}>
-				<Typography variant="h3" sx={{ display: { xs: 'none', md: 'flex' },fontFamily: 'Playfair Display'}}>
+			<Box
+				sx={{
+					display: { xs: 'none', md: 'inline' },
+					width: '30%',
+					marginRight: '14%',
+					marginBottom: { md: 16, lg: 0 },
+				}}
+			>
+				<Typography
+					variant="h3"
+					sx={{
+						display: { xs: 'none', md: 'flex' },
+						fontFamily: 'Playfair Display',
+					}}
+					gutterBottom
+				>
 					Spiritual Author
 				</Typography>
 				<Typography
@@ -39,6 +47,7 @@ export default function Homepage() {
 						alignSelf: 'center',
 						marginBottom: 3,
 						fontFamily: 'inter',
+						color: '#4E5865',
 					}}
 					gutterBottom
 				>
@@ -54,38 +63,22 @@ export default function Homepage() {
 				<div class="animate__animated animate__headShake animate__delay-5s	5s">
 					<Button
 						variant="outlined"
-						color="warning"
 						href="#about"
+						color="warning"
 						onClick={() => {
 							alert('click');
 						}}
 						sx={{
-							display: { xs: 'none', md: 'flex', lg: 'flex' },
+							display: { xs: 'none', md: 'flex' },
 							width: '15rem',
 							fontFamily: 'inter',
 						}}
 					>
-						Learn More
+						Read More
 					</Button>
 
-					{/* Medium Screens (900px+) 
-					<Button
-						variant="outlined"
-						href="#about"
-						color="warning"
-						onClick={() => {
-							alert('click');
-						}}
-						sx={{
-							display: { xs: 'none', md: 'flex', lg: 'none' },
-							width: '15rem',
-						}}
-					>
-						Learn More
-					</Button> */}
-
 					{/* Smaller Screens */}
-					<Typography
+					{/* <Typography
 						variant="body1"
 						sx={{
 							display: { xs: 'flex', md: 'none' },
@@ -116,7 +109,7 @@ export default function Homepage() {
 						}}
 					>
 						Learn More
-					</Button>
+					</Button> */}
 				</div>
 			</Box>
 		</div>

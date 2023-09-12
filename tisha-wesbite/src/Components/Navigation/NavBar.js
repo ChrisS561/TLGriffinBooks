@@ -39,7 +39,6 @@ function NavBar() {
 			<Container maxWidth="xl">
 				<Toolbar>
 					{/* Bigger Screens */}
-					{/* Mobile devices */}
 					<Typography
 						variant="h5"
 						noWrap
@@ -71,7 +70,7 @@ function NavBar() {
 							onClick={handleOpenNavMenu}
 							color="inherit"
 						>
-							<MenuIcon sx={{color: "black"}} />
+							<MenuIcon sx={{ color: 'black' }} />
 						</IconButton>
 
 						<Menu
@@ -94,7 +93,9 @@ function NavBar() {
 						>
 							{pages.map((page) => (
 								<MenuItem key={page} onClick={handleCloseNavMenu}>
-									<Typography sx={{fontFamily: "inter"}} textAlign="center">{page}</Typography>
+									<Typography sx={{ fontFamily: 'inter' }} textAlign="center">
+										{page}
+									</Typography>
 								</MenuItem>
 							))}
 						</Menu>
@@ -124,7 +125,7 @@ function NavBar() {
 							display: {
 								xs: 'none',
 								md: 'flex',
-								justifyContent: 'space-evenly',
+								justifyContent: 'flex-end',
 							},
 						}}
 					>
@@ -132,7 +133,15 @@ function NavBar() {
 							<Button
 								key={page}
 								onClick={handleCloseNavMenu}
-								sx={{ my: 2, color: 'black', display: 'block', fontSize: 16, fontFamily: "inter" }}
+								sx={{
+									my: 3,
+									color: 'black',
+									display: 'block',
+									fontSize: 16,
+									fontFamily: 'inter',
+									margin: "2rem"
+									
+								}}
 							>
 								{page}
 							</Button>
