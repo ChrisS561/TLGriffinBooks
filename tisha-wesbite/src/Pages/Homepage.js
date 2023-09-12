@@ -14,6 +14,8 @@ import AuthorPicture from './AuthorPicture';
 // };
 
 export default function Homepage() {
+	//Standard is 1440
+	console.log(window.innerWidth);
 	return (
 		<div
 			className="homepage"
@@ -47,14 +49,14 @@ export default function Homepage() {
 				{/* Large Screens (1200px+) */}
 				<Button
 					variant="outlined"
+					color="warning"
 					href="#about"
 					onClick={() => {
 						alert('click');
 					}}
 					sx={{
-						display: { xs: 'none', md: 'none',lg:'flex' },
+						display: { xs: 'none', md: 'none', lg: 'flex' },
 						width: '15rem',
-						ml: 8,
 					}}
 				>
 					Learn More
@@ -67,9 +69,8 @@ export default function Homepage() {
 						alert('click');
 					}}
 					sx={{
-						display: { xs: 'none', md: 'flex',lg:'none' },
+						display: { xs: 'none', md: 'flex', lg: 'none' },
 						width: '15rem',
-						ml: 3,
 					}}
 				>
 					Learn More
