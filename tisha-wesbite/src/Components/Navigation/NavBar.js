@@ -41,7 +41,7 @@ function NavBar() {
 					{/* Bigger Screens */}
 					{/* Mobile devices */}
 					<Typography
-						variant="h6"
+						variant="h5"
 						noWrap
 						component="a"
 						href="/"

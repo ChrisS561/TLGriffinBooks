@@ -28,6 +28,9 @@ export default function Homepage() {
 		>
 			<AuthorPicture />
 			<Box style={{ width: '30%', marginRight: '14%' }}>
+				<Typography variant="h3" sx={{ display: { xs: 'none', md: 'flex' },fontFamily: 'Playfair Display'}}>
+					Spiritual Author
+				</Typography>
 				<Typography
 					variant="body1"
 					sx={{
@@ -57,7 +60,7 @@ export default function Homepage() {
 							alert('click');
 						}}
 						sx={{
-							display: { xs: 'none', md: 'none', lg: 'flex' },
+							display: { xs: 'none', md: 'flex', lg: 'flex' },
 							width: '15rem',
 							fontFamily: 'inter',
 						}}
@@ -65,7 +68,7 @@ export default function Homepage() {
 						Learn More
 					</Button>
 
-					{/* Medium Screens (900px+)  */}
+					{/* Medium Screens (900px+) 
 					<Button
 						variant="outlined"
 						href="#about"
@@ -79,7 +82,7 @@ export default function Homepage() {
 						}}
 					>
 						Learn More
-					</Button>
+					</Button> */}
 
 					{/* Smaller Screens */}
 					<Typography
@@ -88,6 +91,7 @@ export default function Homepage() {
 							display: { xs: 'flex', md: 'none' },
 							textAlign: 'center',
 							fontFamily: 'inter',
+							// fontSize: { xs: '14px', sm: '16px', md: '18px' }
 						}}
 						gutterBottom
 					>
