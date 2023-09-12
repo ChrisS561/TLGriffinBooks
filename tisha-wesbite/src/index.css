@@ -11,3 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.homepage { 
+  background-color: white;
+  background-image: linear-gradient(to bottom,#FAF9F8 23%,#E8E5DF 24% );
+  background-size: cover;
+  background-position:center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+} 
+
+.author-Picture{ 
+ display: flex;
+ height: 40rem;
+ margin-right: 5rem;
+
+}
