@@ -38,7 +38,7 @@ function NavBar() {
 	};
 
 	return (
-		<AppBar position="sticky" sx={{ backgroundColor: '#FAF9F8' }}>
+		<AppBar position="static" sx={{ backgroundColor: '#FAF9F8' }}>
 			<Container maxWidth="xl">
 				<Toolbar>
 					{/* Bigger Screens */}
