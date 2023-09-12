@@ -1,20 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
-import AppCoverpage from './AppCoverpage';
+import "./App.css";
+import AppCoverpage from "./AppCoverpage";
 import {
-	RecoilRoot,
-	atom,
-	selector,
-	useRecoilState,
-	useRecoilValue,
-} from 'recoil';
+  RecoilRoot,
+  atom,
+  selector,
+  useRecoilState,
+  useRecoilValue,
+} from "recoil";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
-	return (
-		<RecoilRoot>
-			<AppCoverpage />
-		</RecoilRoot>
-	);
+  return (
+    <BrowserRouter>
+      <RecoilRoot>
+        <Routes>
+          <Route path="/" element={<AppCoverpage />} />
+          <Route path="/About" element={<></>} />
+        </Routes>
+      </RecoilRoot>
+    </BrowserRouter>
+  );
 }
 
 export default App;
