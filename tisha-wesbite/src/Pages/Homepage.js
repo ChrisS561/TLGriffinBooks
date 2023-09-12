@@ -63,7 +63,7 @@ export default function Homepage() {
 				<div class="animate__animated animate__headShake animate__delay-5s	5s">
 					<Button
 						variant="outlined"
-						href="#about"
+						href="#About"
 						color="warning"
 						onClick={() => {
 							alert('click');
