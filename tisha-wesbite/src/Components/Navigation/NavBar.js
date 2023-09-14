@@ -136,10 +136,9 @@ function NavBar() {
 									my: 3,
 									color: 'black',
 									display: 'block',
-									fontSize: 16,
+									fontSize: 15,
 									fontFamily: 'inter',
-									margin: "2rem"
-									
+									margin: '1rem',
 								}}
 							>
 								{page}
