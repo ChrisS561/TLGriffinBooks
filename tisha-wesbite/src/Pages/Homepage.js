@@ -30,8 +30,12 @@ export default function Homepage() {
 					variant="h3"
 					sx={{
 						display: 'block',
-						fontFamily: 'Playfair Display',
-						fontSize: { xs: 30, sm: 50 },
+						color: '#333',
+						textTransform: 'capitalize',
+						fontWeight: 'bold',
+						textAlign: { lg: 'center' },
+						fontFamily: 'Playfair Display,serif',
+						fontSize: { xs: 36, sm: 48, lg: 60 },
 					}}
 					gutterBottom
 				>
@@ -41,12 +45,12 @@ export default function Homepage() {
 					variant="body1"
 					sx={{
 						display: 'block',
-						textAlign: 'left',
+						textAlign: { xs: 'left', lg: 'center' },
 						alignSelf: 'center',
 						marginBottom: 3,
 						fontFamily: 'inter',
-						fontSize: { xs: 14, sm: '' },
-						position: { xs: 'relative', sm: '' },
+						fontSize: { xs: 14, lg: 16 },
+						position: 'relative',
 						height: { xs: '200px', sm: '' },
 						overflow: { xs: 'hidden', sm: '' },
 						overflowY: { xs: 'scroll', sm: '' },
@@ -63,23 +67,40 @@ export default function Homepage() {
 					culpa qui officia deserunt mollit anim id est laborum.
 				</Typography>
 
-				<div class="animate__animated animate__headShake animate__delay-5s 5s">
+				<Box
+					class="animate__animated animate__headShake animate__delay-5s 5s"
+					sx={{
+						display: 'block',
+						width: { xs: '10rem', sm: '15rem', md: '11rem' },
+						fontFamily: 'inter',
+					}}
+				>
 					<Button
-						variant="outlined"
+						variant="contained"
 						href="#About"
 						color="info"
 						onClick={() => {
 							alert('click');
 						}}
 						sx={{
+							transition:
+								'box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease',
+							':hover': {
+								boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.3)',
+								backgroundColor: '#FFBB57',
+								color: '#333',
+							},
 							display: 'block',
-							width: { xs: '10rem', sm: '15rem', md: '11rem' },
+							width: '100%',
+							margin: { lg: '0 auto' },
+							maxWidth: '15rem',
 							fontFamily: 'inter',
+							fontSize:"15px",
 						}}
 					>
 						Read More
 					</Button>
-				</div>
+				</Box>
 			</Box>
 		</div>
 	);

@@ -22,11 +22,7 @@ code {
   width: 100vw;
 } 
 
-.author-Picture{ 
- /* display: flex; */
- /* height: 30%; */
- margin-left: 14%;
- margin-bottom: 20%;
-/* width: fit-content; */
-
+.MuiButton-contained{ 
+  border-radius: 10px !important;
+  background-color: #DCA564 !important;
 }
