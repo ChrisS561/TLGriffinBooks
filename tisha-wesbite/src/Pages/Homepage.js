@@ -68,7 +68,7 @@ export default function Homepage() {
 				</Typography>
 
 				<Box
-					class="animate__animated animate__headShake animate__delay-5s 5s"
+					// class="animate__animated animate__headShake animate__delay-5s 5s"
 					sx={{
 						display: 'block',
 						width: { xs: '10rem', sm: '15rem', md: '11rem' },
@@ -89,13 +89,15 @@ export default function Homepage() {
 								boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.3)',
 								backgroundColor: '#FFBB57',
 								color: '#333',
+								animation: 'shake 0.5s',
 							},
 							display: 'block',
 							width: '100%',
 							margin: { lg: '0 auto' },
-							maxWidth: '15rem',
+							maxWidth: '14rem',
 							fontFamily: 'inter',
-							fontSize:"15px",
+							fontSize: '15px',
+							textAlign: 'center',
 						}}
 					>
 						Read More

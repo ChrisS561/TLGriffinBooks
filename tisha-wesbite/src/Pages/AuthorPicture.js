@@ -13,10 +13,10 @@ export default function AuthorPicture() {
 					height: { xs: '20rem', sm: '30rem', md: '35rem', lg: '40rem' },
 					marginRight: { md: '2rem' },
 					marginBottom: { md: '8rem' },
-					transition: 'transform 0.2s ease-in-out', // Add a hover effect
-					'&:hover': {
-						transform: 'scale(1.05)', // Scale up the image on hover
-					},
+					// transition: 'transform 0.2s ease-in-out', // Add a hover effect
+					// '&:hover': {
+					// 	transform: 'scale(1.05)', // Scale up the image on hover
+					// },
 				}}
 			>
 				<img
