@@ -73,6 +73,9 @@ export default function Homepage() {
 						display: 'block',
 						width: { xs: '10rem', sm: '15rem', md: '11rem' },
 						fontFamily: 'inter',
+						alignItems: 'center',
+						margin: { lg: '0 auto' },
+						justifyContent: 'center',
 					}}
 				>
 					<Button
@@ -93,7 +96,6 @@ export default function Homepage() {
 							},
 							display: 'block',
 							width: '100%',
-							margin: { lg: '0 auto' },
 							maxWidth: '14rem',
 							fontFamily: 'inter',
 							fontSize: '15px',
