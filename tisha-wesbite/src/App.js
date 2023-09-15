@@ -16,6 +16,9 @@ function App() {
         <Routes>
           <Route path="/" element={<AppCoverpage />} />
           <Route path="/About" element={<></>} />
+          <Route path="/Books" element={<></>} />
+          <Route path="/Events" element={<></>} />
+          <Route path="/Contact" element={<></>} />
         </Routes>
       </RecoilRoot>
     </BrowserRouter>
