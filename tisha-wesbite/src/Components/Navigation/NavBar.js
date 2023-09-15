@@ -11,9 +11,9 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import { common } from "@mui/material/colors";
 
-const pages = ["About", "Books", "Events", "Contact"];
-const AuthSettings = ["Profile", "Cart", "Logout"];
-const Books = ["Book 1", "Book 2", "Book 3"];
+
+const pages = ['About', 'Books', 'Contact'];
+const Books = ['Book 1', 'Book 2', 'Book 3'];
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);

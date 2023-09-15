@@ -11,21 +11,21 @@ export default function AuthorPicture() {
 			<Box
 				sx={{
 					display: { xs: 'none', md: 'flex' },
-					height: '45rem',
+					height: '40rem',
 					marginRight: '5rem',
+					marginBottom: "8rem"
 				}}
 			>
 				<img
 					src={AuthorPic1}
 					alt="Profile"
-					// className=" author-Picture "
 					loading="lazy"
 				/>
 			</Box>
 			{/* Smaller Screens < 900width */}
 			<Box
 				sx={{
-					display: { xs: 'flex', md: 'none' },
+					display: { xs: 'none', md: 'none' },
 				}}
 			>
 				<img
