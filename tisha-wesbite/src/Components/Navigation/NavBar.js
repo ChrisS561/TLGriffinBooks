@@ -11,7 +11,7 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import { common } from '@mui/material/colors';
 
-const pages = ['About', 'Books', 'Events', 'Contact'];
+const pages = ['About', 'Books', 'Contact'];
 const Books = ['Book 1', 'Book 2', 'Book 3'];
 
 function NavBar() {
@@ -138,13 +138,25 @@ function NavBar() {
 									display: 'block',
 									fontSize: 16,
 									fontFamily: 'inter',
-									margin: "2rem"
-									
+									margin: '2rem',
 								}}
 							>
 								{page}
 							</Button>
 						))}
+						<Button
+							color="inherit"
+							sx={{
+								my: 3,
+								color: 'black',
+								display: 'block',
+								fontSize: 16,
+								fontFamily: 'inter',
+								margin: '2rem',
+							}}
+						>
+							Login
+						</Button>
 					</Box>
 				</Toolbar>
 			</Container>
