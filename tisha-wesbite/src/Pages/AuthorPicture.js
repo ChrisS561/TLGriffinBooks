@@ -1,5 +1,4 @@
 import React from 'react';
-import AuthorPic from '../Images/AuntTisha.jpg';
 import AuthorPic1 from '../Images/AuntTisha.png';
 import '../index.css';
 import { Box } from '@mui/material';
@@ -10,29 +9,21 @@ export default function AuthorPicture() {
 		<>
 			<Box
 				sx={{
-					display: { xs: 'none', md: 'flex' },
-					height: '40rem',
-					marginRight: '5rem',
-					marginBottom: "8rem"
+					display: 'flex',
+					height: { xs: '26rem', sm: '30rem', md: '35rem', lg: '40rem' },
+					marginRight: { md: '2rem' },
+					marginBottom: { md: '8rem' },
+					// transition: 'transform 0.2s ease-in-out', // Add a hover effect
+					// '&:hover': {
+					// 	transform: 'scale(1.05)', // Scale up the image on hover
+					// },
 				}}
 			>
 				<img
 					src={AuthorPic1}
 					alt="Profile"
 					loading="lazy"
-				/>
-			</Box>
-			{/* Smaller Screens < 900width */}
-			<Box
-				sx={{
-					display: { xs: 'none', md: 'none' },
-				}}
-			>
-				<img
-					src={AuthorPic1}
-					alt="Profile"
-					className=" author-Picture "
-					loading="lazy"
+					style={{ objectFit: 'cover' }}
 				/>
 			</Box>
 		</>

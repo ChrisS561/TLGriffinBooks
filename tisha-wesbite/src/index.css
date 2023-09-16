@@ -1,3 +1,29 @@
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX(-5px);
+  }
+
+  40% {
+    transform: translateX(5px);
+  }
+
+  60% {
+    transform: translateX(-5px);
+  }
+
+  80% {
+    transform: translateX(5px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -14,7 +40,7 @@ code {
 
 .homepage { 
   background-color: white;
-  background-image: linear-gradient(to bottom,#FAF9F8 23%,#E8E5DF 24% );
+  background-image: linear-gradient(to bottom, #FAF9F8 10%, #E8E5DF 24%);
   background-size: cover;
   background-position:center;
   background-repeat: no-repeat;
@@ -22,11 +48,7 @@ code {
   width: 100vw;
 } 
 
-.author-Picture{ 
- display: flex;
- height: 50%;
- margin-left: 14%;
- margin-bottom: 20%;
-
-
+.MuiButton-contained{ 
+  border-radius: 10px !important;
+  background-color: #DCA564 !important;
 }
