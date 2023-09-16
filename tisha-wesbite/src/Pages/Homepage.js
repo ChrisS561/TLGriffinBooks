@@ -85,11 +85,8 @@ export default function Homepage() {
 				>
 					<Button
 						variant="contained"
-						href="#About"
+						href="About"
 						color="info"
-						onClick={() => {
-							alert('click');
-						}}
 						sx={{
 							transition:
 								'box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease',
