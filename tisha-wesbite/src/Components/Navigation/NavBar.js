@@ -35,121 +35,133 @@ function NavBar() {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: "#FAF9F8" }}>
-      <Container maxWidth="xl">
-        <Toolbar>
-          {/* Bigger Screens */}
-          {/* Mobile devices */}
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 1,
-              display: { xs: "none", md: "flex" },
-              fontFamily: "Playfair Display",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: common.black,
-              textDecoration: "none",
-            }}
-          >
-            T.L. Griffin
-          </Typography>
-          <Box
-            sx={{
-              flexGrow: 1,
-              display: { xs: "flex", md: "none" },
-            }}
-          >
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon sx={{ color: "black" }} />
-            </IconButton>
+		<AppBar position="static" sx={{ backgroundColor: '#FAF9F8' }}>
+			<Container maxWidth="xl">
+				<Toolbar>
+					{/* Bigger Screens */}
+					{/* Mobile devices */}
+					<Typography
+						variant="h5"
+						noWrap
+						component="a"
+						href="/"
+						sx={{
+							mr: 1,
+							display: { xs: 'none', md: 'flex' },
+							fontFamily: 'Playfair Display',
+							fontWeight: 700,
+							letterSpacing: '.3rem',
+							color: common.black,
+							textDecoration: 'none',
+						}}
+					>
+						T.L. Griffin
+					</Typography>
+					<Box
+						sx={{
+							flexGrow: 1,
+							display: { xs: 'flex', md: 'none' },
+						}}
+					>
+						<IconButton
+							size="large"
+							aria-label="account of current user"
+							aria-controls="menu-appbar"
+							aria-haspopup="true"
+							onClick={handleOpenNavMenu}
+							color="inherit"
+						>
+							<MenuIcon sx={{ color: 'black' }} />
+						</IconButton>
 
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: "block", md: "none" },
-              }}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography sx={{ fontFamily: "inter" }} textAlign="center">
-                    {page}
-                  </Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
+						<Menu
+							id="menu-appbar"
+							anchorEl={anchorElNav}
+							anchorOrigin={{
+								vertical: 'bottom',
+								horizontal: 'left',
+							}}
+							keepMounted
+							transformOrigin={{
+								vertical: 'top',
+								horizontal: 'left',
+							}}
+							open={Boolean(anchorElNav)}
+							onClose={handleCloseNavMenu}
+							sx={{
+								display: { xs: 'block', md: 'none' },
+							}}
+						>
+							{pages.map((page) => (
+								<MenuItem key={page} onClick={handleCloseNavMenu}>
+									<Typography sx={{ fontFamily: 'inter' }} textAlign="center">
+										{page}
+									</Typography>
+								</MenuItem>
+							))}
+						</Menu>
+					</Box>
 
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: "flex", md: "none" },
-              flexGrow: 1,
-              fontFamily: "Playfair Display",
-              fontWeight: 700,
-              letterSpacing: ".1px",
-              color: "common.black",
-              textDecoration: "none",
-            }}
-          >
-            T.L. Griffin
-          </Typography>
-          <Box
-            sx={{
-              flexGrow: 1,
-              display: {
-                xs: "none",
-                md: "flex",
-                justifyContent: "space-evenly",
-              },
-            }}
-          >
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{
-                  my: 2,
-                  color: "black",
-                  display: "block",
-                  fontSize: 16,
-                  fontFamily: "inter",
-                }}
-                href={`/${page}`}
-              >
-                {page}
-              </Button>
-            ))}
-          </Box>
-        </Toolbar>
-      </Container>
-    </AppBar>
-  );
+					<Typography
+						variant="h5"
+						noWrap
+						component="a"
+						href="/"
+						sx={{
+							mr: 2,
+							display: { xs: 'flex', md: 'none' },
+							flexGrow: 1,
+							fontFamily: 'Playfair Display',
+							fontWeight: 700,
+							letterSpacing: '.1px',
+							color: 'common.black',
+							textDecoration: 'none',
+						}}
+					>
+						T.L. Griffin
+					</Typography>
+					<Box
+						sx={{
+							flexGrow: 1,
+							display: {
+								xs: 'none',
+								md: 'flex',
+								justifyContent: 'space-evenly',
+							},
+						}}
+					>
+						{pages.map((page) => (
+							<Button
+								key={page}
+								onClick={handleCloseNavMenu}
+								sx={{
+									my: 2,
+									color: 'black',
+									display: 'block',
+									fontSize: 16,
+									fontFamily: 'inter',
+								}}
+								href={`/${page}`}
+							>
+								{page}
+							</Button>
+						))}
+					</Box>
+					<Button
+						color="inherit"
+						sx={{
+							my: 2,
+							color: 'black',
+							display: 'block',
+							fontSize: 16,
+							fontFamily: 'inter',
+						}}
+					>
+						Login
+					</Button>
+				</Toolbar>
+			</Container>
+		</AppBar>
+	);
 }
 export default NavBar;
