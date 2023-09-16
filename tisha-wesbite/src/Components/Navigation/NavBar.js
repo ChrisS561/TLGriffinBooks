@@ -1,15 +1,16 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
-import { common } from '@mui/material/colors';
+import * as React from "react";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import Menu from "@mui/material/Menu";
+import MenuIcon from "@mui/icons-material/Menu";
+import Container from "@mui/material/Container";
+import Button from "@mui/material/Button";
+import MenuItem from "@mui/material/MenuItem";
+import { common } from "@mui/material/colors";
+
 
 const pages = ['About', 'Books', 'Contact',"Member Login"];
 // const Books = ['Book 1', 'Book 2', 'Book 3'];
@@ -25,19 +26,21 @@ function NavBar() {
 	// 	setAnchorElUser(event.currentTarget);
 	// };
 
-	const handleCloseNavMenu = () => {
-		setAnchorElNav(null);
-	};
+
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
 
 	// const handleCloseUserMenu = () => {
 	// 	setAnchorElUser(null);
 	// };
 
-	return (
+  return (
 		<AppBar position="static" sx={{ backgroundColor: '#FAF9F8' }}>
 			<Container maxWidth="l">
 				<Toolbar>
 					{/* Bigger Screens */}
+					{/* Mobile devices */}
 					<Typography
 						variant="h5"
 						noWrap
@@ -124,7 +127,7 @@ function NavBar() {
 							display: {
 								xs: 'none',
 								md: 'flex',
-								justifyContent: 'flex-end',
+								justifyContent: 'space-evenly',
 							},
 						}}
 					>
@@ -133,18 +136,32 @@ function NavBar() {
 								key={page}
 								onClick={handleCloseNavMenu}
 								sx={{
-									my: 3,
+									my: 2,
 									color: 'black',
 									display: 'block',
 									fontSize: 15,
 									fontFamily: 'inter',
 									margin: '1rem',
+
 								}}
+								href={`/${page}`}
 							>
 								{page}
 							</Button>
 						))}
 					</Box>
+					<Button
+						color="inherit"
+						sx={{
+							my: 2,
+							color: 'black',
+							display: 'block',
+							fontSize: 16,
+							fontFamily: 'inter',
+						}}
+					>
+						Login
+					</Button>
 				</Toolbar>
 			</Container>
 		</AppBar>
