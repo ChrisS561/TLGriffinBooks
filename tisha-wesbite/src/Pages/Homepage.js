@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Button, Typography } from '@mui/material';
+import { Box, Button, Container, Typography } from '@mui/material';
 import '../index.css';
 import AuthorPicture from './AuthorPicture';
 
@@ -16,7 +16,9 @@ export default function Homepage() {
 				height: '100vh',
 			}}
 		>
-			<AuthorPicture />
+			<Box sx={{ display: { xs: 'none', sm: 'flex' } }}>
+				<AuthorPicture />
+			</Box>
 			<Box
 				sx={{
 					display: 'block',
@@ -26,6 +28,9 @@ export default function Homepage() {
 					marginBottom: { md: 15, lg: 9 },
 				}}
 			>
+				<Box sx={{ display: { xs: 'flex', sm: 'none' } }}>
+					<AuthorPicture />
+				</Box>
 				<Typography
 					variant="h3"
 					sx={{
@@ -33,7 +38,7 @@ export default function Homepage() {
 						color: '#333',
 						textTransform: 'capitalize',
 						fontWeight: 'bold',
-						textAlign: { lg: 'center' },
+						textAlign: { xs: 'center', sm: 'left', lg: 'center' },
 						fontFamily: 'Playfair Display,serif',
 						fontSize: { xs: 36, sm: 48, lg: 60 },
 					}}
@@ -74,7 +79,7 @@ export default function Homepage() {
 						width: { xs: '10rem', sm: '15rem', md: '11rem' },
 						fontFamily: 'inter',
 						alignItems: 'center',
-						margin: { lg: '0 auto' },
+						margin: { xs: '0 auto', sm:"0", lg: '0 auto' },
 						justifyContent: 'center',
 					}}
 				>

@@ -10,7 +10,7 @@ export default function AuthorPicture() {
 			<Box
 				sx={{
 					display: 'flex',
-					height: { xs: '20rem', sm: '30rem', md: '35rem', lg: '40rem' },
+					height: { xs: '26rem', sm: '30rem', md: '35rem', lg: '40rem' },
 					marginRight: { md: '2rem' },
 					marginBottom: { md: '8rem' },
 					// transition: 'transform 0.2s ease-in-out', // Add a hover effect

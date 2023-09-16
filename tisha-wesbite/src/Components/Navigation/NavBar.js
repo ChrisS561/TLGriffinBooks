@@ -11,7 +11,7 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import { common } from '@mui/material/colors';
 
-const pages = ['About', 'Books', 'Events', 'Contact'];
+const pages = ['About', 'Books', 'Contact',"Member Login"];
 // const Books = ['Book 1', 'Book 2', 'Book 3'];
 
 function NavBar() {
