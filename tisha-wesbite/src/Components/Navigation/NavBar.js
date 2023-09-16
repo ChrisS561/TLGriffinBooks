@@ -127,7 +127,7 @@ function NavBar() {
 							display: {
 								xs: 'none',
 								md: 'flex',
-								justifyContent: 'space-evenly',
+								justifyContent: 'flex-end',
 							},
 						}}
 					>
@@ -142,7 +142,6 @@ function NavBar() {
 									fontSize: 15,
 									fontFamily: 'inter',
 									margin: '1rem',
-
 								}}
 								href={`/${page}`}
 							>
@@ -150,18 +149,6 @@ function NavBar() {
 							</Button>
 						))}
 					</Box>
-					<Button
-						color="inherit"
-						sx={{
-							my: 2,
-							color: 'black',
-							display: 'block',
-							fontSize: 16,
-							fontFamily: 'inter',
-						}}
-					>
-						Login
-					</Button>
 				</Toolbar>
 			</Container>
 		</AppBar>
