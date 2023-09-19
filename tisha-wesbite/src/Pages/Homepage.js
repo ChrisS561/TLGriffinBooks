@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Button, Container, Divider, Typography } from '@mui/material';
 import '../index.css';
-import AuthorPicture from './AuthorPicture';
+import AuthorPicture from '../Components/AuthorPicture';
 import AuthorBookDisplay from '../Components/HomepageBookDisplay/AuthorBookDisplay';
 
 export default function Homepage() {
@@ -40,7 +40,7 @@ export default function Homepage() {
 							color: '#333',
 							textTransform: 'capitalize',
 							fontWeight: 'bold',
-							marginLeft:{xs:2,sm:0},
+							marginLeft: { xs: 2, sm: 0 },
 							textAlign: 'left',
 							fontFamily: 'Playfair Display,serif',
 							fontSize: { xs: 36, sm: 48, lg: 60 },
@@ -54,9 +54,9 @@ export default function Homepage() {
 						sx={{
 							display: 'block',
 							textAlign: { xs: 'left', lg: 'left' },
-							marginLeft: {xs:2,sm:0},
+							marginLeft: { xs: 2, sm: 0 },
 							alignSelf: 'center',
-							width:{xs:"100%",sm:"100%"},
+							width: { xs: '100%', sm: '100%' },
 							marginBottom: 3,
 							fontFamily: 'inter',
 							fontSize: { xs: 14, lg: 16 },
@@ -80,7 +80,7 @@ export default function Homepage() {
 							width: { xs: '10rem', sm: '15rem', md: '11rem' },
 							fontFamily: 'inter',
 							alignItems: 'center',
-							marginLeft:{xs:2,sm:0},
+							marginLeft: { xs: 2, sm: 0 },
 							justifyContent: 'center',
 						}}
 					>
