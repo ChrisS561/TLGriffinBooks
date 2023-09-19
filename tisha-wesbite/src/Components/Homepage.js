@@ -1,8 +1,8 @@
 import React from 'react';
 import { Box, Button, Container, Divider, Typography } from '@mui/material';
 import '../index.css';
-import AuthorPicture from '../Components/AuthorPicture';
-import AuthorBookDisplay from '../Components/AuthorBookDisplay';
+import AuthorPicture from './AuthorPicture';
+import AuthorBookDisplay from '../Components/HomepageBookDisplay/AuthorBookDisplay';
 
 export default function Homepage() {
 	//Standard is 1440
@@ -40,7 +40,8 @@ export default function Homepage() {
 							color: '#333',
 							textTransform: 'capitalize',
 							fontWeight: 'bold',
-							textAlign: { xs: 'center', sm: 'left', lg: 'center' },
+							marginLeft:{xs:2,sm:0},
+							textAlign: 'left',
 							fontFamily: 'Playfair Display,serif',
 							fontSize: { xs: 36, sm: 48, lg: 60 },
 						}}
@@ -52,15 +53,13 @@ export default function Homepage() {
 						variant="body1"
 						sx={{
 							display: 'block',
-							textAlign: { xs: 'left', lg: 'center' },
+							textAlign: { xs: 'left', lg: 'left' },
+							marginLeft: {xs:2,sm:0},
 							alignSelf: 'center',
+							width:{xs:"100%",sm:"100%"},
 							marginBottom: 3,
 							fontFamily: 'inter',
 							fontSize: { xs: 14, lg: 16 },
-							position: 'relative',
-							height: { xs: '200px', sm: '' },
-							overflow: { xs: 'hidden', sm: '' },
-							overflowY: { xs: 'scroll', sm: '' },
 							color: '#4E5865',
 						}}
 						gutterBottom
@@ -81,12 +80,12 @@ export default function Homepage() {
 							width: { xs: '10rem', sm: '15rem', md: '11rem' },
 							fontFamily: 'inter',
 							alignItems: 'center',
-							margin: { xs: '0 auto', sm: '0', lg: '0 auto' },
+							marginLeft:{xs:2,sm:0},
 							justifyContent: 'center',
 						}}
 					>
 						<Button
-							variant="contained"
+							variant="outlined"
 							href="About"
 							color="info"
 							sx={{
@@ -95,12 +94,12 @@ export default function Homepage() {
 								':hover': {
 									boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.3)',
 									backgroundColor: '#FFBB57',
-									color: '#333',
+									// color: '#333',
 									animation: 'shake 0.5s',
 								},
 								display: 'block',
 								width: '100%',
-								maxWidth: '14rem',
+								maxWidth: '100%',
 								fontFamily: 'inter',
 								fontSize: '15px',
 								textAlign: 'center',

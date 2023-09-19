@@ -61,7 +61,7 @@ function NavBar() {
 					<Box
 						sx={{
 							flexGrow: 1,
-							display: { xs: 'flex', md: 'none' },
+							display: { xs: 'flex', md: 'none' }
 						}}
 					>
 						<IconButton
@@ -72,7 +72,7 @@ function NavBar() {
 							onClick={handleOpenNavMenu}
 							color="inherit"
 						>
-							<MenuIcon sx={{ color: 'black' }} />
+							<MenuIcon sx={{ color: 'black', }} />
 						</IconButton>
 
 						<Menu

@@ -49,10 +49,13 @@ code {
 } 
 
 .bookdisplay{ 
-  
+  height: 100vh;
+  width: 100vw;
 }
 
-.MuiButton-contained{ 
-  border-radius: 10px !important;
-  background-color: #DCA564 !important;
+.MuiButton-outlined{ 
+  /* border-radius: 10px !important; */
+  border-color: #DCA564 !important;
+  color: black !important;
+  /* background-color: #DCA564 !important; */
 }
