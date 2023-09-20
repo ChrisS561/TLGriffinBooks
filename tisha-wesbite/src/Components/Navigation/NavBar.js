@@ -13,8 +13,9 @@ import { common } from "@mui/material/colors";
 import { useAuth0 } from "@auth0/auth0-react";
 import LoginButton from "../Buttons/LoginButton";
 import LogoutButton from "../Buttons/LogoutButton";
+import PopupState, { bindTrigger, bindMenu } from "material-ui-popup-state";
 
-const pages = ["About", "Books", "Contact"];
+const pages = ["About", "Events", "Contact"];
 // const Books = ['Book 1', 'Book 2', 'Book 3'];
 
 function NavBar() {
@@ -151,6 +152,30 @@ function NavBar() {
                 {page}
               </Button>
             ))}
+            <PopupState variant="popover" popupId="demo-popup-menu">
+              {(popupState) => (
+                <React.Fragment>
+                  <Button
+                    variant="outlined"
+                    {...bindTrigger(popupState)}
+                    sx={{
+                      my: 2,
+                      color: "black",
+                      display: "block",
+                      fontSize: 15,
+                      fontFamily: "inter",
+                      margin: "1rem",
+                      border: "none",
+                    }}
+                  >
+                    Books
+                  </Button>
+                  <Menu {...bindMenu(popupState)}>
+                    <MenuItem onClick={popupState.close}>Book Test</MenuItem>
+                  </Menu>
+                </React.Fragment>
+              )}
+            </PopupState>
             {!isLoading && !user && <LoginButton />}
             {!isLoading && user && <LogoutButton />}
           </Box>
