@@ -7,21 +7,19 @@ import {
   useRecoilState,
   useRecoilValue,
 } from "recoil";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <BrowserRouter>
-      <RecoilRoot>
-        <Routes>
-          <Route path="/" element={<AppCoverpage />} />
-          <Route path="/About" element={<></>} />
-          <Route path="/Books" element={<></>} />
-          <Route path="/Events" element={<></>} />
-          <Route path="/Contact" element={<></>} />
-        </Routes>
-      </RecoilRoot>
-    </BrowserRouter>
+    <RecoilRoot>
+      <Routes>
+        <Route path="/" element={<AppCoverpage />} />
+        <Route path="/About" element={<></>} />
+        <Route path="/Books" element={<></>} />
+        <Route path="/Events" element={<></>} />
+        <Route path="/Contact" element={<></>} />
+      </Routes>
+    </RecoilRoot>
   );
 }
 
