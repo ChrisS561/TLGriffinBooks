@@ -40,7 +40,7 @@ code {
 
 .homepage { 
   background-color: white;
-  background-image: linear-gradient(to bottom, #FAF9F8 10%, #E8E5DF 24%);
+  background-image: linear-gradient(to bottom, #FAF9F8 10%, #C3D9DC 24%);
   background-size: cover;
   background-position:center;
   background-repeat: no-repeat;
@@ -51,11 +51,12 @@ code {
 .bookdisplay{ 
   height: 100vh;
   width: 100vw;
+  color: #FAF9F8;
 }
 
-.MuiButton-outlined{ 
+.MuiButton-contained{ 
   /* border-radius: 10px !important; */
-  border-color: #DCA564 !important;
-  color: black !important;
+  background-color: #677884 !important;
+  color: #FAF9F8 !important;
   /* background-color: #DCA564 !important; */
 }

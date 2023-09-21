@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Button, Container, Divider, Typography } from '@mui/material';
 import '../index.css';
-import AuthorPicture from '../Components/AuthorPicture';
+import AuthorPicture from '../Components/ImageDisplay/AuthorPicture';
 import AuthorBookDisplay from '../Components/HomepageBookDisplay/AuthorBookDisplay';
 
 export default function Homepage() {
@@ -37,30 +37,31 @@ export default function Homepage() {
 						variant="h3"
 						sx={{
 							display: 'block',
-							color: '#333',
+							color: '#4E5865',
 							textTransform: 'capitalize',
 							fontWeight: 'bold',
 							marginLeft: { xs: 2, sm: 0 },
 							textAlign: 'left',
-							fontFamily: 'Playfair Display,serif',
+							letterSpacing: '5px',
+							fontFamily: 'inter',
 							fontSize: { xs: 36, sm: 48, lg: 60 },
 						}}
 						gutterBottom
 					>
-						Spiritual Author
+						AUTHOR
 					</Typography>
 					<Typography
 						variant="body1"
 						sx={{
 							display: 'block',
-							textAlign: { xs: 'left', lg: 'left' },
+							textAlign: 'left',
 							marginLeft: { xs: 2, sm: 0 },
 							alignSelf: 'center',
-							width: { xs: '100%', sm: '100%' },
+							width: { xs: '100%', sm: '100%',xl:'80%' },
 							marginBottom: 3,
 							fontFamily: 'inter',
 							fontSize: { xs: 14, lg: 16 },
-							color: '#4E5865',
+							color: '#677884',
 						}}
 						gutterBottom
 					>
@@ -85,7 +86,7 @@ export default function Homepage() {
 						}}
 					>
 						<Button
-							variant="outlined"
+							variant="contained"
 							href="About"
 							color="info"
 							sx={{
@@ -93,8 +94,6 @@ export default function Homepage() {
 									'box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease',
 								':hover': {
 									boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.3)',
-									backgroundColor: '#FFBB57',
-									// color: '#333',
 									animation: 'shake 0.5s',
 								},
 								display: 'block',
@@ -102,6 +101,7 @@ export default function Homepage() {
 								maxWidth: '100%',
 								fontFamily: 'inter',
 								fontSize: '15px',
+								letterSpacing: '3px',
 								textAlign: 'center',
 							}}
 						>
@@ -110,7 +110,7 @@ export default function Homepage() {
 					</Box>
 				</Box>
 			</div>
-			{/* <Divider light sx={{border:1, color:'white'}}/> */}
+			
 		</>
 	);
 }
