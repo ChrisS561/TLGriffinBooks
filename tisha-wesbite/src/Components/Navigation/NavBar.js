@@ -15,7 +15,7 @@ import LoginButton from "../Buttons/LoginButton";
 import LogoutButton from "../Buttons/LogoutButton";
 import PopupState, { bindTrigger, bindMenu } from "material-ui-popup-state";
 
-const pages = ["About", "Events", "Contact"];
+const pages = ["About", "Events", "Subscribe"];
 // const Books = ['Book 1', 'Book 2', 'Book 3'];
 
 function NavBar() {
