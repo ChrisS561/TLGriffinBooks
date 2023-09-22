@@ -40,7 +40,7 @@ code {
 
 .homepage { 
   background-color: white;
-  background-image: linear-gradient(to bottom, #FAF9F8 10%, #C3D9DC 24%);
+  background-image: linear-gradient(to bottom, #FAF9F8 24%, #C3D9DC 24%);
   background-size: cover;
   background-position:center;
   background-repeat: no-repeat;
