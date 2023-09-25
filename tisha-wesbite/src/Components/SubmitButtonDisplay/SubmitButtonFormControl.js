@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 export default function SubmitButtonFormControl() {
 	const [inputForm, setInputForm] = useState({
 		firstname: '',
-		zipcode: '',
+		lastname: '',
 		email: '',
 	});
 	const [error, setError] = useState(false);
@@ -41,14 +41,18 @@ export default function SubmitButtonFormControl() {
 					}
 				/>
 				<TextField
-					id="zipcode"
-					type="number"
-					label="Zip Code (Optional)"
+					id="lastname"
+					type="text"
+					label="Last Name"
 					variant="standard"
-					name="zipcode"
+					name="lastname"
 					onChange={handleInput}
-					value={inputForm.zipcode}
+					value={inputForm.lastname}
 					sx={{ width: '100vw', maxWidth: '15rem' }}
+					error={error && !inputForm.lastname}
+					helperText={
+						error && !inputForm.lastname ? 'This field is required' : ''
+					}
 				/>
 				<TextField
 					required
