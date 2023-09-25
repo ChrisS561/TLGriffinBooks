@@ -43,7 +43,7 @@ export default function SubscribeButtonModal(props) {
 						<SubscribeButtonImage />
 						<Stack direction="column" spacing={0} ml={5} mt={3}>
 							<CloseIcon
-								sx={{ alignSelf: 'flex-end', mr: 2 }}
+								sx={{ alignSelf: 'flex-end', mr: 2, cursor: 'pointer' }}
 								onClick={handleClose}
 							/>
 							<Typography
@@ -116,7 +116,7 @@ export default function SubscribeButtonModal(props) {
 					>
 						<Stack direction="column" spacing={0} ml={5} mt={3}>
 							<CloseIcon
-								sx={{ alignSelf: 'flex-end', mr: 2 }}
+								sx={{ alignSelf: 'flex-end', mr: 2, cursor: 'pointer' }}
 								onClick={handleClose}
 							/>
 							<Typography
