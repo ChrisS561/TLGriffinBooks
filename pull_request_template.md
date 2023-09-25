@@ -2,9 +2,9 @@
 
 ## Checklist before requesting a review
 
-[ ] <mark>I have tested the changes on multiple mobile devices and browsers</mark>.
+[ ] I have tested the changes on multiple mobile devices and browsers.
 [ ] I have performed a self-review of my code.
+[ ] Have you updated the code style and formatting to match the rest of the codebase?
 [ ] I have communicated with my colleagues about my changes and we have agreed on the approach.
-[ ] I have added tests for all new and modified functionality.
-[ ] Will this be part of a product update? If yes, please write one phrase about this update.
+[ ] Have you added any new comments or documentation to explain your changes?
 
