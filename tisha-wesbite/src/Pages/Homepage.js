@@ -1,8 +1,7 @@
 import React from 'react';
-import { Box, Button, Container, Divider, Typography } from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
 import '../index.css';
 import AuthorPicture from '../Components/ImageDisplay/AuthorPicture';
-import AuthorBookDisplay from '../Components/HomepageBookDisplay/AuthorBookDisplay';
 
 export default function Homepage() {
 	//Standard is 1440
@@ -57,7 +56,7 @@ export default function Homepage() {
 							textAlign: 'left',
 							marginLeft: { xs: 2, sm: 0 },
 							alignSelf: 'center',
-							width: { xs: '100%', sm: '100%',xl:'80%' },
+							width: { xs: '100%', sm: '100%', xl: '80%' },
 							marginBottom: 3,
 							fontFamily: 'inter',
 							fontSize: { xs: 14, lg: 16 },
@@ -110,7 +109,6 @@ export default function Homepage() {
 					</Box>
 				</Box>
 			</div>
-			
 		</>
 	);
 }

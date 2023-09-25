@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../index.css';
-import { Box, Button, Container, Grid, Stack, Typography } from '@mui/material';
-import AuthorPicture from '../ImageDisplay/AuthorPicture';
+import { Box, Button, Container,  Stack, Typography } from '@mui/material';
+
 import BookDisplay from '../ImageDisplay/BookDisplay';
 
 export default function AuthorBookDisplay() {

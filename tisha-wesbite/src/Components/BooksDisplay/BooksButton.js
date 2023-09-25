@@ -30,8 +30,8 @@ export default function BooksButton() {
 				onClick={handleClick}
 				sx={{
 					my: 2,
-					color: 'black',
-					display: { xs: 'none', sm: 'block' },
+					color: '#4E5865',
+					display: { xs: 'none', md: 'block' },
 					fontSize: 15,
 					fontFamily: 'inter',
 					margin: '1rem',
@@ -52,7 +52,13 @@ export default function BooksButton() {
 			</Menu>
 
 			<div>
-				<Box sx={{ minWidth: 100, display: { xs: 'block', sm: 'none' } }}>
+				<Box
+					sx={{
+						minWidth: 100,
+						display: { xs: 'block', md: 'none' },
+						color: '#4E5865',
+					}}
+				>
 					<FormControl fullWidth>
 						<InputLabel id="demo-simple-select-label">Books</InputLabel>
 						<Select

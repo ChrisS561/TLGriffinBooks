@@ -11,18 +11,13 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import { common } from '@mui/material/colors';
 import { useAuth0 } from '@auth0/auth0-react';
-import LoginButton from '../Buttons/LoginButton';
-import LogoutButton from '../Buttons/LogoutButton';
-import PopupState, { bindTrigger, bindMenu } from 'material-ui-popup-state';
-import BooksButton from './BooksButton';
-import SubscribeButton from '../Buttons/SubscribeButton';
-
-const pages = ['About', 'Events', 'Subscribe'];
-// const Books = ['Book 1', 'Book 2', 'Book 3'];
+import LoginButton from '../Login/LoginButton';
+import LogoutButton from '../Login/LogoutButton';
+import BooksButton from '../BooksDisplay/BooksButton';
+import SubscribeButton from '../SubmitButtonDisplay/SubscribeButton';
 
 function NavBar() {
 	const [anchorElNav, setAnchorElNav] = React.useState(null);
-	// const [anchorElUser, setAnchorElUser] = React.useState(null);
 
 	// Auth0 functionality
 	const { user, isLoading } = useAuth0();
@@ -30,17 +25,10 @@ function NavBar() {
 	const handleOpenNavMenu = (event) => {
 		setAnchorElNav(event.currentTarget);
 	};
-	// const handleOpenUserMenu = (event) => {
-	// 	setAnchorElUser(event.currentTarget);
-	// };
 
 	const handleCloseNavMenu = () => {
 		setAnchorElNav(null);
 	};
-
-	// const handleCloseUserMenu = () => {
-	// 	setAnchorElUser(null);
-	// };
 
 	return (
 		<AppBar position="static" sx={{ backgroundColor: '#FAF9F8' }}>
@@ -100,7 +88,11 @@ function NavBar() {
 						>
 							<MenuItem onClick={handleCloseNavMenu}>
 								<Button
-									sx={{ fontFamily: 'inter', color: 'black' }}
+									sx={{
+										fontFamily: 'inter',
+										color: '#4E5865',
+										margin: '0 auto',
+									}}
 									href="/About"
 								>
 									About
@@ -108,15 +100,18 @@ function NavBar() {
 							</MenuItem>
 							<MenuItem onClick={handleCloseNavMenu}>
 								<Button
-									sx={{ fontFamily: 'inter', color: 'black' }}
+									sx={{
+										fontFamily: 'inter',
+										color: '#4E5865',
+										margin: '0 auto',
+									}}
 									href="/Events"
 								>
 									Events
 								</Button>
 							</MenuItem>
-							<MenuItem onClick={handleCloseNavMenu}>
-								<BooksButton />
-							</MenuItem>
+							<SubscribeButton />
+							<BooksButton />
 						</Menu>
 					</Box>
 					<Typography
@@ -151,7 +146,7 @@ function NavBar() {
 							onClick={handleCloseNavMenu}
 							sx={{
 								my: 2,
-								color: 'black',
+								color: '#4E5865',
 								display: 'block',
 								fontSize: 15,
 								fontFamily: 'inter',
@@ -166,7 +161,7 @@ function NavBar() {
 							onClick={handleCloseNavMenu}
 							sx={{
 								my: 2,
-								color: 'black',
+								color: '#4E5865',
 								display: 'block',
 								fontSize: 15,
 								fontFamily: 'inter',
