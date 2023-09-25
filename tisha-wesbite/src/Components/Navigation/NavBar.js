@@ -15,6 +15,7 @@ import LoginButton from '../Buttons/LoginButton';
 import LogoutButton from '../Buttons/LogoutButton';
 import PopupState, { bindTrigger, bindMenu } from 'material-ui-popup-state';
 import BooksButton from './BooksButton';
+import SubscribeButton from '../Buttons/SubscribeButton';
 
 const pages = ['About', 'Events', 'Subscribe'];
 // const Books = ['Book 1', 'Book 2', 'Book 3'];
@@ -100,7 +101,6 @@ function NavBar() {
 							<MenuItem onClick={handleCloseNavMenu}>
 								<Button
 									sx={{ fontFamily: 'inter', color: 'black' }}
-									textAlign="center"
 									href="/About"
 								>
 									About
@@ -109,7 +109,6 @@ function NavBar() {
 							<MenuItem onClick={handleCloseNavMenu}>
 								<Button
 									sx={{ fontFamily: 'inter', color: 'black' }}
-									textAlign="center"
 									href="/Events"
 								>
 									Events
@@ -177,6 +176,7 @@ function NavBar() {
 						>
 							Events
 						</Button>
+						<SubscribeButton />
 						{!isLoading && !user && <LoginButton />}
 						{!isLoading && user && <LogoutButton />}
 					</Box>
