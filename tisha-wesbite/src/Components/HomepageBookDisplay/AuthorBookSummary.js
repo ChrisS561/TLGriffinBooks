@@ -1,8 +1,8 @@
 import React from 'react';
 import '../../index.css';
-import { Box, Button, Container,  Stack, Typography } from '@mui/material';
-
+import { Box, Button, Container, Stack, Typography } from '@mui/material';
 import BookDisplay from '../ImageDisplay/BookDisplay';
+
 
 export default function AuthorBookDisplay() {
 	return (
@@ -32,8 +32,6 @@ export default function AuthorBookDisplay() {
 					display: 'flex',
 					justifyContent: 'center',
 					marginTop: { sm: 25 },
-
-					// margin: "0 auto",
 				}}
 			>
 				<Stack>
