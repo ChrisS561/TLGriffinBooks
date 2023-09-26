@@ -14,7 +14,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 import LoginButton from '../Login/LoginButton';
 import LogoutButton from '../Login/LogoutButton';
 import BooksButton from '../BooksDisplay/BooksButton';
-import SubscribeButton from '../SubmitButtonDisplay/SubscribeButton';
+import SubscribeButton from '../SubscribeButtonDisplay/SubscribeButton';
 
 function NavBar() {
 	const [anchorElNav, setAnchorElNav] = React.useState(null);
