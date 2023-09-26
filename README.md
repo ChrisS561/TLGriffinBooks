@@ -1,5 +1,5 @@
 # Tisha-BookWebsite
-# Describtion 
+# Description 
 One paragraph of the project description goes here
 # Prerequisties 
 * List all the dependencies 
