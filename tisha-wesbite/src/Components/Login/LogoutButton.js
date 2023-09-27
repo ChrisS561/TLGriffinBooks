@@ -8,11 +8,10 @@ const LogoutButton = () => {
   return (
     <Button
       sx={{
-        my: 2,
-        display: "block",
-        fontSize: 15,
-        fontFamily: "inter",
-        margin: "1rem",
+        display: 'inherit',
+				fontFamily: 'inter',
+				color: '#4E5865',
+				margin: '1rem',
       }}
       onClick={() =>
         logout({ logoutParams: { returnTo: window.location.origin } })

@@ -10,17 +10,14 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import { common } from '@mui/material/colors';
-import { useAuth0 } from '@auth0/auth0-react';
-import LoginButton from '../Login/LoginButton';
-import LogoutButton from '../Login/LogoutButton';
 import BooksButton from '../BooksDisplay/BooksButton';
 import SubscribeButton from '../SubscribeButtonDisplay/SubscribeButton';
 
 function NavBar() {
 	const [anchorElNav, setAnchorElNav] = React.useState(null);
 
-	// Auth0 functionality
-	const { user, isLoading } = useAuth0();
+	
+	
 
 	const handleOpenNavMenu = (event) => {
 		setAnchorElNav(event.currentTarget);
@@ -172,8 +169,6 @@ function NavBar() {
 							Events
 						</Button>
 						<SubscribeButton />
-						{!isLoading && !user && <LoginButton />}
-						{!isLoading && user && <LogoutButton />}
 					</Box>
 				</Toolbar>
 			</Container>
