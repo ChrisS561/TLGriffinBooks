@@ -30,7 +30,7 @@ We welcome contributions from the community to help improve and enhance this aut
 
 1.  *`Fork the Repository`*: Click the "Fork" button on the top right corner of this repository's page to create your own copy.
 
-2.  *`Clone the Repository`*: Clone your forked repository to your local machine using git clone https://github.com/your-username/author-portfolio.git.
+2.  *`Clone the Repository`*: Clone your forked repository to your local machine using git clone https://github.com/your-username/author-books-website.git.
 
 3.  *`Create a Branch`*: Create a new branch for your contributions using a descriptive name, e.g., initials/feature/new-feature or initials/fix/bug-fix.
 
