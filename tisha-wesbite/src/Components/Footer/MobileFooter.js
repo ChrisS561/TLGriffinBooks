@@ -8,16 +8,13 @@ import { useAuth0 } from '@auth0/auth0-react';
 import LoginButton from '../Login/LoginButton';
 import LogoutButton from '../Login/LogoutButton';
 import { StyledToolbar } from '../../Style/Styling';
-import MobileFooter from './MobileFooter';
 
-
-
-export default function Footer() {
+export default function MobileFooter() {
 	// Auth0 functionality
 	const { user, isLoading } = useAuth0();
 	return (
 		<footer>
-			<Box sx={{display: {xs:"none",sm:"flex"}}}>
+			<Box sx={{ display: { xs: 'flex', sm: 'none' } }}>
 				<AppBar position="static">
 					<StyledToolbar>
 						<Stack direction="column">
@@ -36,7 +33,8 @@ export default function Footer() {
 							</Typography>
 							<Stack
 								direction="row"
-								spacing={{ xs: 0, sm: 3 }}
+                spacing={0}
+                flexWrap="wrap"
 								sx={{ alignItems: 'center', justifyContent: 'center' }}
 							>
 								<Button
@@ -146,7 +144,6 @@ export default function Footer() {
 					</StyledToolbar>
 				</AppBar>
 			</Box>
-			<MobileFooter/>
 		</footer>
 	);
 }
