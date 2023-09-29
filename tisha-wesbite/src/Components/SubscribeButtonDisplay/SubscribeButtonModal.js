@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Box, Container, Modal, Stack, Typography } from '@mui/material';
 import SubscribeButtonImage from '../ImageDisplay/SubscribeButtonImage';
-import SubmitButtonFormControl from './SubmitButtonFormControl';
+import SubmitButtonFormControl from './SubscribeButtonFormControl';
 import CloseIcon from '@mui/icons-material/Close';
 
 export default function SubscribeButtonModal(props) {

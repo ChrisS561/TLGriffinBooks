@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Button from '@mui/material/Button';
-import SubscribeButtonModal from './SubmitButtonModal';
+import SubscribeButtonModal from './SubscribeButtonModal';
 import { Box } from '@mui/material';
 
 export default function SubscribeButton() {
