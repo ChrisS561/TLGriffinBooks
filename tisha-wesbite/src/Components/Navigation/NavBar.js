@@ -12,13 +12,11 @@ import MenuItem from '@mui/material/MenuItem';
 import { common } from '@mui/material/colors';
 import BooksButton from '../BooksDisplay/BooksButton';
 import SubscribeButton from '../SubscribeButtonDisplay/SubscribeButton';
+import MobileFooter from '../Footer/MobileFooter';
+import MobileNavBar from './MobileNavBar';
 
 function NavBar() {
 	const [anchorElNav, setAnchorElNav] = React.useState(null);
-
-	
-	
-
 	const handleOpenNavMenu = (event) => {
 		setAnchorElNav(event.currentTarget);
 	};
@@ -28,151 +26,79 @@ function NavBar() {
 	};
 
 	return (
-		<AppBar position="static" sx={{ backgroundColor: '#FAF9F8' }}>
-			<Container maxWidth="l">
-				<Toolbar>
-					<Typography
-						variant="h5"
-						noWrap
-						component="a"
-						href="/"
-						sx={{
-							mr: 1,
-							display: { xs: 'none', md: 'flex' },
-							fontFamily: 'Playfair Display',
-							fontWeight: 700,
-							letterSpacing: '.3rem',
-							color: common.black,
-							textDecoration: 'none',
-						}}
-					>
-						T.L. Griffin
-					</Typography>
-					<Box
-						sx={{
-							flexGrow: 1,
-							display: { xs: 'flex', md: 'none' },
-						}}
-					>
-						<IconButton
-							size="large"
-							aria-label="account of current user"
-							aria-controls="menu-appbar"
-							aria-haspopup="true"
-							onClick={handleOpenNavMenu}
-							color="inherit"
-						>
-							<MenuIcon sx={{ color: 'black' }} />
-						</IconButton>
-
-						<Menu
-							id="menu-appbar"
-							anchorEl={anchorElNav}
-							anchorOrigin={{
-								vertical: 'bottom',
-								horizontal: 'left',
-							}}
-							keepMounted
-							transformOrigin={{
-								vertical: 'top',
-								horizontal: 'left',
-							}}
-							open={Boolean(anchorElNav)}
-							onClose={handleCloseNavMenu}
+		<>
+			<Box sx={{ display: { xs: 'flex', md: 'none' } }}>
+				<MobileNavBar
+					handleOpenNavMenu={handleOpenNavMenu}
+					handleCloseNavMenu={handleCloseNavMenu}
+					anchorElNav={anchorElNav}
+				/>
+			</Box>
+			<AppBar position="static" sx={{ backgroundColor: '#FAF9F8' }}>
+				<Container maxWidth="l">
+					<Toolbar>
+						<Typography
+							variant="h5"
+							noWrap
+							component="a"
+							href="/"
 							sx={{
-								display: { xs: 'block', md: 'none' },
+								mr: 1,
+								display: { xs: 'none', md: 'flex' },
+								fontFamily: 'Playfair Display',
+								fontWeight: 700,
+								letterSpacing: '.3rem',
+								color: common.black,
+								textDecoration: 'none',
 							}}
 						>
-							<MenuItem onClick={handleCloseNavMenu}>
-								<Button
-									sx={{
-										fontFamily: 'inter',
-										color: '#4E5865',
-										margin: '0 auto',
-									}}
-									href="/About"
-								>
-									About
-								</Button>
-							</MenuItem>
-							<MenuItem onClick={handleCloseNavMenu}>
-								<Button
-									sx={{
-										fontFamily: 'inter',
-										color: '#4E5865',
-										margin: '0 auto',
-									}}
-									href="/Events"
-								>
-									Events
-								</Button>
-							</MenuItem>
-							<SubscribeButton />
+							T.L. Griffin
+						</Typography>
+						<Box
+							sx={{
+								flexGrow: 1,
+								display: {
+									xs: 'none',
+									md: 'flex',
+									justifyContent: 'flex-end',
+								},
+							}}
+						>
+							<Button
+								onClick={handleCloseNavMenu}
+								sx={{
+									my: 2,
+									color: '#4E5865',
+									display: 'block',
+									fontSize: 15,
+									fontFamily: 'inter',
+									margin: '1rem',
+								}}
+								href="/About"
+							>
+								About
+							</Button>
 							<BooksButton />
-						</Menu>
-					</Box>
-					<Typography
-						variant="h5"
-						noWrap
-						component="a"
-						href="/"
-						sx={{
-							mr: 2,
-							display: { xs: 'flex', md: 'none' },
-							flexGrow: 1,
-							fontFamily: 'Playfair Display',
-							fontWeight: 700,
-							letterSpacing: '.1px',
-							color: 'common.black',
-							textDecoration: 'none',
-						}}
-					>
-						T.L. Griffin
-					</Typography>
-					<Box
-						sx={{
-							flexGrow: 1,
-							display: {
-								xs: 'none',
-								md: 'flex',
-								justifyContent: 'flex-end',
-							},
-						}}
-					>
-						<Button
-							onClick={handleCloseNavMenu}
-							sx={{
-								my: 2,
-								color: '#4E5865',
-								display: 'block',
-								fontSize: 15,
-								fontFamily: 'inter',
-								margin: '1rem',
-							}}
-							href="/About"
-						>
-							About
-						</Button>
-						<BooksButton />
-						<Button
-							onClick={handleCloseNavMenu}
-							sx={{
-								my: 2,
-								color: '#4E5865',
-								display: 'block',
-								fontSize: 15,
-								fontFamily: 'inter',
-								margin: '1rem',
-							}}
-							href="/About"
-						>
-							Events
-						</Button>
-						<SubscribeButton />
-					</Box>
-				</Toolbar>
-			</Container>
-		</AppBar>
+							<Button
+								onClick={handleCloseNavMenu}
+								sx={{
+									my: 2,
+									color: '#4E5865',
+									display: 'block',
+									fontSize: 15,
+									fontFamily: 'inter',
+									margin: '1rem',
+								}}
+								href="/About"
+							>
+								Events
+							</Button>
+							<SubscribeButton />
+						</Box>
+					</Toolbar>
+				</Container>
+			</AppBar>
+		</>
 	);
 }
 export default NavBar;

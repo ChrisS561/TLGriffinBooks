@@ -3,6 +3,7 @@ import bgremoved from '../../Images/ProfilePic.png';
 import pic from '../../Images/Attachment.jpg';
 import '../../index.css';
 import { Box } from '@mui/material';
+import MobileAuthorPicture from './MobileAuthorPicture';
 
 export default function AuthorPicture() {
 	return (
@@ -24,20 +25,7 @@ export default function AuthorPicture() {
 					style={{ objectFit: 'cover' }}
 				/>
 			</Box>
-			<Box
-				sx={{
-					display: { xs: 'flex', sm: 'none' },
-					marginLeft: 2,
-					height: { xs: '26rem' },
-				}}
-			>
-				<img
-					src={pic}
-					alt="Profile"
-					loading="lazy"
-					style={{ objectFit: 'cover' }}
-				/>
-			</Box>
+			<MobileAuthorPicture/>
 		</>
 	);
 }
