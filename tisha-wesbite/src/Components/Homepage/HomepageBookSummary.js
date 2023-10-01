@@ -11,14 +11,14 @@ export default function AuthorBookDisplay() {
 				variant="h3"
 				sx={{
 					display: { xs: 'block', sm: 'none' },
+					paddingTop:5,
 					color: '#4E5865',
 					marginLeft: 2,
-					marginTop: 5,
 					textTransform: 'capitalize',
 					fontWeight: 'bold',
 					letterSpacing: '5px',
 					textAlign: 'left',
-					fontFamily: 'Playfair Display,serif',
+					fontFamily: 'inter',
 					fontSize: { xs: 36, sm: 48, lg: 60 },
 				}}
 			>
@@ -31,7 +31,6 @@ export default function AuthorBookDisplay() {
 				sx={{
 					display: 'flex',
 					justifyContent: 'center',
-					marginTop: { sm: 25 },
 				}}
 			>
 				<Stack>
@@ -39,6 +38,7 @@ export default function AuthorBookDisplay() {
 						variant="h3"
 						sx={{
 							display: { xs: 'none', sm: 'block' },
+							paddingTop: "15rem",
 							color: '#4E5865',
 							textTransform: 'capitalize',
 							fontWeight: 'bold',
@@ -100,7 +100,7 @@ export default function AuthorBookDisplay() {
 						Read More
 					</Button>
 				</Stack>
-				<Box sx={{ display: { xs: 'none', sm: 'flex' } }}>
+				<Box sx={{ display: { xs: 'none', sm: 'flex',paddingTop:"8rem" } }}>
 					<BookDisplay />
 				</Box>
 			</Container>

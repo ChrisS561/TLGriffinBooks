@@ -1,8 +1,9 @@
 import React from 'react';
-import Homepage from './Pages/Homepage';
+import Homepage from './Components/Homepage/Homepage';
 import NavBar from './Components/Navigation/NavBar';
-import AuthorBookDisplay from './Components/HomepageBookDisplay/AuthorBookSummary';
+import AuthorBookDisplay from './Components/Homepage/HomepageBookSummary';
 import Footer from './Components/Footer/Footer';
+import HomepageEvents from './Components/Homepage/HomepageEvents';
 
 export default function AppCoverpage() {
 	return (
@@ -10,7 +11,8 @@ export default function AppCoverpage() {
 			<NavBar />
 			<Homepage />
 			<AuthorBookDisplay />
-			<Footer/>
+			<HomepageEvents/> 
+			<Footer />
 		</div>
 	);
 }

@@ -2,17 +2,12 @@ import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
 import { common } from '@mui/material/colors';
 import BooksButton from '../BooksDisplay/BooksButton';
 import SubscribeButton from '../SubscribeButtonDisplay/SubscribeButton';
-import MobileFooter from '../Footer/MobileFooter';
 import MobileNavBar from './MobileNavBar';
 
 function NavBar() {
@@ -34,7 +29,14 @@ function NavBar() {
 					anchorElNav={anchorElNav}
 				/>
 			</Box>
-			<AppBar position="static" sx={{ backgroundColor: '#FAF9F8' }}>
+			{/* TODO Implement https://mui.com/material-ui/react-app-bar/#elevate-app-bar the elevated appbar to the navbar */}
+			<AppBar
+				position="static"
+				sx={{
+					display: { xs: 'none', sm: 'flex' },
+					backgroundColor: '#FAF9F8',
+				}}
+			>
 				<Container maxWidth="l">
 					<Toolbar>
 						<Typography

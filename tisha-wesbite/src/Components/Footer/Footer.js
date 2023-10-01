@@ -16,7 +16,7 @@ export default function Footer() {
 	return (
 		<footer>
 			<Box sx={{ display: { xs: 'none', sm: 'flex' } }}>
-				<AppBar position="static">
+				<AppBar position="sticky">
 					<StyledToolbar>
 						<Stack direction="column">
 							<Typography
