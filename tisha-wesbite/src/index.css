@@ -26,37 +26,37 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-.homepage { 
+.homepage {
   background-color: white;
-  background-image: linear-gradient(to bottom, #FAF9F8 24%, #C3D9DC 24%);
+  background-image: linear-gradient(to bottom, #faf9f8 24%, #c3d9dc 24%);
   background-size: cover;
-  background-position:center;
+  background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
   width: 100vw;
-} 
-
-.bookdisplay{ 
-  height: 100vh;
-  width: 100vw;
-  color: #FAF9F8;
 }
 
-.MuiButton-contained{ 
+.bookdisplay {
+  height: 100vh;
+  width: 100vw;
+  color: #faf9f8;
+}
+
+.MuiButton-contained {
   /* border-radius: 10px !important; */
   background-color: #677884 !important;
-  color: #FAF9F8 !important;
+  color: #faf9f8 !important;
   /* background-color: #DCA564 !important; */
 }
