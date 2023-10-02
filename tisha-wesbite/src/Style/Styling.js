@@ -15,3 +15,4 @@ export const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 		minHeight: 128,
 	},
 }));
+
