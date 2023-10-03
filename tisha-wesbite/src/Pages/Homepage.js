@@ -15,9 +15,14 @@ export default function Homepage() {
           alignItems: "center",
           justifyContent: "flex-end",
           height: "100vh",
+          paddingTop: "6rem",
         }}
       >
-        <Box sx={{ display: { xs: "none", sm: "flex" } }}>
+        <Box
+          sx={{
+            display: { xs: "none", sm: "flex" },
+          }}
+        >
           <AuthorPicture />
         </Box>
         <Box
