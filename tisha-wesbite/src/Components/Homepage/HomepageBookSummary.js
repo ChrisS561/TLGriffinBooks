@@ -43,7 +43,7 @@ export default function AuthorBookDisplay() {
 							textTransform: 'capitalize',
 							fontWeight: 'bold',
 							textAlign: 'left',
-							marginLeft: 11,
+							marginLeft: {sm:5.5,md:8,lg:11},
 							fontFamily: 'inter',
 							letterSpacing: '5px',
 							fontSize: { xs: 36, sm: 48, lg: 60 },
