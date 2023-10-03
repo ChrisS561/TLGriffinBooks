@@ -97,22 +97,19 @@ export default function HideAppBar(props) {
                 <Menu
                   id="menu-appbar"
                   anchorEl={anchorElNav}
-                  anchorOrigin={{
-                    vertical: "bottom",
-                    horizontal: "left",
-                  }}
                   keepMounted
-                  transformOrigin={{
-                    vertical: "top",
-                    horizontal: "left",
-                  }}
                   open={Boolean(anchorElNav)}
                   onClose={handleCloseNavMenu}
                   sx={{
                     display: { xs: "block", md: "none" },
+                    "& .css-3dzjca-MuiPaper-root-MuiPopover-paper-MuiMenu-paper":
+                      { width: "100vw", top: "60px!important" },
                   }}
                 >
-                  <MenuItem onClick={handleCloseNavMenu}>
+                  <MenuItem
+                    // sx={{ border: "1px solid red", width: "80vw" }}
+                    onClick={handleCloseNavMenu}
+                  >
                     <Button
                       sx={{
                         fontFamily: "inter",
