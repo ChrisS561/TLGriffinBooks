@@ -1,7 +1,6 @@
 import React from 'react';
 import '../../index.css';
 import { Box, Button, Stack, Typography } from '@mui/material';
-import HomepageEventsDate from './HomepageEventsDate';
 import MobileHomepageEventsDate from './MobileHomepageEventsDate';
 
 export default function MobileHomepageEvents() {

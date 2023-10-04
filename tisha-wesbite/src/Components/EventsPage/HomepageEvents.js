@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../index.css';
-import { Box, Button, Container, Stack, Typography } from '@mui/material';
+import { Box, Button, Stack, Typography } from '@mui/material';
 import HomepageEventsDate from './HomepageEventsDate';
 import MobileHomepageEvents from './MobileHomepageEvents';
 
