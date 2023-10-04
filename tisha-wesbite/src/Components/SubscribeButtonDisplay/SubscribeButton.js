@@ -5,10 +5,10 @@ import { Box } from '@mui/material';
 import MobileSubscribeButton from './MobileSubscribeButton';
 
 export default function SubscribeButton() {
-	const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(false);
 
-	const handleOpen = () => setOpen(true);
-	const handleClose = () => setOpen(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
 	return (
 		<>
@@ -36,4 +36,3 @@ export default function SubscribeButton() {
 		</>
 	);
 }
- 

@@ -7,7 +7,9 @@ export default function MobileSubscribeButton(props) {
     const {handleOpen,handleClose,open} = props
 	return (
 		<>
-			<Box sx={{ display: { xs: 'flex', sm: 'none' } }}>
+			<Box
+				sx={{ display: { xs: 'flex', sm: 'none' }, justifyContent: 'center' }}
+			>
 				<SubscribeButtonModal open={open} handleClose={handleClose} />
 				<Button
 					onClick={handleOpen}

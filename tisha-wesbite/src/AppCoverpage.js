@@ -5,14 +5,13 @@ import AuthorBookDisplay from './Components/Homepage/HomepageBookSummary';
 import Footer from './Components/Footer/Footer';
 import HomepageEvents from './Components/EventsPage/HomepageEvents';
 
-
 export default function AppCoverpage() {
 	return (
-		<div>
+		<div style={{ maxWidth: '100vw', overflow: 'hidden' }}>
 			<NavBar />
 			<Homepage />
 			<AuthorBookDisplay />
-			<HomepageEvents/> 
+			<HomepageEvents />
 			<Footer />
 		</div>
 	);
