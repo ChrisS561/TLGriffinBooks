@@ -12,7 +12,7 @@ export default function SubscribeButton() {
 
 	return (
 		<>
-			<Box sx={{ display: { xs: 'none', sm: 'flex' } }}>
+			<Box sx={{ display: { xs: 'none', sm: 'flex' },justifyContent: 'center'  }}>
 				<SubscribeButtonModal open={open} handleClose={handleClose} />
 				<Button
 					onClick={handleOpen}
