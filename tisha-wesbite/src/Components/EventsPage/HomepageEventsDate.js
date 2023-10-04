@@ -7,11 +7,11 @@ export default function HomepageEventsDate() {
 			<Box
 				sx={{
 					display: { xs: 'none', sm: 'flex' },
-					height: 200,
-					width: 200,
+					height: { sm: 120, md: 170, lg: 200 },
+					width: { sm: 120, md: 170, lg: 200 },
 					backgroundColor: '#C3D9DC',
-					marginTop: -38,
-					marginLeft: { lg: 14, xl: 23 },
+					marginTop: {sm:-32,md:-38},
+					marginLeft: { sm:5,md: 8, lg: 14, xl: 23 },
 				}}
 			>
 				<Stack
@@ -26,7 +26,7 @@ export default function HomepageEventsDate() {
 							fontWeight: 'bold',
 							fontFamily: 'inter',
 							letterSpacing: '3px',
-							fontSize: { sm: 48, lg: 60 },
+							fontSize: { sm: 35, md: 48, lg: 60 },
 						}}
 					>
 						OCT
@@ -39,10 +39,10 @@ export default function HomepageEventsDate() {
 							fontWeight: 'bold',
 							fontFamily: 'inter',
 							letterSpacing: '3px',
-							fontSize: { sm: 48, lg: 60 },
+							fontSize: { sm: 35, md: 48, lg: 60 },
 						}}
 					>
-						24
+						29
 					</Typography>
 				</Stack>
 			</Box>
