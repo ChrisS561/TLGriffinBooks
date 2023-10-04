@@ -15,4 +15,4 @@ export const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 		minHeight: 128,
 	},
 }));
-// TODO Fix the rendering for the Mobile device (xs display)
+

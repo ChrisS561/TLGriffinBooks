@@ -51,7 +51,8 @@ code {
 .bookdisplay {
   height: 100vh;
   width: 100vw;
-  color: #faf9f8;
+  background-color: #FAF9F8;
+
 }
 
 .MuiButton-contained {
@@ -59,4 +60,16 @@ code {
   background-color: #677884 !important;
   color: #faf9f8 !important;
   /* background-color: #DCA564 !important; */
+}
+
+.events{ 
+  height: 80vh;
+    width: 100vw;
+    background-color: #E9E7E2;
+}
+
+@media screen and (max-width: 425px) {
+  .events{ 
+    height: 60vh;
+  }
 }

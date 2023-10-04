@@ -10,15 +10,13 @@ import LogoutButton from '../Login/LogoutButton';
 import { StyledToolbar } from '../../Style/Styling';
 import MobileFooter from './MobileFooter';
 
-
-
 export default function Footer() {
 	// Auth0 functionality
 	const { user, isLoading } = useAuth0();
 	return (
 		<footer>
-			<Box sx={{display: {xs:"none",sm:"flex"}}}>
-				<AppBar position="static">
+			<Box sx={{ display: { xs: 'none', sm: 'flex' } }}>
+				<AppBar position="sticky">
 					<StyledToolbar>
 						<Stack direction="column">
 							<Typography
@@ -77,76 +75,87 @@ export default function Footer() {
 							>
 								© {new Date().getFullYear()} Tisha Griffin. All Rights Reserved.
 							</Typography>
-							<Typography
+							{/* <Stack
+								direction="row"
+								divider={<Divider orientation="vertical" flexItem />}
+								spacing={1}
 								sx={{
-									color: 'black',
 									display: 'inherit',
 									justifyContent: 'center',
 									alignContent: 'center',
-									marginRight: 3.6,
-									fontSize: '12px',
-									fontStyle: 'oblique',
+									
 								}}
 							>
-								Web Design by:{' '}
-								<a
-									style={{
-										textDecoration: 'none',
-										paddingLeft: '2px',
-										paddingRight: '2px',
+								<Typography
+									sx={{
+										color: 'black',
+										display: 'inherit',
+										justifyContent: 'center',
+										alignContent: 'center',
+										fontSize: '12px',
+										fontStyle: 'oblique',
 									}}
-									href="https://wingfieldadvertising.com/"
-									target="_blank"
-									rel="noopener noreferrer"
 								>
-									Corbriyana Wingfield.{' '}
-								</a>
-							</Typography>
-							<Typography
-								sx={{
-									color: 'black',
-									display: 'inherit',
-									justifyContent: 'center',
-									alignContent: 'center',
-									marginLeft: 8.8,
-									fontSize: '12px',
-									fontStyle: 'oblique',
-								}}
-							>
-								Developers:{' '}
-								<a
-									style={{
-										textDecoration: 'none',
-										paddingLeft: '2px',
-										paddingRight: '2px',
+									Web Design by:{' '}
+									<a
+										style={{
+											textDecoration: 'none',
+											paddingLeft: '2px',
+											paddingRight: '2px',
+										}}
+										href="https://wingfieldadvertising.com/"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										Corbriyana Wingfield.{' '}
+									</a>
+								</Typography>
+								<Typography
+									sx={{
+										color: 'black',
+										display: 'inherit',
+										justifyContent: 'center',
+										alignContent: 'center',
+										marginLeft: 8.8,
+										fontSize: '12px',
+										fontStyle: 'oblique',
 									}}
-									href="https://christophersmithjr.com/"
-									target="_blank"
-									rel="noopener noreferrer"
 								>
-									{' '}
-									Christopher Smith Jr.
-								</a>{' '}
-								and
-								<a
-									style={{
-										textDecoration: 'none',
-										paddingLeft: '2px',
-										paddingRight: '2px',
-									}}
-									href="https://brockabloomquist.com/"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									{' '}
-									Brock Bloomquist.
-								</a>
-							</Typography>
+									Developers:{' '}
+									<a
+										style={{
+											textDecoration: 'none',
+											paddingLeft: '2px',
+											paddingRight: '2px',
+										}}
+										href="https://christophersmithjr.com/"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										{' '}
+										Christopher Smith Jr.
+									</a>{' '}
+									and
+									<a
+										style={{
+											textDecoration: 'none',
+											paddingLeft: '2px',
+											paddingRight: '2px',
+										}}
+										href="https://brockabloomquist.com/"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										{' '}
+										Brock Bloomquist.
+									</a>
+								</Typography>
+							</Stack> */}
 						</Stack>
 					</StyledToolbar>
 				</AppBar>
 			</Box>
-			<MobileFooter/>
+			<MobileFooter />
 		</footer>
 	);
 }

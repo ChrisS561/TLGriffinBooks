@@ -1,7 +1,7 @@
-import React from "react";
-import { Box, Button, Typography } from "@mui/material";
-import "../index.css";
-import AuthorPicture from "../Components/ImageDisplay/AuthorPicture";
+import React from 'react';
+import { Box, Button, Typography } from '@mui/material';
+import '../../index.css';
+import AuthorPicture from '../../Components/ImageDisplay/AuthorPicture';
 
 export default function Homepage() {
   //Standard is 1440

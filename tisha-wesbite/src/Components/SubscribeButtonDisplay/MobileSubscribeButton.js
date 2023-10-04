@@ -2,24 +2,20 @@ import * as React from 'react';
 import Button from '@mui/material/Button';
 import SubscribeButtonModal from './SubscribeButtonModal';
 import { Box } from '@mui/material';
-import MobileSubscribeButton from './MobileSubscribeButton';
 
-export default function SubscribeButton() {
-  const [open, setOpen] = React.useState(false);
-
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-
+export default function MobileSubscribeButton(props) {
+    const {handleOpen,handleClose,open} = props
 	return (
 		<>
-			<Box sx={{ display: { xs: 'none', sm: 'flex' } }}>
+			<Box
+				sx={{ display: { xs: 'flex', sm: 'none' }, justifyContent: 'center' }}
+			>
 				<SubscribeButtonModal open={open} handleClose={handleClose} />
 				<Button
 					onClick={handleOpen}
 					sx={{
 						my: 2,
 						color: '#4E5865',
-						display: { xs: 'none', sm: 'block' },
 						fontSize: 15,
 						fontFamily: 'inter',
 						margin: '1rem',
@@ -28,11 +24,6 @@ export default function SubscribeButton() {
 					Subscribe
 				</Button>
 			</Box>
-			<MobileSubscribeButton
-				handleOpen={handleOpen}
-				handleClose={handleClose}
-				open={open}
-			/>
 		</>
 	);
 }
