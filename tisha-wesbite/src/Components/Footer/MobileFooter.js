@@ -3,11 +3,12 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import { Button, Divider, Stack, Typography } from '@mui/material';
 import SubscribeButton from '../SubscribeButtonDisplay/SubscribeButton';
-import BooksButton from '../BooksDisplay/BooksButton';
+
 import { useAuth0 } from '@auth0/auth0-react';
 import LoginButton from '../Login/LoginButton';
 import LogoutButton from '../Login/LogoutButton';
 import { StyledToolbar } from '../../Style/Styling';
+import BooksButton from '../Books/BooksButton';
 
 export default function MobileFooter() {
 	// Auth0 functionality
