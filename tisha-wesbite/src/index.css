@@ -67,3 +67,9 @@ code {
     width: 100vw;
     background-color: #E9E7E2;
 }
+
+@media screen and (max-width: 425px) {
+  .events{ 
+    height: 60vh;
+  }
+}

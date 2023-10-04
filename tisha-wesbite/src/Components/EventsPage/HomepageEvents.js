@@ -1,9 +1,9 @@
 import React from 'react';
 import '../../index.css';
-import { Box, Button, Stack, Typography } from '@mui/material';
+import { Box, Button, Container, Stack, Typography } from '@mui/material';
 import HomepageEventsDate from './HomepageEventsDate';
+import MobileHomepageEvents from './MobileHomepageEvents';
 
-//TODO
 export default function HomepageEvents() {
 	return (
 		<div className="events">
@@ -102,6 +102,10 @@ export default function HomepageEvents() {
 					</Stack>
 				</Box>
 				<HomepageEventsDate />
+			</Box>
+			<Box sx={{ display: { xs: 'flex', sm: 'none' } }}>
+				{' '}
+				<MobileHomepageEvents />
 			</Box>
 		</div>
 	);

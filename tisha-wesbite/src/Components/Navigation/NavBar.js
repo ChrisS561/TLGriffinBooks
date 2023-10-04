@@ -29,7 +29,6 @@ function NavBar() {
 					anchorElNav={anchorElNav}
 				/>
 			</Box>
-			{/* TODO Implement https://mui.com/material-ui/react-app-bar/#elevate-app-bar the elevated appbar to the navbar */}
 			<AppBar
 				position="static"
 				sx={{
