@@ -75,7 +75,7 @@ export default function Footer() {
 							>
 								© {new Date().getFullYear()} Tisha Griffin. All Rights Reserved.
 							</Typography>
-							<Stack
+							{/* <Stack
 								direction="row"
 								divider={<Divider orientation="vertical" flexItem />}
 								spacing={1}
@@ -150,7 +150,7 @@ export default function Footer() {
 										Brock Bloomquist.
 									</a>
 								</Typography>
-							</Stack>
+							</Stack> */}
 						</Stack>
 					</StyledToolbar>
 				</AppBar>

@@ -75,7 +75,7 @@ export default function MobileFooter() {
 							>
 								© {new Date().getFullYear()} Tisha Griffin. All Rights Reserved.
 							</Typography>
-							<Typography
+							{/* <Typography
 								sx={{
 									color: 'black',
 									display: 'inherit',
@@ -139,7 +139,7 @@ export default function MobileFooter() {
 									{' '}
 									Brock Bloomquist.
 								</a>
-							</Typography>
+							</Typography> */}
 						</Stack>
 					</StyledToolbar>
 				</AppBar>
