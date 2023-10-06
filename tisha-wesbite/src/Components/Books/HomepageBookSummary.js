@@ -3,7 +3,6 @@ import '../../index.css';
 import { Box, Button, Container, Stack, Typography } from '@mui/material';
 import BookDisplay from '../ImageDisplay/BookDisplay';
 
-
 export default function AuthorBookDisplay() {
 	return (
 		<div className="bookdisplay">
@@ -11,7 +10,7 @@ export default function AuthorBookDisplay() {
 				variant="h3"
 				sx={{
 					display: { xs: 'block', sm: 'none' },
-					paddingTop:5,
+					paddingTop: 5,
 					color: '#4E5865',
 					marginLeft: 2,
 					textTransform: 'capitalize',
@@ -38,12 +37,12 @@ export default function AuthorBookDisplay() {
 						variant="h3"
 						sx={{
 							display: { xs: 'none', sm: 'block' },
-							paddingTop: "15rem",
+							paddingTop: '15rem',
 							color: '#4E5865',
 							textTransform: 'capitalize',
 							fontWeight: 'bold',
 							textAlign: 'left',
-							marginLeft: {sm:5.5,md:8,lg:11},
+							marginLeft: { sm: 5.5, md: 8, lg: 11 },
 							fontFamily: 'inter',
 							letterSpacing: '5px',
 							fontSize: { xs: 36, sm: 48, lg: 60 },
@@ -100,8 +99,18 @@ export default function AuthorBookDisplay() {
 						Read More
 					</Button>
 				</Stack>
-				<Box sx={{ display: { xs: 'none', sm: 'flex',paddingTop:"8rem" } }}>
-					<BookDisplay />
+				<Box sx={{ display: { xs: 'none', sm: 'flex', paddingTop: '8rem' } }}>
+					<BookDisplay
+						height={{
+							xs: '26rem',
+							sm: '30rem',
+							md: '35rem',
+							lg: '35rem',
+							xl: '40rem',
+						}}
+						marginRight={{ md: '2rem' }}
+						marginBottom={{ md: '8rem' }}
+					/>
 				</Box>
 			</Container>
 		</div>

@@ -1,10 +1,10 @@
 import React from 'react';
 import '../../index.css';
 import { Box, Button, Stack, Typography } from '@mui/material';
-import HomepageEventsDate from './HomepageEventsDate';
-import MobileHomepageEvents from './MobileHomepageEvents';
+import HomepageEventsDate from './DateHomepage';
+import MobileHomepageEvents from './MobileHomepage';
 
-export default function HomepageEvents() {
+export default function EventsHomepage() {
 	return (
 		<div className="events">
 			<Box>

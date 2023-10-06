@@ -1,9 +1,9 @@
 import React from 'react';
 import '../../index.css';
 import { Box, Button, Stack, Typography } from '@mui/material';
-import MobileHomepageEventsDate from './MobileHomepageEventsDate';
+import MobileHomepageEventsDate from './DateMobileHomepage';
 
-export default function MobileHomepageEvents() {
+export default function MobileHomepage() {
 	return (
 		<div className="events">
 			<Box sx={{ display: { xs: 'flex', sm: 'none' } }}>

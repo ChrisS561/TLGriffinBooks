@@ -1,7 +1,7 @@
 import { Box, Stack, Typography } from '@mui/material';
 import React from 'react';
 
-export default function HomepageEventsDate() {
+export default function DateHomepage() {
 	return (
 		<div>
 			<Box
@@ -10,8 +10,8 @@ export default function HomepageEventsDate() {
 					height: { sm: 120, md: 170, lg: 200 },
 					width: { sm: 120, md: 170, lg: 200 },
 					backgroundColor: '#C3D9DC',
-					marginTop: {sm:-32,md:-38},
-					marginLeft: { sm:5,md: 8, lg: 14, xl: 23 },
+					marginTop: { sm: -32, md: -38 },
+					marginLeft: { sm: 5, md: 8, lg: 14, xl: 23 },
 				}}
 			>
 				<Stack
