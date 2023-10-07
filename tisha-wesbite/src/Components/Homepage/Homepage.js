@@ -5,8 +5,7 @@ import AuthorPicture from '../../Components/ImageDisplay/AuthorPicture';
 
 
 export default function Homepage() {
-  //Standard is 1440
-  console.log(window.innerWidth);
+  
   return (
     <>
       <div
