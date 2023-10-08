@@ -2,16 +2,26 @@ import React from 'react';
 import BookPic from '../../Images/BookPic.png';
 import '../../index.css';
 import { Box } from '@mui/material';
-import BuynowButton from '../../StripeApi/BuynowButton';
 
-export default function BookDisplay({height,position}) {
+
+export default function BookDisplay({
+	display,
+	height,
+	position,
+	marginBottom,
+	marginLeft,
+	marginRight,
+}) {
 	return (
 		<>
 			<Box
 				sx={{
-					display: 'flex',
+					display,
 					height,
 					position,
+					marginBottom,
+					marginRight,
+					marginLeft,
 				}}
 			>
 				<img

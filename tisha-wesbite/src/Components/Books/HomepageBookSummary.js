@@ -24,7 +24,16 @@ export default function AuthorBookDisplay() {
 				MY WORK
 			</Typography>
 			<Box sx={{ display: { xs: 'flex', sm: 'none' } }}>
-				<BookDisplay />
+				<BookDisplay
+				display="flex"
+					height={{
+						xs: '26rem',
+						sm: '30rem',
+						md: '35rem',
+						lg: '35rem',
+						xl: '40rem',
+					}}
+				/>
 			</Box>
 			<Container
 				sx={{
@@ -101,6 +110,7 @@ export default function AuthorBookDisplay() {
 				</Stack>
 				<Box sx={{ display: { xs: 'none', sm: 'flex', paddingTop: '8rem' } }}>
 					<BookDisplay
+					display="flex"
 						height={{
 							xs: '26rem',
 							sm: '30rem',
