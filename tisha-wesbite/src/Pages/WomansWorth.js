@@ -49,7 +49,7 @@ export default function WomansWorth() {
 					sx={{
 						display: 'block',
 						// width: '100vw',
-						paddingRight: { xs: 1, sm: 11, md: 15, lg: 24, xl: 35 },
+						paddingRight: { xs: 1, sm: 11, md: 15, lg: 24, xl: 30 },
 						paddingTop: { sm: 14, md: 17, lg: 10, xl: 6 },
 						paddingBottom: { md: 15, lg: 9, xl: 9 },
 					}}
@@ -85,10 +85,10 @@ export default function WomansWorth() {
 							textAlign: 'left',
 							marginLeft: { xs: 0, sm: 5, md: 11 },
 							alignSelf: 'center',
-							width: { xs: '100%', sm: '100%', xl: '70%' },
-							marginBottom: 3,
+							width: { xs: '100%', sm: '100%',lg:"80%", xl: '80%' },
+							marginBottom: 0,
 							fontFamily: 'inter',
-							fontSize: { xs: 14, lg: 16 },
+							fontSize: { xs: 14,md:15, lg: 16 },
 							color: '#677884',
 							whiteSpace: 'pre-line',
 						}}
