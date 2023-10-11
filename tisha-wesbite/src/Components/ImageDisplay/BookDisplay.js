@@ -3,15 +3,25 @@ import BookPic from '../../Images/BookPic.png';
 import '../../index.css';
 import { Box } from '@mui/material';
 
-export default function BookDisplay() {
+
+export default function BookDisplay({
+	display,
+	height,
+	position,
+	marginBottom,
+	marginLeft,
+	marginRight,
+}) {
 	return (
 		<>
 			<Box
 				sx={{
-					display: 'flex',
-					height: { xs: '26rem', sm: '30rem', md: '35rem', lg: '35rem',xl:'40rem' },
-					marginRight: {  md: '2rem' },
-					marginBottom: { md: '8rem' },
+					display,
+					height,
+					position,
+					marginBottom,
+					marginRight,
+					marginLeft,
 				}}
 			>
 				<img

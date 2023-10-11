@@ -1,7 +1,7 @@
 import { Box, Stack, Typography } from '@mui/material';
 import React from 'react';
 
-export default function MobileHomepageEventsDate() {
+export default function DateMobileHomepage() {
 	return (
 		<div>
 			<Box
@@ -9,14 +9,13 @@ export default function MobileHomepageEventsDate() {
 					display: { xs: 'flex', sm: 'none' },
 					height: 100,
 					width: 270,
-                    paddingLeft:"1rem"
-					
+					paddingLeft: '1rem',
 				}}
 			>
 				<Stack
 					direction="row"
-                    spacing={2}
-					sx={{ alignItems:'center', paddingTop: 3 }}
+					spacing={2}
+					sx={{ alignItems: 'center', paddingTop: 3 }}
 				>
 					<Typography
 						variant="h3"

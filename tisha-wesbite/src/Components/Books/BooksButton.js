@@ -3,10 +3,13 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import { Box, FormControl, InputLabel, Select } from '@mui/material';
+import { useNavigate } from 'react-router';
 
 export default function BooksButton() {
 	const [anchorEl, setAnchorEl] = React.useState(null);
 	const [books, setBooks] = React.useState('');
+	const bookLinks = ['/A-Womans-Worth'];
+	const navigate = useNavigate();
 	const open = Boolean(anchorEl);
 	const handleClick = (event) => {
 		setAnchorEl(event.currentTarget);
@@ -20,6 +23,10 @@ export default function BooksButton() {
 		setAnchorEl(null);
 	};
 
+	const handleBookOneNav = ()=> { 
+		setAnchorEl(null);
+		navigate(bookLinks[0]);
+	}
 	return (
 		<div>
 			<Button
@@ -48,7 +55,7 @@ export default function BooksButton() {
 					'aria-labelledby': 'basic-button',
 				}}
 			>
-				<MenuItem onClick={handleClose}>A Women's Worth</MenuItem>
+				<MenuItem onClick={handleBookOneNav}>A Woman's Worth</MenuItem>
 			</Menu>
 
 			<div>
@@ -73,7 +80,9 @@ export default function BooksButton() {
 							label="Books"
 							onChange={handleChange}
 						>
-							<MenuItem value={'book1'}>A Women's Worth</MenuItem>
+							<MenuItem onClick={handleBookOneNav} value={'book1'}>
+								A Woman's Worth
+							</MenuItem>
 						</Select>
 					</FormControl>
 				</Box>

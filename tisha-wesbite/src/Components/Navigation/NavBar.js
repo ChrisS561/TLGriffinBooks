@@ -191,7 +191,7 @@ export default function HideAppBar(props) {
 										fontFamily: 'inter',
 										margin: '1rem',
 									}}
-									href="/About"
+									href="/Events"
 								>
 									Events
 								</Button>

@@ -3,9 +3,9 @@ import { Box, Button, Typography } from '@mui/material';
 import '../../index.css';
 import AuthorPicture from '../../Components/ImageDisplay/AuthorPicture';
 
+
 export default function Homepage() {
-  //Standard is 1440
-  console.log(window.innerWidth);
+  
   return (
     <>
       <div
@@ -91,7 +91,7 @@ export default function Homepage() {
           >
             <Button
               variant="contained"
-              href="About"
+              href="/About"
               color="info"
               sx={{
                 transition:
