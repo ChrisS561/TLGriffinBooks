@@ -4,12 +4,18 @@ import '../index.css';
 import Navbar from '../Components/Navigation/NavBar';
 import Footer from '../Components/Footer/Footer';
 import BookDisplay from '../Components/ImageDisplay/BookDisplay';
-import BuynowButton from '../StripeApi/BuynowButton';
+import BuynowButton from '../StripeFrontend/BuynowButton';
 
 export default function WomansWorth() {
 	console.log(window.innerWidth);
-	const text =
-		'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Felis bibendum ut tristique et egestas quis ipsum suspendisse. Nam libero justo laoreet sit amet cursus sit amet. Rutrum quisque non tellus orci ac auctor augue. Facilisis sed odio morbi quis commodo. Consequat semper viverra nam libero justo laoreet sit amet. Donec et odio pellentesque diam volutpat commodo sed egestas egestas. \n \n Sem et tortor consequat id porta nibh venenatis. Pharetra vel turpis nunc eget lorem dolor sed viverra ipsum. Leo a diam sollicitudin tempor id eu nisl nunc. Semper risus in hendrerit gravida rutrum quisque. Id aliquet lectus proin nibh nisl condimentum id venenatis a. Purus faucibus ornare suspendisse sed nisi lacus. Ut faucibus pulvinar elementum integer. Non diam phasellus vestibulum lorem sed risus ultricies. Posuere lorem ipsum dolor sit amet consectetur adipiscing elit duis. Id cursus metus aliquam eleifend mi in nulla. Fusce ut placerat orci nulla pellentesque dignissim. Neque vitae tempus quam pellentesque nec nam. Senectus et netus et malesuada fames. \n \n Ultricies lacus sed turpis tincidunt id. Adipiscing vitae proin sagittis nisl rhoncus. Dui accumsan sit amet nulla facilisi morbi. Pharetra diam sit amet nisl suscipit adipiscing bibendum. Facilisi cras fermentum odio eu feugiat pretium nibh. Id aliquet risus feugiat in ante metus. Elementum facilisis leo vel fringilla est. Ac tortor dignissim convallis aenean et tortor at. Ultricies mi eget mauris pharetra et ultrices neque. Amet facilisis magna etiam tempor. Non blandit massa enim nec. Ac turpis egestas maecenas pharetra convallis posuere morbi.';
+	const text = `In this deeply moving and spiritually uplifting autobiography, T.L. Griffin invites you on a remarkable journey through the intricate tapestry of life. Drawing inspiration from the diverse experiences and encounters that have shaped her path, Griffin reflects on the profound connection between her own journey and her walk with God.
+
+This book is a testament to the power of spirituality, motivation, and encouragement. It serves as a gentle reminder that every person we meet has a purpose in our lives, whether for a fleeting moment or a lifetime. Griffin eloquently conveys the idea that God places individuals in our path, each with a unique role, to help us grow, learn, and make a positive impact.
+
+As you immerse yourself in these pages, you’ll discover the transformative power of reaching out to someone in need, of being the light that guides others through their darkest moments. The key takeaway is a message of unwavering encouragement and a call to never judge others solely by their outward appearance, for in doing so, we may unknowingly entertain angels among us.
+
+This inspirational autobiography is a heartfelt reminder of the beauty of life and the endless possibilities it offers. It’s a book that will leave you feeling uplifted, hopeful, and inspired to embrace each day with gratitude and a renewed sense of purpose. Read it, and let Griffin guide you on a journey that will make you feel good about life and the extraordinary potential it holds.`;
+
 	return (
 		<>
 			<div
@@ -19,7 +25,7 @@ export default function WomansWorth() {
 					alignItems: 'center',
 					justifyContent: 'flex-end',
 					height: '100%',
-					paddingTop: '6rem',
+					paddingTop: '11rem',
 				}}
 			>
 				<Navbar />
@@ -85,10 +91,10 @@ export default function WomansWorth() {
 							textAlign: 'left',
 							marginLeft: { xs: 0, sm: 5, md: 11 },
 							alignSelf: 'center',
-							width: { xs: '100%', sm: '100%',lg:"80%", xl: '80%' },
+							width: { xs: '100%', sm: '100%', lg: '80%', xl: '80%' },
 							marginBottom: 0,
 							fontFamily: 'inter',
-							fontSize: { xs: 14,md:15, lg: 16 },
+							fontSize: { xs: 14, md: 15, lg: 16 },
 							color: '#677884',
 							whiteSpace: 'pre-line',
 						}}

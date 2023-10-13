@@ -1,5 +1,5 @@
 import React from 'react';
-import bgremoved from '../../Images/ProfilePic.png';
+import bgremoved from '../../Images/home.png';
 import '../../index.css';
 import { Box } from '@mui/material';
 import MobileAuthorPicture from './MobileAuthorPicture';
