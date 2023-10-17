@@ -20,12 +20,12 @@ export default function BuynowButton({ display }) {
 				},
 				display,
 				// width: '100%',
-				maxWidth: { sm: '11rem' },
+				maxWidth: { xs:"8rem", sm: '9rem' },
 				fontFamily: 'inter',
 				fontSize: '15px',
 				letterSpacing: '2px',
-				marginLeft: { sm: '5rem', md: '4rem', lg: '4rem', xl: '8rem' },
-				marginBottom: { xs: 1, sm: 0 },
+				// marginLeft: { sm: '5rem', md: '4rem', lg: '4rem', xl: '8rem' },
+				// marginBottom: { xs: 5, sm: 0 },
 			}}
 		>
 			Buy Now
