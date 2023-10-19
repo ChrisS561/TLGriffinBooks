@@ -8,9 +8,7 @@ This project is a dynamic and user-friendly website developed for our client, [T
 # Technologies Used
 * *`React.js`*: The front-end of the website is developed using React.js, providing a dynamic and interactive user interface.
 
-* *`Auth0`*: Auth0 is used for user authentication and authorization, ensuring data security and privacy.
-
-* *`AWS Simple Storage (S3)`*: AWS S3 is used for scalable and cost-effective storage of PDF file assets.
+* *`Firebase`*: Firebase is used for user authentication and authorization, ensuring data security and privacy, and providing real-time database and hosting services.
 
 * *`Stripe`*: Stripe is integrated for secure and convenient payment processing.
 
