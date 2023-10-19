@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Stack, Typography } from '@mui/material';
+import { Box, Grid, Stack, Typography } from '@mui/material';
 import '../index.css';
 import Navbar from '../Components/Navigation/NavBar';
 import Footer from '../Components/Footer/Footer';
@@ -8,9 +8,7 @@ import BuynowButton from '../StripeFrontend/BuynowButton';
 import WomansWorthText from '../Components/Books/WomansWorthText';
 import PreviewButton from '../Components/Books/PreviewButton';
 
-
-//TODO Make the buttons on the this page responsive. & the buttons aren't the same size. 
-//TODO Fix the text below to make it presentable 
+//TODO fix the height of the title and buttons on the tablet screen. 
 export default function WomansWorth() {
 	console.log(window.innerWidth);
 
@@ -45,14 +43,12 @@ export default function WomansWorth() {
 								lg: '33rem',
 								xl: '36rem',
 							}}
-							// marginRight={{xl:"4rem"}}
 						/>
 					</Box>
 				</Stack>
 				<Box
 					sx={{
 						display: 'block',
-						// width: '100vw',
 						paddingRight: { xs: 1, sm: 11, md: 15, lg: 24, xl: 30 },
 						paddingTop: { sm: 14, md: 17, lg: 10, xl: 6 },
 						paddingBottom: { md: 15, lg: 9, xl: 9 },
@@ -69,14 +65,16 @@ export default function WomansWorth() {
 						variant="h3"
 						sx={{
 							display: 'block',
+							width: '99%',
 							color: '#4E5865',
 							textTransform: 'capitalize',
 							fontWeight: 'bold',
 							paddingLeft: { xs: 0, sm: 4, md: 10 },
 							textAlign: 'left',
-							letterSpacing: '5px',
+							letterSpacing: { xs: '5px', sm: '10px' },
 							fontFamily: 'inter',
 							fontSize: { xs: 36, sm: 48, lg: 60 },
+							marginLeft: { xs: 6, sm: 0 },
 						}}
 						gutterBottom
 					>
@@ -84,8 +82,8 @@ export default function WomansWorth() {
 					</Typography>
 					<Stack
 						direction="row"
-						spacing={3}
-						ml={{ xl: 10 }}
+						spacing={{ md: 6, lg: 6 }}
+						ml={{ lg: 3, xl: 10 }}
 						display={{ xs: 'none', md: 'flex' }}
 					>
 						<PreviewButton display="block" />
@@ -93,8 +91,10 @@ export default function WomansWorth() {
 					</Stack>
 					<Stack
 						direction="row"
-						spacing={3}
+						spacing={{ xs: 3, sm: 5 }}
 						display={{ xs: 'flex', md: 'none' }}
+						paddingLeft={{ xs: 6, sm: 0 }}
+						mb={{ xs: 5, sm: 0 }}
 					>
 						<PreviewButton display="block" />
 						<BuynowButton display="block" />

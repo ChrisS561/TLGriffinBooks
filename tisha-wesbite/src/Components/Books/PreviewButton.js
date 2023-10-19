@@ -8,7 +8,7 @@ export default function PreviewButton(display) {
 				fullWidth
 				variant="contained"
 				color="info"
-				href='/Preview'
+				href="/Preview"
 				sx={{
 					transition:
 						'box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease',
@@ -18,11 +18,12 @@ export default function PreviewButton(display) {
 					},
 					display,
 					// width: '100%',
-					maxWidth: { xs:"8rem", sm: '11rem' },
+					maxWidth: { xs: '8rem', sm: '9rem' },
 					fontFamily: 'inter',
 					fontSize: '15px',
 					letterSpacing: '2px',
-					// marginLeft: { sm: '5rem', md: '4rem', lg: '4rem', xl: '15rem' },
+					marginLeft: { sm: '2rem', md: '5rem', lg: '4rem', xl: '1rem' },
+					textAlign: 'center',
 					// marginBottom: { xs: 1, sm: 0 },
 				}}
 			>

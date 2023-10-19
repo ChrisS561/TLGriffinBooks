@@ -12,20 +12,20 @@ As you immerse yourself in these pages, you’ll discover the transformative pow
 This inspirational autobiography is a heartfelt reminder of the beauty of life and the endless possibilities it offers. It’s a book that will leave you feeling uplifted, hopeful, and inspired to embrace each day with gratitude and a renewed sense of purpose. Read it, and let Griffin guide you on a journey that will make you feel good about life and the extraordinary potential it holds.`;
 
   return (
-		<div className='womansworthText'>
+		<div className="womansworthText">
 			<Typography
 				variant="body1"
 				sx={{
 					display: 'block',
 					textAlign: 'left',
-					marginLeft: { xs: 0, sm: 5, md: 11 },
+					padding:{xs:3,sm:5,md:7,lg:10},
 					alignSelf: 'center',
-					width: { xs: '100%', sm: '100%', lg: '80%', xl: '80%' },
 					marginBottom: 0,
 					fontFamily: 'inter',
 					fontSize: { xs: 14, md: 15, lg: 16 },
 					color: '#677884',
 					whiteSpace: 'pre-line',
+					
 				}}
 				gutterBottom
 			>

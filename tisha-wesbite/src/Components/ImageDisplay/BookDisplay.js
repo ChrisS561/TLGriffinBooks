@@ -3,7 +3,6 @@ import BookPic from '../../Images/BookPic.png';
 import '../../index.css';
 import { Box } from '@mui/material';
 
-
 export default function BookDisplay({
 	display,
 	height,
