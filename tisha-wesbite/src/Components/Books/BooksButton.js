@@ -69,7 +69,7 @@ export default function BooksButton() {
 					<FormControl fullWidth>
 						<InputLabel
 							id="demo-simple-select-label"
-							sx={{ alignSelf: 'center' }}
+							sx={{ alignSelf: 'center',alignItems:'center' }}
 						>
 							Books
 						</InputLabel>
