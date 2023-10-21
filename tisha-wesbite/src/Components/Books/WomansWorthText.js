@@ -12,7 +12,7 @@ As you immerse yourself in these pages, you’ll discover the transformative pow
 This inspirational autobiography is a heartfelt reminder of the beauty of life and the endless possibilities it offers. It’s a book that will leave you feeling uplifted, hopeful, and inspired to embrace each day with gratitude and a renewed sense of purpose. Read it, and let Griffin guide you on a journey that will make you feel good about life and the extraordinary potential it holds.`;
 
   return (
-		<div className="womansworthText">
+		<div className="womans-worth-text">
 			<Typography
 				variant="body1"
 				sx={{

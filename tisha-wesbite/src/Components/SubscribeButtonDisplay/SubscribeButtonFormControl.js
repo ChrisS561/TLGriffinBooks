@@ -1,5 +1,6 @@
 import { Button, Stack, TextField } from '@mui/material';
 import React, { useState } from 'react';
+import validator from 'validator';
 
 export default function SubmitButtonFormControl() {
 	const [inputForm, setInputForm] = useState({
@@ -18,7 +19,16 @@ export default function SubmitButtonFormControl() {
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
-		setError(true);
+		const { firstname, lastname, email } = inputForm;
+		if (!firstname || !lastname || !email) {
+			setError(true);
+			return;
+		}
+		if (!validator.isEmail(email)) {
+			alert('Please enter a valid email address.');
+			return;
+		}
+		setError(false);
 		console.log(inputForm);
 	};
 

@@ -15,7 +15,7 @@ export default function WomansWorth() {
 	return (
 		<>
 			<div
-				className="womansworth"
+				className="womans-worth"
 				style={{
 					display: 'flex',
 					alignItems: 'center',

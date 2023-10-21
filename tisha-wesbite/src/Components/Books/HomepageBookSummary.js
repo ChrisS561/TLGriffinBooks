@@ -5,7 +5,7 @@ import BookDisplay from '../ImageDisplay/BookDisplay';
 
 export default function AuthorBookDisplay() {
 	return (
-		<div className="bookdisplay">
+		<div className="book-display">
 			<Typography
 				variant="h3"
 				sx={{
