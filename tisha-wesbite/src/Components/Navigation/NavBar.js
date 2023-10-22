@@ -117,9 +117,9 @@ export default function HideAppBar(props) {
 												color: '#4E5865',
 												margin: '0 auto',
 											}}
-											href="/About"
+											href="/"
 										>
-											About
+											Home
 										</Button>
 									</MenuItem>
 									<MenuItem onClick={handleCloseNavMenu}>
@@ -129,9 +129,9 @@ export default function HideAppBar(props) {
 												color: '#4E5865',
 												margin: '0 auto',
 											}}
-											href="/Events"
+											href="/About"
 										>
-											Events
+											About
 										</Button>
 									</MenuItem>
 									<SubscribeButton />
@@ -176,11 +176,10 @@ export default function HideAppBar(props) {
 										fontFamily: 'inter',
 										margin: '1rem',
 									}}
-									href="/About"
+									href="/"
 								>
-									About
+									Home
 								</Button>
-								<BooksButton />
 								<Button
 									onClick={handleCloseNavMenu}
 									sx={{
@@ -191,10 +190,11 @@ export default function HideAppBar(props) {
 										fontFamily: 'inter',
 										margin: '1rem',
 									}}
-									href="/Events"
+									href="/About"
 								>
-									Events
+									About
 								</Button>
+								<BooksButton />
 								<SubscribeButton />
 							</Box>
 						</Toolbar>

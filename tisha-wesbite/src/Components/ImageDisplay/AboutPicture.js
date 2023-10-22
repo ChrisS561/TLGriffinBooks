@@ -1,9 +1,9 @@
 import React from 'react';
-import BookPic from '../../Images/BookPic.png';
+import AboutPic from '../../Images/AuntTisha.jpeg';
 import '../../index.css';
 import { Box } from '@mui/material';
 
-export default function BookDisplay({
+export default function Aboutpic({
 	display,
 	height,
 	position,
@@ -24,7 +24,7 @@ export default function BookDisplay({
 				}}
 			>
 				<img
-					src={BookPic}
+					src={AboutPic}
 					alt="Profile"
 					loading="lazy"
 					style={{ objectFit: 'cover' }}

@@ -5,7 +5,7 @@ import BookDisplay from '../ImageDisplay/BookDisplay';
 
 export default function AuthorBookDisplay() {
 	return (
-		<div className="bookdisplay">
+		<div className="book-display">
 			<Typography
 				variant="h3"
 				sx={{
@@ -25,7 +25,7 @@ export default function AuthorBookDisplay() {
 			</Typography>
 			<Box sx={{ display: { xs: 'flex', sm: 'none' } }}>
 				<BookDisplay
-				display="flex"
+					display="flex"
 					height={{
 						xs: '26rem',
 						sm: '30rem',
@@ -74,13 +74,12 @@ export default function AuthorBookDisplay() {
 						}}
 						gutterBottom
 					>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-						ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-						aliquip ex ea commodo consequat. Duis aute irure dolor in
-						reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-						pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-						culpa qui officia deserunt mollit anim id est laborum.
+						T.L. Griffin's moving autobiography, A Woman’s Worth explores life's
+						intricate tapestry, finding inspiration in diverse experiences. It
+						emphasizes spirituality's power, encouraging us to connect with
+						others and embrace the hidden potential in every encounter.
+						Griffin's heartfelt reminder to never judge based on appearances
+						uplifts and inspires, making each day brim with purpose.
 					</Typography>
 					<Button
 						variant="contained"
@@ -110,7 +109,7 @@ export default function AuthorBookDisplay() {
 				</Stack>
 				<Box sx={{ display: { xs: 'none', sm: 'flex', paddingTop: '8rem' } }}>
 					<BookDisplay
-					display="flex"
+						display="flex"
 						height={{
 							xs: '26rem',
 							sm: '30rem',

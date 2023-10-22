@@ -48,7 +48,7 @@ code {
   width: 100vw;
 }
 
-.bookdisplay {
+.book-display {
   height: 100vh;
   width: 100vw;
   background-color: #FAF9F8;
@@ -74,7 +74,7 @@ code {
   }
 }
 
-.womensworth{ 
+.womans-worth{ 
   background-image: linear-gradient(to bottom, #faf9f8 28%,#E9E7E2 28%);
   background-color: #E9E7E2;
   background-size: cover;
@@ -83,4 +83,37 @@ code {
   height: 100vh;
   width: 100vw;
    
+}
+
+.womans-worth-text{
+  height: 100%;
+    width: 100vw;
+    background-color: #FFFFFF;
+}
+
+.about-bg {
+background-color: white;
+  background-image: linear-gradient(to bottom, #faf9f8 28%, #c3d9dc 28%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+
+}
+
+.about-text{
+  height: 100%;
+    width: 100vw;
+    background-color: #FFFFFF;
+}
+
+.upcoming-events{ 
+  background-color: white;
+    background-image: linear-gradient(to bottom, #faf9f8 28%, #E9E7E2 28%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
 }

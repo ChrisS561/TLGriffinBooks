@@ -77,7 +77,7 @@ export default function EventsHomepage() {
 
 						<Button
 							variant="contained"
-							href="/Events"
+							href="/Upcoming-Events"
 							color="info"
 							sx={{
 								transition:
