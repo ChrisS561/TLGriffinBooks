@@ -5,7 +5,7 @@ import {
 } from "recoil";
 import { Routes, Route } from "react-router-dom";
 import WomansWorth from "./Pages/WomansWorth";
-import Events from "./Pages/Events";
+import Events from "./Pages/UpcomingEvents";
 import About from "./Pages/About";
 import PreviewPage from "./Pages/PreviewPage";
 
@@ -16,7 +16,7 @@ function App() {
 				<Route path="/" element={<AppCoverpage />} />
 				<Route path="/About" element={<About/>} />
 				<Route path="/Preview" element={<PreviewPage/>} />
-				<Route path="/Events" element={<Events/>} />
+				<Route path="/Upcoming-Events" element={<Events/>} />
 				<Route path="/A-Womans-Worth" element={<WomansWorth/>} />
 			</Routes>
 		</RecoilRoot>

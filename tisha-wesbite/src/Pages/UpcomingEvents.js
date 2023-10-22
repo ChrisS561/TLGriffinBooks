@@ -4,15 +4,17 @@ import '../index.css';
 
 import Navbar from '../Components/Navigation/NavBar';
 import Footer from '../Components/Footer/Footer';
-import AboutText from '../Components/About/AboutText';
 import AboutPicture from '../Components/ImageDisplay/AboutPicture';
+import UpcomingEventsText from '../Components/UpcomingEvents/UpcomingEventsText';
+import UpcomingEventsImage from '../Components/ImageDisplay/UpcomingEventsImage';
+import MobileUpcomingEventsImage from '../Components/ImageDisplay/MobileUpcomingEventsImage';
 
 // TODO: Fix the height of the title and buttons on the tablet screen.
-export default function About() {
+export default function UpcomingEvents() {
 	return (
 		<>
 			<div
-				className="about-bg"
+				className="upcoming-events"
 				style={{
 					display: 'flex',
 					alignItems: 'center',
@@ -74,7 +76,7 @@ export default function About() {
 						}}
 						gutterBottom
 					>
-						About The Author
+						A Woman's Worth
 					</Typography>
 					<Typography
 						variant="h3"
@@ -91,7 +93,7 @@ export default function About() {
 							fontSize: { xs: 36, sm: 48, lg: 60 },
 						}}
 					>
-						T.L.
+						BOOK
 					</Typography>
 					<Typography
 						variant="h3"
@@ -110,11 +112,25 @@ export default function About() {
 						}}
 						gutterBottom
 					>
-						GRIFFIN
+						SIGNING
 					</Typography>
 				</Box>
 			</div>
-			<AboutText />
+			<Stack
+				direction="row"
+				spacing={{ sm: 3, md: 9 }}
+				sx={{ display: { xs: 'none', sm: 'flex' }, padding: { sm: 6, lg: 10 } }}
+			>
+				<UpcomingEventsText />
+				<UpcomingEventsImage />
+			</Stack>
+			<Stack
+				direction="column"
+				sx={{ display: { xs: 'flex', sm: 'none' }}}
+			>
+				<UpcomingEventsText />
+        <MobileUpcomingEventsImage/>
+			</Stack>
 			<Footer />
 		</>
 	);

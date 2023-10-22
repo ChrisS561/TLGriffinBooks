@@ -107,3 +107,13 @@ background-color: white;
     width: 100vw;
     background-color: #FFFFFF;
 }
+
+.upcoming-events{ 
+  background-color: white;
+    background-image: linear-gradient(to bottom, #faf9f8 28%, #E9E7E2 28%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+}

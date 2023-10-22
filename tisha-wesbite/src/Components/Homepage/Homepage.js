@@ -69,12 +69,11 @@ export default function Homepage() {
 						}}
 						gutterBottom
 					>
-						T.L. Griffin, a devoted author and nurse, has written novels and
-						poems since [XXXX]. Her work encompasses love, loss, femininity, and
-						encouragement. Her goal is to inspire others and contribute to the
-						world's betterment. Griffin, a mother of two and nurse with over 20
-						years of experience, gives thanks to God and her family for helping
-						mold her into the woman she is today.
+						T.L. Griffin, a writer with over two decades of nursing experience,
+						draws inspiration from the remarkable women who have influenced her
+						life. She aspires to inspire, uplift, and become a positive role
+						model through her heartfelt words, making the world a brighter
+						place.
 					</Typography>
 
 					<Box

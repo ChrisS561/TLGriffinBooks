@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Grid, Stack, Typography } from '@mui/material';
+import { Box, Stack, Typography } from '@mui/material';
 import '../index.css';
 import Navbar from '../Components/Navigation/NavBar';
 import Footer from '../Components/Footer/Footer';
@@ -8,7 +8,7 @@ import BuynowButton from '../StripeFrontend/BuynowButton';
 import WomansWorthText from '../Components/Books/WomansWorthText';
 import PreviewButton from '../Components/Books/PreviewButton';
 
-//TODO fix the height of the title and buttons on the tablet screen. 
+//TODO fix the height of the title and buttons on the tablet screen.
 export default function WomansWorth() {
 	console.log(window.innerWidth);
 
@@ -94,7 +94,7 @@ export default function WomansWorth() {
 						spacing={{ xs: 3, sm: 5 }}
 						display={{ xs: 'flex', md: 'none' }}
 						paddingLeft={{ xs: 6, sm: 0 }}
-						mb={{ xs: 5, sm: 30,md:0 }}
+						mb={{ xs: 5, sm: 30, md: 0 }}
 					>
 						<PreviewButton display="block" />
 						<BuynowButton display="block" />
