@@ -4,10 +4,11 @@ import '../index.css';
 
 import Navbar from '../Components/Navigation/NavBar';
 import Footer from '../Components/Footer/Footer';
-import AboutPicture from '../Components/ImageDisplay/AboutPicture';
 import UpcomingEventsText from '../Components/UpcomingEvents/UpcomingEventsText';
 import UpcomingEventsImage from '../Components/ImageDisplay/UpcomingEventsImage';
 import MobileUpcomingEventsImage from '../Components/ImageDisplay/MobileUpcomingEventsImage';
+import BookSigningPicture from '../Components/ImageDisplay/BookSigningPicture';
+import MobileBookSigningPicture from '../Components/ImageDisplay/MobileBookSigningPicture';
 
 // TODO: Fix the height of the title and buttons on the tablet screen.
 export default function UpcomingEvents() {
@@ -34,7 +35,7 @@ export default function UpcomingEvents() {
 					}}
 				>
 					<Box>
-						<AboutPicture
+						<BookSigningPicture
 							display={{ xs: 'none', sm: 'flex' }}
 							height={{
 								sm: '25rem',
@@ -54,7 +55,7 @@ export default function UpcomingEvents() {
 					}}
 				>
 					<Box>
-						<AboutPicture
+						<MobileBookSigningPicture
 							display={{ xs: 'flex', sm: 'none' }}
 							height={{ xs: '25rem' }}
 							marginRight={{ xs: 5, sm: 0 }}

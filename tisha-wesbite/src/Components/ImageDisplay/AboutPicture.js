@@ -3,7 +3,7 @@ import AboutPic from '../../Images/AuntTisha.jpeg';
 import '../../index.css';
 import { Box } from '@mui/material';
 
-export default function Aboutpic({
+export default function AboutPicture({
 	display,
 	height,
 	position,
