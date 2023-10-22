@@ -1,5 +1,5 @@
 import React from 'react';
-import pic from '../../Images/Attachment.jpg';
+import pic from '../../Images/HomepagePic.jpg';
 import '../../index.css';
 import { Box } from '@mui/material';
 

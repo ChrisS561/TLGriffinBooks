@@ -40,7 +40,7 @@ code {
 
 .homepage {
   background-color: white;
-  background-image: linear-gradient(to bottom, #faf9f8 24%, #c3d9dc 24%);
+  background-image: linear-gradient(to bottom, #F4F3F0 24%,#E9E7E2 24%);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -51,7 +51,7 @@ code {
 .book-display {
   height: 100vh;
   width: 100vw;
-  background-color: #FAF9F8;
+  background-color: #F4F3F0;
 
 }
 

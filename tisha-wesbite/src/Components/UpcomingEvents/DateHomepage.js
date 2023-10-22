@@ -11,7 +11,7 @@ export default function DateHomepage() {
 					height: { sm: 120, md: 170, lg: 200 },
 					width: { sm: 120, md: 170, lg: 200 },
 					backgroundColor: '#C3D9DC',
-					marginTop: { sm: -32, md: -38 },
+					marginTop: { sm: -32, md: -35 },
 					marginLeft: { sm: 5, md: 8, lg: 14, xl: 23 },
 				}}
 			>

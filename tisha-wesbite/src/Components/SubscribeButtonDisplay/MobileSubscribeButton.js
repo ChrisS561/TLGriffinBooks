@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Button from '@mui/material/Button';
-import SubscribeButtonModal from './SubscribeButtonModal';
+import SubscribeModal from './SubscribeModal';
 import { Box } from '@mui/material';
 
 export default function MobileSubscribeButton(props) {
@@ -10,7 +10,7 @@ export default function MobileSubscribeButton(props) {
 			<Box
 				sx={{ display: { xs: 'flex', sm: 'none' }, justifyContent: 'center' }}
 			>
-				<SubscribeButtonModal open={open} handleClose={handleClose} />
+				<SubscribeModal open={open} handleClose={handleClose} />
 				<Button
 					onClick={handleOpen}
 					sx={{
