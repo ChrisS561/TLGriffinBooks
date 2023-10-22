@@ -10,6 +10,7 @@ export default function AboutPicture({
 	marginBottom,
 	marginLeft,
 	marginRight,
+	marginTop,
 }) {
 	return (
 		<>
@@ -21,6 +22,7 @@ export default function AboutPicture({
 					marginBottom,
 					marginRight,
 					marginLeft,
+					marginTop
 				}}
 			>
 				<img

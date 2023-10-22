@@ -11,7 +11,8 @@ export default function MobileBookSigningPicture() {
 				sx={{
 					display: { xs: 'flex', sm: 'none' },
 					marginLeft: 2,
-					height: { xs: '26rem' },
+					marginRight:5,
+					height: { xs: '25rem' },
 				}}
 			>
 				<img
