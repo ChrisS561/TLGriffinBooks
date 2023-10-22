@@ -74,6 +74,11 @@ export default function HideAppBar(props) {
 									letterSpacing: '.3rem',
 									color: common.black,
 									textDecoration: 'none',
+									transition:
+										'box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease',
+									'&:hover': {
+										transform: 'scale(1.05)', // Slight scale on hover
+									},
 								}}
 							>
 								T.L. Griffin

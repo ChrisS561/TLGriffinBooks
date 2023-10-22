@@ -61,6 +61,9 @@ code {
   color: #faf9f8 !important;
   /* background-color: #DCA564 !important; */
 }
+.MuiButton-outlined {
+color: black !important;
+}
 
 .events{ 
   height: 80vh;
