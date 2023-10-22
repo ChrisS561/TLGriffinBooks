@@ -94,7 +94,7 @@ export default function WomansWorth() {
 						spacing={{ xs: 3, sm: 5 }}
 						display={{ xs: 'flex', md: 'none' }}
 						paddingLeft={{ xs: 6, sm: 0 }}
-						mb={{ xs: 5, sm: 30, md: 0 }}
+						mb={{ xs: 10, sm: 30, md: 0 }}
 					>
 						<PreviewButton display="block" />
 						<BuynowButton display="block" />

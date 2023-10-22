@@ -75,7 +75,7 @@ export default function MobileHomepage() {
 
 							<Button
 								variant="contained"
-								href="/Events"
+								href="/Upcoming-Events"
 								color="info"
 								sx={{
 									transition:

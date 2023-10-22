@@ -1,16 +1,18 @@
 import React from 'react';
 import pic from '../../Images/UpcomingEvents.jpg';
 import '../../index.css';
-import { Box } from '@mui/material';
+import { Box, Grid } from '@mui/material';
 
 export default function MobileUpcomingEventsImage() {
-	return (
-		<>
+return (
+	<Grid container display={{ xs: 'flex', sm: 'none' }}>
+		<Grid item xs={12}>
 			<Box
 				sx={{
 					display: { xs: 'flex', sm: 'none' },
-					marginLeft: 2,
-					height: { xs: '20rem' },
+					marginLeft: 4,
+					marginBottom:3,
+					height: { xs: '22rem' },
 				}}
 			>
 				<img
@@ -20,6 +22,7 @@ export default function MobileUpcomingEventsImage() {
 					style={{ objectFit: 'cover' }}
 				/>
 			</Box>
-		</>
-	);
+		</Grid>
+	</Grid>
+);
 }

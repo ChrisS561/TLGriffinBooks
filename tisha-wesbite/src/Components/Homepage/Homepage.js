@@ -3,10 +3,8 @@ import { Box, Button, Typography } from '@mui/material';
 import '../../index.css';
 import AuthorPicture from '../../Components/ImageDisplay/AuthorPicture';
 
-
 export default function Homepage() {
-  
-  return (
+	return (
 		<>
 			<div
 				className="homepage"
@@ -105,6 +103,7 @@ export default function Homepage() {
 								fontSize: '15px',
 								letterSpacing: '3px',
 								textAlign: 'center',
+								marginBottom: { xs: 5, sm: 0 },
 							}}
 						>
 							Read More

@@ -7,6 +7,7 @@ import MobileUpcomingEventsImage from './MobileUpcomingEventsImage';
 export default function UpcomingEventsImage() {
 	return (
 		<>
+		
 			<Box
 				sx={{
 					display: { xs: 'none', sm: 'flex' },
