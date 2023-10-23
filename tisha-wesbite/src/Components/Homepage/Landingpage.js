@@ -57,9 +57,11 @@ export default function Landingpage() {
 				}}
 			>
 				<Typography sx={{ color: '#72320A', fontSize: 16 }}>
-					Scroll down to explore
+					Uncover More About The Author
 				</Typography>
-				<ArrowDownwardIcon sx={{ fontSize: 30 }} />
+				<ArrowDownwardIcon
+					sx={{ fontSize: 30, animation: 'spinning 2s linear infinite' }}
+				/>
 			</Box>
 		</div>
 	);
