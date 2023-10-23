@@ -37,7 +37,7 @@ export default function SubmitButtonFormControl() {
 
 	return (
 		<div>
-			<Stack direction="column" >
+			<Stack direction="column">
 				<TextField
 					required
 					id="firstname"

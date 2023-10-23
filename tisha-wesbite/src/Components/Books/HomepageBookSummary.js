@@ -11,7 +11,7 @@ export default function AuthorBookDisplay() {
 				sx={{
 					display: { xs: 'block', sm: 'none' },
 					paddingTop: 5,
-					color: '#4E5865',
+					color: '#72320A',
 					marginLeft: 2,
 					textTransform: 'capitalize',
 					fontWeight: 'bold',
@@ -47,7 +47,7 @@ export default function AuthorBookDisplay() {
 						sx={{
 							display: { xs: 'none', sm: 'block' },
 							paddingTop: '15rem',
-							color: '#4E5865',
+							color: '#72320A',
 							textTransform: 'capitalize',
 							fontWeight: 'bold',
 							textAlign: 'left',
@@ -70,7 +70,7 @@ export default function AuthorBookDisplay() {
 							fontFamily: 'inter',
 							fontSize: { xs: 14, lg: 16 },
 							width: { xs: '100%', sm: '75%' },
-							color: '#677884',
+							color: '#72320A',
 						}}
 						gutterBottom
 					>

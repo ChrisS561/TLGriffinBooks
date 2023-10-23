@@ -9,7 +9,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import { common } from '@mui/material/colors';
 
 import SubscribeButton from '../SubscribeButtonDisplay/SubscribeButton';
 import PropTypes from 'prop-types';
@@ -58,7 +57,7 @@ export default function HideAppBar(props) {
 		<React.Fragment>
 			<CssBaseline />
 			<HideOnScroll {...props}>
-				<AppBar sx={{ backgroundColor: '#FAF9F8' }}>
+				<AppBar sx={{ backgroundColor: '#FFFFFF' }}>
 					<Container maxWidth="l">
 						<Toolbar>
 							<Typography
@@ -72,7 +71,7 @@ export default function HideAppBar(props) {
 									fontFamily: 'Playfair Display',
 									fontWeight: 700,
 									letterSpacing: '.3rem',
-									color: common.black,
+									color: '#72320A',
 									textDecoration: 'none',
 									transition:
 										'box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease',
@@ -119,7 +118,7 @@ export default function HideAppBar(props) {
 										<Button
 											sx={{
 												fontFamily: 'inter',
-												color: '#4E5865',
+												color: '#72320A',
 												margin: '0 auto',
 											}}
 											href="/"
@@ -131,7 +130,7 @@ export default function HideAppBar(props) {
 										<Button
 											sx={{
 												fontFamily: 'inter',
-												color: '#4E5865',
+												color: '#72320A',
 												margin: '0 auto',
 											}}
 											href="/About"
@@ -155,7 +154,7 @@ export default function HideAppBar(props) {
 									fontFamily: 'Playfair Display',
 									fontWeight: 700,
 									letterSpacing: '.1px',
-									color: 'common.black',
+									color: '#72320A',
 									textDecoration: 'none',
 								}}
 							>
@@ -175,7 +174,7 @@ export default function HideAppBar(props) {
 									onClick={handleCloseNavMenu}
 									sx={{
 										my: 2,
-										color: '#4E5865',
+										color: '#72320A',
 										display: 'block',
 										fontSize: 15,
 										fontFamily: 'inter',
@@ -189,7 +188,7 @@ export default function HideAppBar(props) {
 									onClick={handleCloseNavMenu}
 									sx={{
 										my: 2,
-										color: '#4E5865',
+										color: '#72320A',
 										display: 'block',
 										fontSize: 15,
 										fontFamily: 'inter',

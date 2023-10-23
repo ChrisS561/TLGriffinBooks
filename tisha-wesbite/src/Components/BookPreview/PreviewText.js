@@ -15,7 +15,7 @@ export default function PreviewText() {
 					textAlign: 'left',
 					fontFamily: 'Arial, sans-serif',
 					fontSize: { xs: 24, md: 28, lg: 32 },
-					color: '#4E5865',
+					color: '#72320A',
 				}}
 				gutterBottom
 			>

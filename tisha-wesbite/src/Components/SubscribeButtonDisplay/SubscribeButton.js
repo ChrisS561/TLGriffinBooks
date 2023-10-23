@@ -12,13 +12,15 @@ export default function SubscribeButton() {
 
 	return (
 		<>
-			<Box sx={{ display: { xs: 'none', sm: 'flex' },justifyContent: 'center'  }}>
+			<Box
+				sx={{ display: { xs: 'none', sm: 'flex' }, justifyContent: 'center' }}
+			>
 				<SubscribeModal open={open} handleClose={handleClose} />
 				<Button
 					onClick={handleOpen}
 					sx={{
 						my: 2,
-						color: '#4E5865',
+						color: '#72320A',
 						display: { xs: 'none', sm: 'block' },
 						fontSize: 15,
 						fontFamily: 'inter',

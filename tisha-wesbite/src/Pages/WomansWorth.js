@@ -66,7 +66,7 @@ export default function WomansWorth() {
 						sx={{
 							display: 'block',
 							width: '99%',
-							color: '#4E5865',
+							color: '#72320A',
 							textTransform: 'capitalize',
 							fontWeight: 'bold',
 							paddingLeft: { xs: 0, sm: 4, md: 10 },

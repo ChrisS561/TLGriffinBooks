@@ -1,9 +1,9 @@
 import React from 'react';
 import { Box, Button, Typography } from '@mui/material';
 import '../../index.css';
-import AuthorPicture from '../../Components/ImageDisplay/AuthorPicture';
+import AuthorPicture from '../ImageDisplay/AuthorPicture';
 
-export default function Homepage() {
+export default function AuthorBio() {
 	return (
 		<>
 			<div
@@ -30,7 +30,7 @@ export default function Homepage() {
 						marginRight: { xs: 1, sm: 10, md: 15, lg: 24 },
 						marginTop: { sm: 5, lg: 0 },
 						marginBottom: { md: 15, lg: 9 },
-						ml:{sm:5,md:0}
+						ml: { sm: 5, md: 0 },
 					}}
 				>
 					<Box sx={{ display: { xs: 'flex', sm: 'none' } }}>
@@ -40,7 +40,7 @@ export default function Homepage() {
 						variant="h3"
 						sx={{
 							display: 'block',
-							color: '#4E5865',
+							color: '#72320A',
 							textTransform: 'capitalize',
 							fontWeight: 'bold',
 							marginLeft: { xs: 2, sm: 0 },
@@ -64,7 +64,7 @@ export default function Homepage() {
 							marginBottom: 3,
 							fontFamily: 'inter',
 							fontSize: { xs: 14, lg: 16 },
-							color: '#677884',
+							color: '#72320A',
 						}}
 						gutterBottom
 					>

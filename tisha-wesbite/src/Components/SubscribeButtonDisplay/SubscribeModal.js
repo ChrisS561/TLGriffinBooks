@@ -29,7 +29,7 @@ export default function SubscribeModal(props) {
 					<Box
 						sx={{
 							display: 'flex',
-							backgroundColor: '#E8E6E1',
+							backgroundColor: '#E6E2DF',
 							maxWidth: { sm: 700, md: 800 },
 							height: '100vh',
 							width: '100vw',
@@ -50,14 +50,13 @@ export default function SubscribeModal(props) {
 								variant="h5"
 								sx={{
 									display: 'block',
-									color: '#4E5865',
+									color: '#72320A',
 									textTransform: 'capitalize',
 									fontWeight: 'bold',
 									letterSpacing: '2px',
 									fontFamily: 'inter',
 									fontSize: { sm: 18, md: 20, lg: 25, xl: 30 },
 								}}
-								
 							>
 								STAY CONNECT
 							</Typography>
@@ -70,7 +69,7 @@ export default function SubscribeModal(props) {
 									letterSpacing: { sm: '0', md: '0.1px', lg: '1.5px' },
 									fontFamily: 'inter',
 									fontSize: { xs: 13, lg: 12 },
-									color: '#677884',
+									color: '#72320A',
 								}}
 							>
 								Join my exclusive author's newsletter for a weekly dose of
@@ -104,7 +103,7 @@ export default function SubscribeModal(props) {
 					<Box
 						sx={{
 							display: 'flex',
-							backgroundColor: '#E8E6E1',
+							backgroundColor: '#E6E2DF',
 							maxWidth: { xs: 400, sm: 700, md: 800 },
 							height: '100vh',
 							width: '100vw',
@@ -124,7 +123,7 @@ export default function SubscribeModal(props) {
 								variant="h5"
 								sx={{
 									display: 'block',
-									color: '#4E5865',
+									color: '#72320A',
 									textTransform: 'capitalize',
 									fontWeight: 'bold',
 									letterSpacing: '2px',
@@ -144,7 +143,7 @@ export default function SubscribeModal(props) {
 									letterSpacing: { sm: '0', md: '0.1px', lg: '1.5px' },
 									fontFamily: 'inter',
 									fontSize: { xs: 13, lg: 12 },
-									color: '#677884',
+									color: '#72320A',
 								}}
 							>
 								My weekly insider`s email is basically the best! I send an email

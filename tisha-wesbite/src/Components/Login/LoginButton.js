@@ -10,7 +10,7 @@ const LoginButton = () => {
 			sx={{
 				display: 'inherit',
 				fontFamily: 'inter',
-				color: '#4E5865',
+				color: '#72320A',
 				margin: '1rem',
 			}}
 			onClick={() => loginWithRedirect()}

@@ -21,6 +21,7 @@ export default function EventsHomepage() {
 						width: '70%',
 						height: { sm: '20rem', md: '25rem' },
 						margin: '0 auto',
+						borderColor: '#72320A',
 					}}
 				>
 					<Stack
@@ -36,7 +37,7 @@ export default function EventsHomepage() {
 							variant="h3"
 							sx={{
 								paddingTop: { sm: '4rem', md: '6rem', lg: '5rem' },
-								color: '#4E5865',
+								color: '#72320A',
 								textTransform: 'capitalize',
 								fontWeight: 'bold',
 								fontFamily: 'inter',
@@ -50,7 +51,7 @@ export default function EventsHomepage() {
 						<Typography
 							variant="body1"
 							sx={{
-								color: '#4E5865',
+								color: '#72320A',
 								textTransform: 'capitalize',
 								fontFamily: 'inter',
 								letterSpacing: '1px',
@@ -63,7 +64,7 @@ export default function EventsHomepage() {
 						<Typography
 							variant="body1"
 							sx={{
-								color: '#4E5865',
+								color: '#72320A',
 								textTransform: 'capitalize',
 								textAlign: 'left',
 								fontFamily: 'inter',

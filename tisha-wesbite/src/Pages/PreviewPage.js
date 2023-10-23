@@ -17,7 +17,7 @@ export default function PreviewPage() {
 					fontFamily: 'Playfair Display',
 					fontWeight: 700,
 					letterSpacing: '.3rem',
-					color: '#4E5865',
+					color: '#72320A',
 					textDecoration: 'none',
 					padding: { xs: 2, sm: 4 },
 					
@@ -30,7 +30,7 @@ export default function PreviewPage() {
 				variant="h3"
 				sx={{
 					display: 'flex',
-					color: '#4E5865',
+					color: '#72320A',
 					textTransform: 'capitalize',
 					fontWeight: 'bold',
 					textAlign: 'left',
@@ -39,7 +39,7 @@ export default function PreviewPage() {
 					fontSize: { xs: 36, sm: 48, lg: 60 },
 					justifyContent: { sm: 'center' },
 					pl: { xs: 2, sm: 0 },
-					paddingTop: { xs: 14, sm: 10, lg: 11, xl: 12 },
+					paddingTop: { xs: 18, sm: 15, lg: 17, xl: 20 },
 				}}
 				gutterBottom
 			>

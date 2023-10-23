@@ -15,7 +15,7 @@ export default function MobileSubscribeButton(props) {
 					onClick={handleOpen}
 					sx={{
 						my: 2,
-						color: '#4E5865',
+						color: '#72320A',
 						fontSize: 15,
 						fontFamily: 'inter',
 						margin: '1rem',

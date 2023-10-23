@@ -18,14 +18,13 @@ This inspirational autobiography is a heartfelt reminder of the beauty of life a
 				sx={{
 					display: 'block',
 					textAlign: 'left',
-					padding:{xs:4,sm:5,md:7,lg:10},
+					padding: { xs: 4, sm: 5, md: 7, lg: 10 },
 					alignSelf: 'center',
 					marginBottom: 0,
 					fontFamily: 'inter',
 					fontSize: { xs: 14, md: 15, lg: 16 },
-					color: '#677884',
+					color: '#72320A',
 					whiteSpace: 'pre-line',
-					
 				}}
 				gutterBottom
 			>

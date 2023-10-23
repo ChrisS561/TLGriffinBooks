@@ -6,7 +6,6 @@ import Footer from '../Components/Footer/Footer';
 import AboutText from '../Components/About/AboutText';
 import AboutPicture from '../Components/ImageDisplay/AboutPicture';
 
-// TODO: Fix the height of the title and buttons on the tablet screen.
 export default function About() {
 	return (
 		<>
@@ -33,7 +32,7 @@ export default function About() {
 					<Box>
 						<AboutPicture
 							display={{ xs: 'none', sm: 'flex' }}
-							marginTop={{sm:5,md:5}}
+							marginTop={{ sm: 5, md: 5 }}
 							height={{
 								sm: '30rem',
 								md: '32rem',
@@ -64,7 +63,7 @@ export default function About() {
 						sx={{
 							display: 'block',
 							width: '100%',
-							color: '#4E5865',
+							color: '#72320A',
 							textTransform: 'capitalize',
 							paddingLeft: { xs: 0, sm: 4, md: 10 },
 							textAlign: 'left',
@@ -81,7 +80,7 @@ export default function About() {
 						sx={{
 							display: 'block',
 							width: '100%',
-							color: '#4E5865',
+							color: '#72320A',
 							textTransform: 'capitalize',
 							fontWeight: 'bold',
 							paddingLeft: { xs: 0, sm: 4, md: 10 },
@@ -98,7 +97,7 @@ export default function About() {
 						sx={{
 							display: 'block',
 							width: '100%',
-							color: '#4E5865',
+							color: '#72320A',
 							textTransform: 'capitalize',
 							fontWeight: 'bold',
 							paddingLeft: { xs: 0, sm: 4, md: 10 },
@@ -106,7 +105,7 @@ export default function About() {
 							letterSpacing: { xs: '5px', sm: '10px' },
 							fontFamily: 'Inter, sans-serif',
 							fontSize: { xs: 36, sm: 48, lg: 60 },
-							marginBottom: { sm: 20, md: 10,lg:0 },
+							marginBottom: { sm: 20, md: 10, lg: 0 },
 						}}
 						gutterBottom
 					>
@@ -115,7 +114,8 @@ export default function About() {
 				</Box>
 			</div>
 			<AboutText />
-			<Footer />
+			<Footer toolbarColor="#FFFFFF" />
+			
 		</>
 	);
 }
