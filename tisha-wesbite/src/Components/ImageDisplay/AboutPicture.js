@@ -3,13 +3,14 @@ import AboutPic from '../../Images/AuntTisha.jpeg';
 import '../../index.css';
 import { Box } from '@mui/material';
 
-export default function Aboutpic({
+export default function AboutPicture({
 	display,
 	height,
 	position,
 	marginBottom,
 	marginLeft,
 	marginRight,
+	marginTop,
 }) {
 	return (
 		<>
@@ -21,6 +22,7 @@ export default function Aboutpic({
 					marginBottom,
 					marginRight,
 					marginLeft,
+					marginTop
 				}}
 			>
 				<img

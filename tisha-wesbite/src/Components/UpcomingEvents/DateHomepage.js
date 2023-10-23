@@ -10,8 +10,8 @@ export default function DateHomepage() {
 					display: { xs: 'none', sm: 'flex' },
 					height: { sm: 120, md: 170, lg: 200 },
 					width: { sm: 120, md: 170, lg: 200 },
-					backgroundColor: '#C3D9DC',
-					marginTop: { sm: -32, md: -38 },
+					backgroundColor: '#72320A',
+					marginTop: { sm: -32, md: -35 },
 					marginLeft: { sm: 5, md: 8, lg: 14, xl: 23 },
 				}}
 			>
@@ -22,7 +22,7 @@ export default function DateHomepage() {
 					<Typography
 						variant="h3"
 						sx={{
-							color: '#4E5865',
+							color: '#FFFFFF',
 							textTransform: 'capitalize',
 							fontWeight: 'bold',
 							fontFamily: 'inter',
@@ -35,7 +35,7 @@ export default function DateHomepage() {
 					<Typography
 						variant="h3"
 						sx={{
-							color: '#4E5865',
+							color: '#FFFFFF',
 							textTransform: 'capitalize',
 							fontWeight: 'bold',
 							fontFamily: 'inter',

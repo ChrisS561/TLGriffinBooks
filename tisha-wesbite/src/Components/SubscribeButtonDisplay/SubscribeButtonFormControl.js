@@ -1,5 +1,6 @@
 import { Button, Stack, TextField } from '@mui/material';
 import React, { useState } from 'react';
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import validator from 'validator';
 
 export default function SubmitButtonFormControl() {
@@ -8,7 +9,8 @@ export default function SubmitButtonFormControl() {
 		lastname: '',
 		email: '',
 	});
-	const [error, setError] = useState(false);
+	const [error, setError] = useState('');
+	const [success, setSuccess] = useState(false);
 	const handleInput = (event) => {
 		const { name, value } = event.target;
 		setInputForm({
@@ -21,14 +23,15 @@ export default function SubmitButtonFormControl() {
 		event.preventDefault();
 		const { firstname, lastname, email } = inputForm;
 		if (!firstname || !lastname || !email) {
-			setError(true);
+			setError('All fields are required');
 			return;
 		}
 		if (!validator.isEmail(email)) {
 			alert('Please enter a valid email address.');
 			return;
 		}
-		setError(false);
+		setError('');
+		setSuccess(true);
 		console.log(inputForm);
 	};
 
@@ -46,11 +49,10 @@ export default function SubmitButtonFormControl() {
 					onChange={handleInput}
 					sx={{ width: '100vw', maxWidth: '15rem' }}
 					error={error && !inputForm.firstname}
-					helperText={
-						error && !inputForm.firstname ? 'This field is required' : ''
-					}
+					helperText={error && !inputForm.firstname ? error : ''}
 				/>
 				<TextField
+					required
 					id="lastname"
 					type="text"
 					label="Last Name"
@@ -60,9 +62,7 @@ export default function SubmitButtonFormControl() {
 					value={inputForm.lastname}
 					sx={{ width: '100vw', maxWidth: '15rem' }}
 					error={error && !inputForm.lastname}
-					helperText={
-						error && !inputForm.lastname ? 'This field is required' : ''
-					}
+					helperText={error && !inputForm.lastname ? error : ''}
 				/>
 				<TextField
 					required
@@ -75,31 +75,61 @@ export default function SubmitButtonFormControl() {
 					onChange={handleInput}
 					sx={{ width: '100vw', maxWidth: '15rem' }}
 					error={error && !inputForm.email}
-					helperText={error && !inputForm.email ? 'This field is required' : ''}
+					helperText={error && !inputForm.email ? error : ''}
 				/>
-				<Button
-					type="submit"
-					variant="contained"
-					color="info"
-					onClick={handleSubmit}
-					sx={{
-						transition:
-							'box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease',
-						':hover': {
-							boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.3)',
-						},
-						display: 'block',
-						width: '100%',
-						maxWidth: '10rem',
-						fontFamily: 'inter',
-						fontSize: '12px',
-						letterSpacing: '3px',
-						textAlign: 'center',
-						marginTop: 1,
-					}}
-				>
-					SUBSCRIBE
-				</Button>
+				{success ? (
+					<Button
+						type="submit"
+						variant="outlined"
+						color="primary"
+						onClick={handleSubmit}
+						disabled={success}
+						sx={{
+							display: 'block',
+							width: '100%',
+							maxWidth: '10rem',
+							fontFamily: 'inter, sans-serif',
+							fontSize: '14px',
+							letterSpacing: '1px',
+							textAlign: 'center',
+							marginTop: 1,
+							backgroundColor: 'green',
+							borderColor: 'green',
+							'&:hover': {
+								backgroundColor: 'darkgreen',
+								borderColor: 'darkgreen',
+							},
+						}}
+					>
+						Submit
+						<CheckCircleOutlineIcon sx={{ color: 'black' }} />
+					</Button>
+				) : (
+					<Button
+						type="submit"
+						variant="contained"
+						color="info"
+						onClick={handleSubmit}
+						disabled={success}
+						sx={{
+							transition:
+								'box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease',
+							':hover': {
+								boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.3)',
+							},
+							display: 'block',
+							width: '100%',
+							maxWidth: '10rem',
+							fontFamily: 'inter',
+							fontSize: '12px',
+							letterSpacing: '3px',
+							textAlign: 'center',
+							marginTop: 1,
+						}}
+					>
+						SUBSCRIBE
+					</Button>
+				)}
 			</Stack>
 		</div>
 	);

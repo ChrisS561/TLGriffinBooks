@@ -4,10 +4,11 @@ import '../index.css';
 
 import Navbar from '../Components/Navigation/NavBar';
 import Footer from '../Components/Footer/Footer';
-import AboutPicture from '../Components/ImageDisplay/AboutPicture';
 import UpcomingEventsText from '../Components/UpcomingEvents/UpcomingEventsText';
 import UpcomingEventsImage from '../Components/ImageDisplay/UpcomingEventsImage';
 import MobileUpcomingEventsImage from '../Components/ImageDisplay/MobileUpcomingEventsImage';
+import BookSigningPicture from '../Components/ImageDisplay/BookSigningPicture';
+import MobileBookSigningPicture from '../Components/ImageDisplay/MobileBookSigningPicture';
 
 // TODO: Fix the height of the title and buttons on the tablet screen.
 export default function UpcomingEvents() {
@@ -34,7 +35,7 @@ export default function UpcomingEvents() {
 					}}
 				>
 					<Box>
-						<AboutPicture
+						<BookSigningPicture
 							display={{ xs: 'none', sm: 'flex' }}
 							height={{
 								sm: '25rem',
@@ -48,17 +49,13 @@ export default function UpcomingEvents() {
 				<Box
 					sx={{
 						display: 'block',
-						paddingRight: { xs: 1, sm: 11, md: 15, lg: 24, xl: 80 },
+						paddingRight: { xs: 2, sm: 4, md: 15, lg: 35, xl: 80 },
 						paddingTop: { sm: 14, md: 17, lg: 10, xl: 6 },
 						paddingBottom: { md: 15, lg: 9, xl: 9 },
 					}}
 				>
 					<Box>
-						<AboutPicture
-							display={{ xs: 'flex', sm: 'none' }}
-							height={{ xs: '25rem' }}
-							marginRight={{ xs: 5, sm: 0 }}
-							marginBottom={1}
+						<MobileBookSigningPicture
 						/>
 					</Box>
 					<Typography
@@ -68,7 +65,7 @@ export default function UpcomingEvents() {
 							width: '100%',
 							color: '#4E5865',
 							textTransform: 'capitalize',
-							paddingLeft: { xs: 0, sm: 4, md: 10 },
+							paddingLeft: { xs: 2, sm: 4, md: 10 },
 							textAlign: 'left',
 							letterSpacing: { xs: '2px', sm: '1px' },
 							fontFamily: 'Inter, sans-serif',
@@ -86,7 +83,7 @@ export default function UpcomingEvents() {
 							color: '#4E5865',
 							textTransform: 'capitalize',
 							fontWeight: 'bold',
-							paddingLeft: { xs: 0, sm: 4, md: 10 },
+							paddingLeft: { xs: 2, sm: 4, md: 10 },
 							textAlign: 'left',
 							letterSpacing: { xs: '5px', sm: '10px' },
 							fontFamily: 'Inter, sans-serif',
@@ -103,7 +100,7 @@ export default function UpcomingEvents() {
 							color: '#4E5865',
 							textTransform: 'capitalize',
 							fontWeight: 'bold',
-							paddingLeft: { xs: 0, sm: 4, md: 10 },
+							paddingLeft: { xs: 2, sm: 4, md: 10 },
 							textAlign: 'left',
 							letterSpacing: { xs: '5px', sm: '10px' },
 							fontFamily: 'Inter, sans-serif',

@@ -1,9 +1,9 @@
 import React from 'react';
-import pic from '../../Images/HomepagePic.jpg';
+import pic from '../../Images/BookSigning.jpeg';
 import '../../index.css';
 import { Box } from '@mui/material';
 
-export default function MobileAuthorPicture() {
+export default function MobileBookSigningPicture() {
 	return (
 		// Medium 900width+
 		<>
@@ -11,7 +11,8 @@ export default function MobileAuthorPicture() {
 				sx={{
 					display: { xs: 'flex', sm: 'none' },
 					marginLeft: 2,
-					height: { xs: '26rem' },
+					marginRight:5,
+					height: { xs: '25rem' },
 				}}
 			>
 				<img

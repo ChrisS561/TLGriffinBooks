@@ -13,7 +13,7 @@ export default function MobileHomepage() {
 						sx={{
 							paddingTop: '2rem',
 							paddingLeft: '1rem',
-							color: '#72320A',
+							color: '#4E5865',
 							textTransform: 'capitalize',
 							fontWeight: 'bold',
 							fontFamily: 'inter',
@@ -50,7 +50,7 @@ export default function MobileHomepage() {
 							<Typography
 								variant="body1"
 								sx={{
-									color: '#72320A',
+									color: '#4E5865',
 									textTransform: 'capitalize',
 									fontFamily: 'inter',
 									letterSpacing: '1px',
@@ -62,7 +62,7 @@ export default function MobileHomepage() {
 							<Typography
 								variant="body1"
 								sx={{
-									color: '#72320A',
+									color: '#4E5865',
 									textTransform: 'capitalize',
 									textAlign: 'left',
 									fontFamily: 'inter',
@@ -75,7 +75,7 @@ export default function MobileHomepage() {
 
 							<Button
 								variant="contained"
-								href="/Upcoming-Events"
+								href="/Events"
 								color="info"
 								sx={{
 									transition:

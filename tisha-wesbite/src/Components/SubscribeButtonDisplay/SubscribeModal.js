@@ -4,7 +4,7 @@ import SubscribeButtonImage from '../ImageDisplay/SubscribeButtonImage';
 import SubmitButtonFormControl from './SubscribeButtonFormControl';
 import CloseIcon from '@mui/icons-material/Close';
 
-export default function SubscribeButtonModal(props) {
+export default function SubscribeModal(props) {
 	const { open, handleClose } = props;
 
 	return (
@@ -29,7 +29,7 @@ export default function SubscribeButtonModal(props) {
 					<Box
 						sx={{
 							display: 'flex',
-							backgroundColor: '#E8E6E1',
+							backgroundColor: '#E6E2DF',
 							maxWidth: { sm: 700, md: 800 },
 							height: '100vh',
 							width: '100vw',
@@ -41,7 +41,7 @@ export default function SubscribeButtonModal(props) {
 						}}
 					>
 						<SubscribeButtonImage />
-						<Stack direction="column" spacing={0} ml={5} mt={3}>
+						<Stack direction="column" spacing={0} ml={5} mt={2}>
 							<CloseIcon
 								sx={{ alignSelf: 'flex-end', mr: 2, cursor: 'pointer' }}
 								onClick={handleClose}
@@ -50,14 +50,13 @@ export default function SubscribeButtonModal(props) {
 								variant="h5"
 								sx={{
 									display: 'block',
-									color: '#4E5865',
+									color: '#72320A',
 									textTransform: 'capitalize',
 									fontWeight: 'bold',
 									letterSpacing: '2px',
 									fontFamily: 'inter',
 									fontSize: { sm: 18, md: 20, lg: 25, xl: 30 },
 								}}
-								gutterBottom
 							>
 								STAY CONNECT
 							</Typography>
@@ -70,13 +69,14 @@ export default function SubscribeButtonModal(props) {
 									letterSpacing: { sm: '0', md: '0.1px', lg: '1.5px' },
 									fontFamily: 'inter',
 									fontSize: { xs: 13, lg: 12 },
-									color: '#677884',
+									color: '#72320A',
 								}}
 							>
-								My weekly insider`s email is basically the best! I send an email
-								with my best advice, my most favorite recipes, the products I'm
-								loving and fun events we have coming up. Enter your email to
-								join in the fun!
+								Join my exclusive author's newsletter for a weekly dose of
+								literary inspiration! You'll receive emails filled with my top
+								writing tips, favorite book recommendations, upcoming author
+								events, and more. Enter your email to be part of this creative
+								journey!
 							</Typography>
 							<SubmitButtonFormControl />
 						</Stack>
@@ -103,7 +103,7 @@ export default function SubscribeButtonModal(props) {
 					<Box
 						sx={{
 							display: 'flex',
-							backgroundColor: '#E8E6E1',
+							backgroundColor: '#E6E2DF',
 							maxWidth: { xs: 400, sm: 700, md: 800 },
 							height: '100vh',
 							width: '100vw',
@@ -123,7 +123,7 @@ export default function SubscribeButtonModal(props) {
 								variant="h5"
 								sx={{
 									display: 'block',
-									color: '#4E5865',
+									color: '#72320A',
 									textTransform: 'capitalize',
 									fontWeight: 'bold',
 									letterSpacing: '2px',
@@ -143,7 +143,7 @@ export default function SubscribeButtonModal(props) {
 									letterSpacing: { sm: '0', md: '0.1px', lg: '1.5px' },
 									fontFamily: 'inter',
 									fontSize: { xs: 13, lg: 12 },
-									color: '#677884',
+									color: '#72320A',
 								}}
 							>
 								My weekly insider`s email is basically the best! I send an email

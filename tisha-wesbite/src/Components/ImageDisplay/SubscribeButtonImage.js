@@ -14,7 +14,7 @@ export default function SubscribeButtonImage() {
 						sm: '20rem',
 					},
                     ml:4,
-                    mt:7
+                    mt:6
 				}}
 			>
 				<img

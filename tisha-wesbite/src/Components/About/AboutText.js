@@ -24,7 +24,7 @@ Join Griffin on her journey of spreading positivity and making the world a brigh
 					marginBottom: 0,
 					fontFamily: 'inter',
 					fontSize: { xs: 14, md: 15, lg: 17 },
-					color: '#677884',
+					color: '#72320A',
 					whiteSpace: 'pre-line',
 				}}
 				gutterBottom

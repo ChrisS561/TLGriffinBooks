@@ -37,7 +37,7 @@ export default function BooksButton() {
 				onClick={handleClick}
 				sx={{
 					my: 2,
-					color: '#4E5865',
+					color: '#72320A',
 					display: { xs: 'none', md: 'block' },
 					fontSize: 15,
 					fontFamily: 'inter',
@@ -63,7 +63,7 @@ export default function BooksButton() {
 					sx={{
 						minWidth: 100,
 						display: { xs: 'block', md: 'none' },
-						color: '#4E5865',
+						color: '#72320A',
 					}}
 				>
 					<FormControl fullWidth>

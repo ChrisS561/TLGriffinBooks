@@ -39,8 +39,7 @@ code {
 }
 
 .homepage {
-  background-color: white;
-  background-image: linear-gradient(to bottom, #faf9f8 24%, #c3d9dc 24%);
+  background-color: #FFFFFF;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -51,21 +50,24 @@ code {
 .book-display {
   height: 100vh;
   width: 100vw;
-  background-color: #FAF9F8;
+  background-color: #E6E2DF;
 
 }
 
 .MuiButton-contained {
   /* border-radius: 10px !important; */
-  background-color: #677884 !important;
+  background-color: #72320A !important;
   color: #faf9f8 !important;
   /* background-color: #DCA564 !important; */
+}
+.MuiButton-outlined {
+color: black !important;
 }
 
 .events{ 
   height: 80vh;
     width: 100vw;
-    background-color: #E9E7E2;
+    background-color: #FFFFFF;
 }
 
 @media screen and (max-width: 425px) {
@@ -75,8 +77,7 @@ code {
 }
 
 .womans-worth{ 
-  background-image: linear-gradient(to bottom, #faf9f8 28%,#E9E7E2 28%);
-  background-color: #E9E7E2;
+  background-color: #E6E2DF;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -92,8 +93,7 @@ code {
 }
 
 .about-bg {
-background-color: white;
-  background-image: linear-gradient(to bottom, #faf9f8 28%, #c3d9dc 28%);
+background-color: #E6E2DF;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -105,12 +105,22 @@ background-color: white;
 .about-text{
   height: 100%;
     width: 100vw;
-    background-color: #FFFFFF;
+    background-color: #E6E2DF;
 }
 
 .upcoming-events{ 
   background-color: white;
     background-image: linear-gradient(to bottom, #faf9f8 28%, #E9E7E2 28%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+}
+
+.preview-page{ 
+  background-color: white;
+    background-image: linear-gradient(to bottom, #FFFFFF 28%, #E6E2DF 28%);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

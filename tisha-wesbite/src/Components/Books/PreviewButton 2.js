@@ -17,13 +17,14 @@ export default function PreviewButton(display) {
 						animation: 'shake 0.5s',
 					},
 					display,
+					// width: '100%',
 					maxWidth: { xs: '8rem', sm: '9rem' },
 					fontFamily: 'inter',
 					fontSize: '15px',
 					letterSpacing: '2px',
 					marginLeft: { sm: '2rem', md: '5rem', lg: '4rem', xl: '1rem' },
 					textAlign: 'center',
-				
+					// marginBottom: { xs: 1, sm: 0 },
 				}}
 			>
 				Preview

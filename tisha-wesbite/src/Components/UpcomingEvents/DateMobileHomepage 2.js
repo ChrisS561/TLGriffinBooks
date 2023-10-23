@@ -20,7 +20,7 @@ export default function DateMobileHomepage() {
 					<Typography
 						variant="h3"
 						sx={{
-							color: '#72320A',
+							color: '#4E5865',
 							textTransform: 'capitalize',
 							fontWeight: 'bold',
 							fontFamily: 'inter',
@@ -33,7 +33,7 @@ export default function DateMobileHomepage() {
 					<Typography
 						variant="h3"
 						sx={{
-							color: '#72320A',
+							color: '#4E5865',
 							textTransform: 'capitalize',
 							fontWeight: 'bold',
 							fontFamily: 'inter',

@@ -10,18 +10,18 @@ import LogoutButton from '../Login/LogoutButton';
 import { StyledToolbar } from '../../Style/Styling';
 import BooksButton from '../Books/BooksButton';
 
-export default function MobileFooter() {
+export default function MobileFooter({toolbarColor}) {
 	// Auth0 functionality
 	const { user, isLoading } = useAuth0();
 	return (
 		<footer>
 			<Box sx={{ display: { xs: 'flex', sm: 'none' } }}>
 				<AppBar position="static">
-					<StyledToolbar>
+					<StyledToolbar style={{ backgroundColor: toolbarColor }}>
 						<Stack direction="column">
 							<Typography
 								sx={{
-									color: '#4E5865',
+									color: '#72320A',
 									display: 'inherit',
 									justifyContent: 'center',
 									fontFamily: 'Playfair Display',
@@ -34,14 +34,24 @@ export default function MobileFooter() {
 							</Typography>
 							<Stack
 								direction="row"
-                spacing={0}
-                flexWrap="wrap"
+								spacing={0}
+								flexWrap="wrap"
 								sx={{ alignItems: 'center', justifyContent: 'center' }}
 							>
 								<Button
 									sx={{
 										fontFamily: 'inter',
-										color: '#4E5865',
+										color: '#72320A',
+										margin: '1rem',
+									}}
+									href="/"
+								>
+									Home
+								</Button>
+								<Button
+									sx={{
+										fontFamily: 'inter',
+										color: '#72320A',
 										margin: '1rem',
 									}}
 									href="/About"
@@ -49,16 +59,6 @@ export default function MobileFooter() {
 									About
 								</Button>
 								<BooksButton />
-								<Button
-									sx={{
-										fontFamily: 'inter',
-										color: '#4E5865',
-										margin: '1rem',
-									}}
-									href="/Events"
-								>
-									Events
-								</Button>
 								<SubscribeButton />
 								{!isLoading && !user && <LoginButton />}
 								{!isLoading && user && <LogoutButton />}
