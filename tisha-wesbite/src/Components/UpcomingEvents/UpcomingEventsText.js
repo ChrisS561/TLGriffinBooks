@@ -19,7 +19,7 @@ While you're reveling in the Halloween spirit, make a stop at her book signing s
 					alignSelf: 'center',
 					fontFamily: 'inter',
 					fontSize: { xs: 14, md: 15, lg: 17 },
-					color: '#677884',
+					color: '#72320A',
 					whiteSpace: 'pre-line',
 				}}
 				gutterBottom

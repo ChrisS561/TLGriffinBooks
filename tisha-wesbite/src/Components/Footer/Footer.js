@@ -65,7 +65,7 @@ export default function Footer({toolbarColor}) {
 							<Divider sx={{ width: '100vw' }} />
 							<Typography
 								sx={{
-									color: 'black',
+									color: '#72320A',
 									display: 'inherit',
 									justifyContent: 'center',
 									alignContent: 'center',

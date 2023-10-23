@@ -33,8 +33,8 @@ export default function MobileHomepage() {
 							borderWidth: 10,
 							width: '70%',
 							height: '17rem',
-                            marginLeft:"1rem"
-							
+							borderColor: '#72320A',
+							marginLeft: '1rem',
 						}}
 					>
 						<MobileHomepageEventsDate />

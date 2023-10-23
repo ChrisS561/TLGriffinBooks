@@ -1,14 +1,14 @@
 import React from 'react';
 import homepagepicture from '../../Images/HomepagePic.jpg';
 import '../../index.css';
-import { Box } from '@mui/material';
+import {  Paper } from '@mui/material';
 import MobileAuthorPicture from './MobileAuthorPicture';
 
 export default function AuthorPicture() {
 	return (
 		// Medium 900width+
 		<>
-			<Box
+			<Paper elevation={24}
 				sx={{
 					display: { xs: 'none', sm: 'flex' },
 					height: { sm: '30rem', md: '35rem', lg: '35rem', xl: '40rem' },
@@ -23,7 +23,7 @@ export default function AuthorPicture() {
 					loading="lazy"
 					style={{ objectFit: 'cover' }}
 				/>
-			</Box>
+			</Paper>
 			<MobileAuthorPicture/>
 		</>
 	);

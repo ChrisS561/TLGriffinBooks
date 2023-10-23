@@ -27,12 +27,14 @@ export default function AuthorBookDisplay() {
 				<BookDisplay
 					display="flex"
 					height={{
-						xs: '26rem',
+						xs: '25rem',
 						sm: '30rem',
 						md: '35rem',
 						lg: '35rem',
 						xl: '40rem',
 					}}
+					marginBottom={3}
+					marginLeft={2}
 				/>
 			</Box>
 			<Container

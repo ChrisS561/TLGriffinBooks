@@ -1,19 +1,20 @@
 import React from 'react';
-import BookPic from '../../Images/BookPic.jpeg';
+import AboutPic from '../../Images/AuntTisha.jpeg';
 import '../../index.css';
-import { Box } from '@mui/material';
+import {  Paper } from '@mui/material';
 
-export default function BookDisplay({
+export default function AboutPicture({
 	display,
 	height,
 	position,
 	marginBottom,
 	marginLeft,
 	marginRight,
+	marginTop,
 }) {
 	return (
 		<>
-			<Box
+			<Paper elevation={24}
 				sx={{
 					display,
 					height,
@@ -21,15 +22,16 @@ export default function BookDisplay({
 					marginBottom,
 					marginRight,
 					marginLeft,
+					marginTop
 				}}
 			>
 				<img
-					src={BookPic}
+					src={AboutPic}
 					alt="Profile"
 					loading="lazy"
 					style={{ objectFit: 'cover' }}
 				/>
-			</Box>
+			</Paper>
 		</>
 	);
 }
