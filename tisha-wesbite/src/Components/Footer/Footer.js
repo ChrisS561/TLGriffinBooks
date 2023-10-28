@@ -73,7 +73,7 @@ export default function Footer({toolbarColor}) {
 									marginTop: 1,
 								}}
 							>
-								© {new Date().getFullYear()} Tisha Griffin. All Rights Reserved.
+								© {new Date().getFullYear()} T.L. Griffin. All Rights Reserved.
 							</Typography>
 							{/* <Stack
 								direction="row"

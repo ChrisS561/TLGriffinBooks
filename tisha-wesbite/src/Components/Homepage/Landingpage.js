@@ -10,22 +10,36 @@ const styles = {
 	backgroundPosition: 'center',
 	height: '100vh',
 	width: '100vw',
-	display: 'flex', // Add flex property
-	flexDirection: 'column', // Add flexDirection property
+	display: 'flex',
+	flexDirection: 'column',
 	justifyContent: 'center',
 	alignItems: 'center',
 };
 
 export default function Landingpage() {
-	const [fadeIn, setFadeIn] = useState(false);
+	const [fadeIn, setFadeIn] = useState(true);
+	const [imageLoaded, setImageLoaded] = useState(false);
+
+	const handleImageLoad = () => {
+		setImageLoaded(true);
+	};
 
 	useEffect(() => {
-		setFadeIn(true);
-	}, []);
+		if (imageLoaded) {
+			setFadeIn(true);
+		}
+	}, [imageLoaded]);
 
 	return (
 		<div style={styles}>
+			<img
+				src={backgroundpic}
+				alt="Background"
+				style={{ display: 'none' }}
+				onLoad={handleImageLoad}
+			/>
 			<Typography
+				className={fadeIn ? 'fadeIn 2s ease-in' : 'none'}
 				sx={{
 					display: 'flex',
 					color: '#72320A',
@@ -40,8 +54,6 @@ export default function Landingpage() {
 					height: '100vh',
 					mt: 18,
 					fontSize: { xs: 60, sm: 78, lg: 100 },
-					animation: fadeIn ? 'fadeIn 2s ease-in' : 'none',
-					transition: 'color 0.5s ease-in',
 				}}
 			>
 				T.L. GRIFFIN
@@ -53,14 +65,17 @@ export default function Landingpage() {
 					alignItems: 'center',
 					marginBottom: 10,
 					animation: fadeIn ? 'fadeIn 2s ease-in' : 'none',
-					transition: 'color 0.5s ease-in',
 				}}
 			>
 				<Typography sx={{ color: '#72320A', fontSize: 16 }}>
 					Uncover More About The Author
 				</Typography>
 				<ArrowDownwardIcon
-					sx={{ fontSize: 30, animation: 'spinning 2s linear infinite' }}
+					sx={{
+						fontSize: 30,
+						animation: 'spinning 2s linear infinite',
+						color: '#72320A',
+					}}
 				/>
 			</Box>
 		</div>

@@ -109,19 +109,8 @@ export default function AuthorBookDisplay() {
 						Read More
 					</Button>
 				</Stack>
-				<Box sx={{ display: { xs: 'none', sm: 'flex', paddingTop: '8rem' } }}>
-					<BookDisplay
-						display="flex"
-						height={{
-							xs: '26rem',
-							sm: '30rem',
-							md: '35rem',
-							lg: '35rem',
-							xl: '40rem',
-						}}
-						marginRight={{ md: '2rem' }}
-						marginBottom={{ md: '8rem' }}
-					/>
+				<Box sx={{ display: { xs: 'none', sm: 'flex' } }}>
+					<BookDisplay display="flex" />
 				</Box>
 			</Container>
 		</div>

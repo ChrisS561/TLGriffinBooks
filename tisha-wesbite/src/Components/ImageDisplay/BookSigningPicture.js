@@ -1,14 +1,14 @@
 import React from 'react';
 import Booksigningpic from '../../Images/BookSigning.jpeg';
 import '../../index.css';
-import {  Paper } from '@mui/material';
+import {  Box } from '@mui/material';
 import MobileBookSigningPicture from './MobileBookSigningPicture';
 
 export default function BookSigningPicture() {
 	return (
 		// Medium 900width+
 		<>
-			<Paper elevation={24}
+			<Box
 				sx={{
 					display: { xs: 'none', sm: 'flex' },
 					height: { sm: '30rem', md: '33rem', lg: '35rem', xl: '40rem' },
@@ -24,7 +24,7 @@ export default function BookSigningPicture() {
 					loading="lazy"
 					style={{ objectFit: 'cover' }}
 				/>
-			</Paper>
+			</Box>
 			<MobileBookSigningPicture />
 		</>
 	);

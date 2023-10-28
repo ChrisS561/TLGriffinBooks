@@ -63,7 +63,7 @@ export default function UpcomingEvents() {
 						sx={{
 							display: 'block',
 							width: '100%',
-							color: '#4E5865',
+							color: '#72320A',
 							textTransform: 'capitalize',
 							paddingLeft: { xs: 2, sm: 4, md: 10 },
 							textAlign: 'left',
@@ -80,7 +80,7 @@ export default function UpcomingEvents() {
 						sx={{
 							display: 'block',
 							width: '100%',
-							color: '#4E5865',
+							color: '#72320A',
 							textTransform: 'capitalize',
 							fontWeight: 'bold',
 							paddingLeft: { xs: 2, sm: 4, md: 10 },
@@ -97,7 +97,7 @@ export default function UpcomingEvents() {
 						sx={{
 							display: 'block',
 							width: '100%',
-							color: '#4E5865',
+							color: '#72320A',
 							textTransform: 'capitalize',
 							fontWeight: 'bold',
 							paddingLeft: { xs: 2, sm: 4, md: 10 },
