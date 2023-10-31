@@ -1,7 +1,7 @@
 import React from 'react';
 import AboutPic from '../../Images/AuntTisha.jpeg';
 import '../../index.css';
-import {  Paper } from '@mui/material';
+import {  Box } from '@mui/material';
 
 export default function AboutPicture({
 	display,
@@ -14,7 +14,7 @@ export default function AboutPicture({
 }) {
 	return (
 		<>
-			<Paper elevation={24}
+			<Box
 				sx={{
 					display,
 					height,
@@ -31,7 +31,7 @@ export default function AboutPicture({
 					loading="lazy"
 					style={{ objectFit: 'cover' }}
 				/>
-			</Paper>
+			</Box>
 		</>
 	);
 }

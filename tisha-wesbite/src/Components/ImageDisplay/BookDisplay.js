@@ -10,28 +10,32 @@ export default function BookDisplay({
 	marginBottom,
 	marginLeft,
 	marginRight,
+	marginTop,
+	margin,
+	width,
 }) {
 	return (
 		<>
-			
-				<Paper elevation={24}
-					sx={{
-						display,
-						height,
-						position,
-						marginBottom,
-						marginRight,
-						marginLeft,
-					}}
-				>
-					<img
-						src={BookPic}
-						alt="Profile"
-						loading="lazy"
-						style={{ objectFit: 'cover' }}
-					/>
-				</Paper>
-			
+			<Paper
+				elevation={24}
+				sx={{
+					display,
+					height,
+					width,
+					position,
+					marginBottom,
+					marginTop,
+					marginLeft,
+					marginRight,
+				}}
+			>
+				<img
+					src={BookPic}
+					alt="Profile"
+					loading="lazy"
+					style={{ objectFit: 'cover' }}
+				/>
+			</Paper>
 		</>
 	);
 }

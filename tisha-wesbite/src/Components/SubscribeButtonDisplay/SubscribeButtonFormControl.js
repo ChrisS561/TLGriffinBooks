@@ -9,7 +9,7 @@ export default function SubmitButtonFormControl() {
 		lastname: '',
 		email: '',
 	});
-	const [error, setError] = useState('');
+	const [error, setError] = useState(false);
 	const [success, setSuccess] = useState(false);
 	const handleInput = (event) => {
 		const { name, value } = event.target;
@@ -23,14 +23,14 @@ export default function SubmitButtonFormControl() {
 		event.preventDefault();
 		const { firstname, lastname, email } = inputForm;
 		if (!firstname || !lastname || !email) {
-			setError('All fields are required');
+			setError(true);
 			return;
 		}
 		if (!validator.isEmail(email)) {
 			alert('Please enter a valid email address.');
 			return;
 		}
-		setError('');
+		setError(false);
 		setSuccess(true);
 		console.log(inputForm);
 	};
@@ -49,7 +49,9 @@ export default function SubmitButtonFormControl() {
 					onChange={handleInput}
 					sx={{ width: '100vw', maxWidth: '15rem' }}
 					error={error && !inputForm.firstname}
-					helperText={error && !inputForm.firstname ? error : ''}
+					helperText={
+						error && !inputForm.firstname ? 'All fields are required' : ''
+					}
 				/>
 				<TextField
 					required
@@ -62,7 +64,9 @@ export default function SubmitButtonFormControl() {
 					value={inputForm.lastname}
 					sx={{ width: '100vw', maxWidth: '15rem' }}
 					error={error && !inputForm.lastname}
-					helperText={error && !inputForm.lastname ? error : ''}
+					helperText={
+						error && !inputForm.lastname ? 'All fields are required' : ''
+					}
 				/>
 				<TextField
 					required
@@ -75,7 +79,9 @@ export default function SubmitButtonFormControl() {
 					onChange={handleInput}
 					sx={{ width: '100vw', maxWidth: '15rem' }}
 					error={error && !inputForm.email}
-					helperText={error && !inputForm.email ? error : ''}
+					helperText={
+						error && !inputForm.email ? 'All fields are required' : ''
+					}
 				/>
 				{success ? (
 					<Button
