@@ -114,7 +114,7 @@ export default function About() {
 				</Box>
 			</div>
 			<AboutText />
-			<Footer toolbarColor="#FFFFFF" />
+			<Footer />
 			
 		</>
 	);

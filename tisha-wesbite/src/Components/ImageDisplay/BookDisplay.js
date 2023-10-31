@@ -1,7 +1,7 @@
 import React from 'react';
-import BookPic from '../../Images/BookPic.jpeg';
+import BookPic from '../../Images/Bookpic.jpg';
 import '../../index.css';
-import { Box } from '@mui/material';
+import { Paper } from '@mui/material';
 
 export default function BookDisplay({
 	display,
@@ -10,17 +10,23 @@ export default function BookDisplay({
 	marginBottom,
 	marginLeft,
 	marginRight,
+	marginTop,
+	margin,
+	width,
 }) {
 	return (
 		<>
-			<Box
+			<Paper
+				elevation={24}
 				sx={{
 					display,
 					height,
+					width,
 					position,
 					marginBottom,
-					marginRight,
+					marginTop,
 					marginLeft,
+					marginRight,
 				}}
 			>
 				<img
@@ -29,7 +35,7 @@ export default function BookDisplay({
 					loading="lazy"
 					style={{ objectFit: 'cover' }}
 				/>
-			</Box>
+			</Paper>
 		</>
 	);
 }

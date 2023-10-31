@@ -1,7 +1,7 @@
 import React from 'react';
 import homepagepicture from '../../Images/HomepagePic.jpg';
 import '../../index.css';
-import { Box } from '@mui/material';
+import {  Box } from '@mui/material';
 import MobileAuthorPicture from './MobileAuthorPicture';
 
 export default function AuthorPicture() {
@@ -11,8 +11,7 @@ export default function AuthorPicture() {
 			<Box
 				sx={{
 					display: { xs: 'none', sm: 'flex' },
-					height: { sm: '30rem', md: '35rem', lg: '35rem', xl: '40rem' },
-					marginLeft: { sm: "5rem", md: '8rem', lg: '15rem', xl: '25rem' },
+					marginLeft: { sm: '5rem', md: '8rem', lg: '15rem', xl: '25rem' },
 					marginRight: { md: '2rem' },
 					marginBottom: { md: '8rem' },
 				}}
@@ -21,10 +20,14 @@ export default function AuthorPicture() {
 					src={homepagepicture}
 					alt="Profile"
 					loading="lazy"
-					style={{ objectFit: 'cover' }}
+					style={{
+						objectFit: 'cover',
+						width: '100%',
+						height: '100%',
+					}}
 				/>
 			</Box>
-			<MobileAuthorPicture/>
+			<MobileAuthorPicture />
 		</>
 	);
 }

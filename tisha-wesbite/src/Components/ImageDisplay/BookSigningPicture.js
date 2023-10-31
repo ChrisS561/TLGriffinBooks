@@ -1,7 +1,7 @@
 import React from 'react';
 import Booksigningpic from '../../Images/BookSigning.jpeg';
 import '../../index.css';
-import { Box } from '@mui/material';
+import {  Box } from '@mui/material';
 import MobileBookSigningPicture from './MobileBookSigningPicture';
 
 export default function BookSigningPicture() {

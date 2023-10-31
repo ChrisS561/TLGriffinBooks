@@ -38,11 +38,12 @@ export default function WomansWorth() {
 						<BookDisplay
 							display={{ xs: 'none', sm: 'flex' }}
 							height={{
-								sm: '31rem',
+								sm: '25rem',
 								md: '32rem',
 								lg: '33rem',
 								xl: '36rem',
 							}}
+							marginLeft={{sm:5,md:15,lg:0}}
 						/>
 					</Box>
 				</Stack>
@@ -57,8 +58,10 @@ export default function WomansWorth() {
 					<Box>
 						<BookDisplay
 							display={{ xs: 'flex', sm: 'none' }}
-							height={{ xs: '30rem' }}
-							marginRight={{ xs: 1, sm: 0 }}
+							height={{ xs: '25rem' }}
+							width="17rem"
+							marginBottom={2}
+							marginLeft={5}
 						/>
 					</Box>
 					<Typography
@@ -69,7 +72,7 @@ export default function WomansWorth() {
 							color: '#72320A',
 							textTransform: 'capitalize',
 							fontWeight: 'bold',
-							paddingLeft: { xs: 0, sm: 4, md: 10 },
+							paddingLeft: { xs: 0, sm: 4, md: 11 },
 							textAlign: 'left',
 							letterSpacing: { xs: '5px', sm: '10px' },
 							fontFamily: 'inter',

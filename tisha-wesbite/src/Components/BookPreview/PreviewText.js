@@ -6,7 +6,7 @@ export default function PreviewText() {
 	const secondColumnText = `A mother is a beacon of light that shines bright to light up this world. A mother endures many struggles, disappointments, tears, and pain. A mother can take the place of many roles played, wearing many hats to bring joy to others each day. A mother will stand by you even when you turn her away. Sharing her love at every turn you face in life along the way. She brings hope when there is none found nowhere in sight. She prays and pleads with all her might. Having this unique role is a blessing from God, never to complain while loving your faults even when the road gets hard. Praying every day that your seed will grow and will always overcome the trials of life, and memories made will make your seed strong. Becoming better with knowledge and lessons learned from the generations before, better human beings with a winning team will guarantee another generation has won.`;
 
 	return (
-		<Box sx={{ padding: 2 }}>
+		<Box sx={{ padding: 6 }}>
 			<Typography
 				variant="h1"
 				sx={{
@@ -24,7 +24,11 @@ export default function PreviewText() {
 			<Stack
 				direction={{ xs: 'column', sm: 'row' }}
 				spacing={2}
-				sx={{ height: '500px', overflow: 'hidden', overflowY: 'scroll' }}
+				sx={{
+					height: { xs: '500px', sm: 'none' },
+					overflow: { xs: 'hidden', sm: 'none' },
+					overflowY: 'scroll',
+				}}
 			>
 				<Typography
 					variant="body1"
@@ -35,6 +39,7 @@ export default function PreviewText() {
 						fontSize: { xs: 16, md: 18, lg: 20 },
 						color: '#555',
 						whiteSpace: 'pre-line',
+						lineHeight: 2,
 					}}
 					gutterBottom
 				>
@@ -49,6 +54,7 @@ export default function PreviewText() {
 						fontSize: { xs: 16, md: 18, lg: 20 },
 						color: '#555',
 						whiteSpace: 'pre-line',
+						lineHeight: 2,
 					}}
 					gutterBottom
 				>

@@ -65,7 +65,7 @@ export default function Footer({toolbarColor}) {
 							<Divider sx={{ width: '100vw' }} />
 							<Typography
 								sx={{
-									color: 'black',
+									color: '#72320A',
 									display: 'inherit',
 									justifyContent: 'center',
 									alignContent: 'center',
@@ -73,7 +73,7 @@ export default function Footer({toolbarColor}) {
 									marginTop: 1,
 								}}
 							>
-								© {new Date().getFullYear()} Tisha Griffin. All Rights Reserved.
+								© {new Date().getFullYear()} T.L. Griffin. All Rights Reserved.
 							</Typography>
 							{/* <Stack
 								direction="row"

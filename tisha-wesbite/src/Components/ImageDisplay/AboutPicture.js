@@ -1,7 +1,7 @@
 import React from 'react';
 import AboutPic from '../../Images/AuntTisha.jpeg';
 import '../../index.css';
-import { Box } from '@mui/material';
+import {  Box } from '@mui/material';
 
 export default function AboutPicture({
 	display,
