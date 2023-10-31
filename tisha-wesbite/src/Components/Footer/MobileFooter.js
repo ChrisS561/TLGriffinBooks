@@ -66,10 +66,10 @@ export default function MobileFooter({toolbarColor}) {
 							<Divider sx={{ width: '100vw' }} />
 							<Typography
 								sx={{
-									color: 'black',
 									display: 'inherit',
 									justifyContent: 'center',
 									alignContent: 'center',
+									color:"#72320A",
 									fontSize: '14px',
 									marginTop: 1,
 								}}
