@@ -32,7 +32,7 @@ export default function About() {
 					<Box>
 						<AboutPicture
 							display={{ xs: 'none', sm: 'flex' }}
-							marginTop={{ sm: 5, md: 5 }}
+							marginBottom={{ sm: 5, md: 5 }}
 							height={{
 								sm: '30rem',
 								md: '32rem',
@@ -65,7 +65,7 @@ export default function About() {
 							width: '100%',
 							color: '#72320A',
 							textTransform: 'capitalize',
-							paddingLeft: { xs: 0, sm: 4, md: 10 },
+							paddingLeft: { xs: 0, sm: 4, md: 6 },
 							textAlign: 'left',
 							letterSpacing: { xs: '2px', sm: '1px' },
 							fontFamily: 'Inter, sans-serif',
@@ -83,7 +83,7 @@ export default function About() {
 							color: '#72320A',
 							textTransform: 'capitalize',
 							fontWeight: 'bold',
-							paddingLeft: { xs: 0, sm: 4, md: 10 },
+							paddingLeft: { xs: 0, sm: 4, md: 6 },
 							textAlign: 'left',
 							letterSpacing: { xs: '5px', sm: '10px' },
 							fontFamily: 'Inter, sans-serif',
@@ -100,7 +100,7 @@ export default function About() {
 							color: '#72320A',
 							textTransform: 'capitalize',
 							fontWeight: 'bold',
-							paddingLeft: { xs: 0, sm: 4, md: 10 },
+							paddingLeft: { xs: 0, sm: 4, md: 6 },
 							textAlign: 'left',
 							letterSpacing: { xs: '5px', sm: '10px' },
 							fontFamily: 'Inter, sans-serif',
