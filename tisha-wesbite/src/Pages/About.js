@@ -3,7 +3,7 @@ import { Box, Stack, Typography } from '@mui/material';
 import '../index.css';
 import Navbar from '../Components/Navigation/NavBar';
 import Footer from '../Components/Footer/Footer';
-import AboutText from '../Components/About/AboutText';
+import AboutText from './AboutText';
 import AboutPicture from '../Components/ImageDisplay/AboutPicture';
 
 export default function About() {

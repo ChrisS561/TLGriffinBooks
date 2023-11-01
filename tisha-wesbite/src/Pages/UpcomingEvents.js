@@ -4,7 +4,7 @@ import '../index.css';
 
 import Navbar from '../Components/Navigation/NavBar';
 import Footer from '../Components/Footer/Footer';
-import UpcomingEventsText from '../Components/UpcomingEvents/UpcomingEventsText';
+import UpcomingEventsText from './UpcomingEventsText';
 import UpcomingEventsImage from '../Components/ImageDisplay/UpcomingEventsImage';
 import MobileUpcomingEventsImage from '../Components/ImageDisplay/MobileUpcomingEventsImage';
 import BookSigningPicture from '../Components/ImageDisplay/BookSigningPicture';

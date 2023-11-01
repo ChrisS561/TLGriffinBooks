@@ -26,6 +26,7 @@ export default function BooksButton() {
 	const handleBookOneNav = ()=> { 
 		setAnchorEl(null);
 		navigate(bookLinks[0]);
+		window.scroll(0,0);
 	}
 	return (
 		<div>

@@ -1,6 +1,6 @@
 import { Typography } from '@mui/material';
 import React from 'react';
-import PreviewText from '../Components/BookPreview/PreviewText';
+import PreviewText from './PreviewText';
 import '../index.css';
 import BackButton from '../Components/BookPreview/BackButton';
 
