@@ -43,7 +43,7 @@ export default function WomansWorth() {
 								lg: '33rem',
 								xl: '36rem',
 							}}
-							marginLeft={{sm:5,md:15,lg:0}}
+							marginLeft={{ sm: 5, md: 15, lg: 45 }}
 						/>
 					</Box>
 				</Stack>

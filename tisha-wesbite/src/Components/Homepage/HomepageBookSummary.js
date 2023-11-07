@@ -72,7 +72,7 @@ export default function AuthorBookDisplay() {
 							fontFamily: 'inter',
 							fontSize: { xs: 14, lg: 16 },
 							width: { xs: '100%', sm: '100%' },
-							marginLeft: { sm: 20, md: 22, xl: 31 },
+							marginLeft: { sm: 20, md: 22, xl: 30 },
 							color: '#72320A',
 						}}
 						gutterBottom

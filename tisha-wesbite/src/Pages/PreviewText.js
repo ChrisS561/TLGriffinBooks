@@ -22,11 +22,48 @@ export default function PreviewText() {
 				A Woman's Worth
 			</Typography>
 			<Stack
-				direction={{ xs: 'column', sm: 'row' }}
+				display={{ xs: 'none', sm: 'flex' }}
+				direction={{ xs: 'none', sm: 'row' }}
+				spacing={2}
+			>
+				<Typography
+					variant="body1"
+					sx={{
+						display: 'block',
+						textAlign: 'left',
+						fontFamily: 'Arial, sans-serif',
+						fontSize: { xs: 16, md: 18, lg: 20 },
+						color: '#555',
+						whiteSpace: 'pre-line',
+						lineHeight: 2,
+					}}
+					gutterBottom
+				>
+					{firstColumnText}
+				</Typography>
+				<Typography
+					variant="body1"
+					sx={{
+						display: 'block',
+						textAlign: 'left',
+						fontFamily: 'Arial, sans-serif',
+						fontSize: { xs: 16, md: 18, lg: 20 },
+						color: '#555',
+						whiteSpace: 'pre-line',
+						lineHeight: 2,
+					}}
+					gutterBottom
+				>
+					{secondColumnText}
+				</Typography>
+			</Stack>
+			<Stack
+				display={{ xs: 'flex', sm: 'none' }}
+				direction={{ xs: 'column', sm: 'none' }}
 				spacing={2}
 				sx={{
-					height: { xs: '500px', sm: 'none' },
-					overflow: { xs: 'hidden', sm: 'none' },
+					height: '700px',
+					overflow: 'hidden',
 					overflowY: 'scroll',
 				}}
 			>
