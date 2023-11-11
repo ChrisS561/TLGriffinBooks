@@ -2,8 +2,8 @@ import React from 'react';
 import Homepage from './Components/Homepage/AuthorBio';
 import NavBar from './Components/Navigation/NavBar';
 import Footer from './Components/Footer/Footer';
-import HomepageEvents from './Components/UpcomingEvents/EventsHomepage';
-import AuthorBookDisplay from './Components/Books/HomepageBookSummary';
+import HomepageEvents from './Components/Homepage/EventsHomepage';
+import AuthorBookDisplay from './Components/Homepage/HomepageBookSummary';
 import Landingpage from './Components/Homepage/Landingpage';
 
 export default function AppCoverpage() {

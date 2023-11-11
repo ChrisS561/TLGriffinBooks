@@ -1,6 +1,6 @@
 import { Typography } from '@mui/material';
 import React from 'react';
-import PreviewText from '../Components/BookPreview/PreviewText';
+import PreviewText from './PreviewText';
 import '../index.css';
 import BackButton from '../Components/BookPreview/BackButton';
 
@@ -20,12 +20,11 @@ export default function PreviewPage() {
 					color: '#72320A',
 					textDecoration: 'none',
 					padding: { xs: 2, sm: 4 },
-					
 				}}
 			>
 				T.L. Griffin
 			</Typography>
-			<BackButton/>
+			<BackButton />
 			<Typography
 				variant="h3"
 				sx={{
@@ -39,7 +38,7 @@ export default function PreviewPage() {
 					fontSize: { xs: 36, sm: 48, lg: 60 },
 					justifyContent: { sm: 'center' },
 					pl: { xs: 2, sm: 0 },
-					paddingTop: { xs: 18, sm: 15, lg: 17, xl: 20 },
+					marginTop: { xs: 17, sm: 12.5, md: 10.5, lg: 7.5, xl: 8 },
 				}}
 				gutterBottom
 			>
