@@ -13,7 +13,7 @@ export default function UpcomingEventsImage() {
 					display: { xs: 'none', sm: 'flex' },
 					height: { sm: '22rem', md: '25rem', lg: '30rem', xl: '35rem' },
                     paddingTop:{sm:5,md:0},
-                    paddingRight:{xl:20}
+                    // paddingRight:{xl:20}
 				}}
 			>
 				<img

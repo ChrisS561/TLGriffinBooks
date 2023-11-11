@@ -8,23 +8,42 @@ import BuynowButton from '../StripeFrontend/BuynowButton';
 import WomansWorthText from '../Components/Books/WomansWorthText';
 import PreviewButton from '../Components/Books/PreviewButton';
 
-//TODO fix the height of the title and buttons on the tablet screen.
-export default function WomansWorth() {
-	console.log(window.innerWidth);
+const commonBookDisplayStyle = {
+	display: 'block',
+	paddingRight: { xs: 1, sm: 11, md: 15, lg: 24, xl: 30 },
+	paddingTop: { sm: 14, md: 17, lg: 10, xl: 6 },
+	paddingBottom: { md: 15, lg: 9, xl: 9 },
+};
 
+const titleStyles = {
+	display: 'block',
+	width: '99%',
+	color: '#72320A',
+	textTransform: 'capitalize',
+	fontWeight: 'bold',
+	paddingLeft: { xs: 0, sm: 4, md: 11 },
+	textAlign: 'left',
+	letterSpacing: { xs: '5px', sm: '10px' },
+	fontFamily: 'inter',
+	fontSize: { xs: 36, sm: 48, lg: 60 },
+	marginLeft: { xs: 6, sm: 0 },
+};
+
+const womansWorthContainerStyle = {
+	display: 'flex',
+	alignItems: 'center',
+	justifyContent: 'flex-end',
+	height: '100vh',
+	width: '100vw',
+	paddingTop: '11rem',
+};
+
+const bookDisplayMarginLeft = { xs: 5, md: 15, lg: 45 };
+
+export default function WomansWorth() {
 	return (
 		<>
-			<div
-				className="womans-worth"
-				style={{
-					display: 'flex',
-					alignItems: 'center',
-					justifyContent: 'flex-end',
-					height: '100vh',
-					width: '100vw',
-					paddingTop: '11rem',
-				}}
-			>
+			<div className="womans-worth" style={womansWorthContainerStyle}>
 				<Navbar />
 				<Stack
 					direction="column"
@@ -43,18 +62,12 @@ export default function WomansWorth() {
 								lg: '33rem',
 								xl: '36rem',
 							}}
-							marginLeft={{ sm: 5, md: 15, lg: 45 }}
+							marginBottom={{xl:18}}
+							marginLeft={bookDisplayMarginLeft}
 						/>
 					</Box>
 				</Stack>
-				<Box
-					sx={{
-						display: 'block',
-						paddingRight: { xs: 1, sm: 11, md: 15, lg: 24, xl: 30 },
-						paddingTop: { sm: 14, md: 17, lg: 10, xl: 6 },
-						paddingBottom: { md: 15, lg: 9, xl: 9 },
-					}}
-				>
+				<Box sx={commonBookDisplayStyle}>
 					<Box>
 						<BookDisplay
 							display={{ xs: 'flex', sm: 'none' }}
@@ -64,23 +77,7 @@ export default function WomansWorth() {
 							marginLeft={5}
 						/>
 					</Box>
-					<Typography
-						variant="h3"
-						sx={{
-							display: 'block',
-							width: '99%',
-							color: '#72320A',
-							textTransform: 'capitalize',
-							fontWeight: 'bold',
-							paddingLeft: { xs: 0, sm: 4, md: 11 },
-							textAlign: 'left',
-							letterSpacing: { xs: '5px', sm: '10px' },
-							fontFamily: 'inter',
-							fontSize: { xs: 36, sm: 48, lg: 60 },
-							marginLeft: { xs: 6, sm: 0 },
-						}}
-						gutterBottom
-					>
+					<Typography variant="h3" sx={titleStyles} gutterBottom>
 						A WOMAN'S WORTH
 					</Typography>
 					<Stack
