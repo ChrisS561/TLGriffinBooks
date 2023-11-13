@@ -9,7 +9,7 @@ export default function EventsHomepage() {
 		<div className="events">
 			<Box>
 				<Typography
-					sx={{ display: { xs: 'none', sm: 'flex' }, paddingBottom: 13 }}
+					sx={{ display: { xs: 'none', sm: 'flex' }, paddingBottom: 30 }}
 				/>
 				<Box
 					sx={{

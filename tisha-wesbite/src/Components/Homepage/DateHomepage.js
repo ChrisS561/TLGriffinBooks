@@ -11,7 +11,7 @@ export default function DateHomepage() {
 					height: { sm: 120, md: 170, lg: 200 },
 					width: { sm: 120, md: 170, lg: 200 },
 					backgroundColor: '#72320A',
-					marginTop: { sm: -32, md: -35 },
+					marginTop: { sm: -30, md: -35 },
 					marginLeft: { sm: 5, md: 8, lg: 14, xl: 23 },
 				}}
 			>
@@ -30,7 +30,7 @@ export default function DateHomepage() {
 							fontSize: { sm: 35, md: 48, lg: 60 },
 						}}
 					>
-						OCT
+						DEC
 					</Typography>
 					<Typography
 						variant="h3"
@@ -43,7 +43,7 @@ export default function DateHomepage() {
 							fontSize: { sm: 35, md: 48, lg: 60 },
 						}}
 					>
-						29
+						3
 					</Typography>
 				</Stack>
 			</Box>

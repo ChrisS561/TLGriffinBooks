@@ -87,7 +87,8 @@ export default function AuthorBookDisplay() {
 						<BookDisplay
 							display="block"
 							position="relative"
-							marginTop={{ xs: 7, sm: 8, md: 2, lg: 10 }}
+							width={{ xl: '90%' }}
+							marginTop={{ xs: 7, sm: 8, md: 10 }}
 							marginBottom={{ xs: 0, sm: 10 }}
 						/>
 					</Grid>
