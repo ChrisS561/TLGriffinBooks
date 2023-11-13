@@ -1,8 +1,8 @@
 import { Button } from '@mui/material';
-import React from 'react'
+import React from 'react';
 
 export default function PreviewButton(display) {
-  return (
+	return (
 		<div>
 			<Button
 				fullWidth
@@ -17,13 +17,12 @@ export default function PreviewButton(display) {
 						animation: 'shake 0.5s',
 					},
 					display,
-					maxWidth: { xs: '8rem', sm: '9rem' },
+					width: 'auto',
 					fontFamily: 'inter',
 					fontSize: '15px',
 					letterSpacing: '2px',
 					marginLeft: { sm: '2rem', md: '5rem', lg: '4rem', xl: '1rem' },
 					textAlign: 'center',
-				
 				}}
 			>
 				Preview

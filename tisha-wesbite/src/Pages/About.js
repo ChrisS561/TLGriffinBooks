@@ -15,9 +15,7 @@ export default function About() {
 					display: 'flex',
 					alignItems: 'center',
 					justifyContent: 'flex-end',
-					height: '100vh',
-					width: '100vw',
-					paddingTop: '11rem',
+					paddingTop: '10rem',
 				}}
 			>
 				<Navbar />

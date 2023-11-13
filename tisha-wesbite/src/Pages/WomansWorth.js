@@ -1,6 +1,5 @@
 import React from 'react';
-import { Box, Stack, Typography } from '@mui/material';
-import '../index.css';
+import { Grid, Typography, Stack, Box } from '@mui/material';
 import Navbar from '../Components/Navigation/NavBar';
 import Footer from '../Components/Footer/Footer';
 import BookDisplay from '../Components/ImageDisplay/BookDisplay';
@@ -10,96 +9,76 @@ import PreviewButton from '../Components/Books/PreviewButton';
 
 const commonBookDisplayStyle = {
 	display: 'block',
-	paddingRight: { xs: 1, sm: 11, md: 15, lg: 24, xl: 30 },
-	paddingTop: { sm: 14, md: 17, lg: 10, xl: 6 },
+	paddingRight: { xs: 1, sm: 0, md: 15, lg: 24, xl: 30 },
+	paddingTop: { sm: 12, md: 17, lg: 10, xl: 6 },
 	paddingBottom: { md: 15, lg: 9, xl: 9 },
 };
 
 const titleStyles = {
 	display: 'block',
-	width: '99%',
+	width: 'auto',
 	color: '#72320A',
-	textTransform: 'capitalize',
+	alignItems:"center",
 	fontWeight: 'bold',
-	paddingLeft: { xs: 0, sm: 4, md: 11 },
+	paddingLeft: { xs: 0, sm: 3, md: 10 },
 	textAlign: 'left',
 	letterSpacing: { xs: '5px', sm: '10px' },
 	fontFamily: 'inter',
 	fontSize: { xs: 36, sm: 48, lg: 60 },
-	marginLeft: { xs: 6, sm: 0 },
+	marginTop: { xs:2,sm:1,md: 6, lg: 15, xl: 25 },
 };
 
 const womansWorthContainerStyle = {
 	display: 'flex',
 	alignItems: 'center',
-	justifyContent: 'flex-end',
-	height: '100vh',
-	width: '100vw',
-	paddingTop: '11rem',
+	justifyContent: 'center',
 };
-
-const bookDisplayMarginLeft = { xs: 5, md: 15, lg: 45 };
 
 export default function WomansWorth() {
 	return (
 		<>
 			<div className="womans-worth" style={womansWorthContainerStyle}>
 				<Navbar />
-				<Stack
-					direction="column"
-					display={{ display: { xs: 'none', sm: 'flex' } }}
-					sx={{
-						alignItems: 'center',
-						paddingBottom: { sm: '12rem', md: '9rem', lg: 0 },
-					}}
-				>
-					<Box>
-						<BookDisplay
-							display={{ xs: 'none', sm: 'flex' }}
-							height={{
-								sm: '25rem',
-								md: '32rem',
-								lg: '33rem',
-								xl: '36rem',
-							}}
-							marginBottom={{xl:18}}
-							marginLeft={bookDisplayMarginLeft}
-						/>
-					</Box>
-				</Stack>
-				<Box sx={commonBookDisplayStyle}>
-					<Box>
-						<BookDisplay
-							display={{ xs: 'flex', sm: 'none' }}
-							height={{ xs: '25rem' }}
-							width="17rem"
-							marginBottom={2}
-							marginLeft={5}
-						/>
-					</Box>
-					<Typography variant="h3" sx={titleStyles} gutterBottom>
-						A WOMAN'S WORTH
-					</Typography>
-					<Stack
-						direction="row"
-						spacing={{ md: 6, lg: 6 }}
-						ml={{ lg: 3, xl: 10 }}
-						display={{ xs: 'none', md: 'flex' }}
+				<Grid container>
+					<Grid
+						item
+						ml={{ sm:10,md: 15, lg: 35, xl: 40 }}
+						mt={{ sm: 10, md: 5, xl: 5 }}
+						xs={12}
+						sm={1}
+						md={4}
+						lg={3}
 					>
-						<PreviewButton display="block" />
-						<BuynowButton display="block" />
-					</Stack>
-					<Stack
-						direction="row"
-						spacing={{ xs: 3, sm: 5 }}
-						display={{ xs: 'flex', md: 'none' }}
-						paddingLeft={{ xs: 6, sm: 0 }}
-						mb={{ xs: 10, sm: 30, md: 0 }}
-					>
-						<PreviewButton display="block" />
-						<BuynowButton display="block" />
-					</Stack>
-				</Box>
+						<BookDisplay display={{ xs: 'none', md: 'flex' }} />
+					</Grid>
+					<Grid item xs={11} sm={6} md={6} lg={6} sx={commonBookDisplayStyle}>
+						<Box>
+							<BookDisplay display={{ xs: 'flex', md: 'none' }} />
+						</Box>
+						<Typography variant="h3" sx={titleStyles} gutterBottom>
+							A WOMAN'S WORTH
+						</Typography>
+						<Stack
+							direction="row"
+							spacing={2}
+							ml={{ lg: 3, xl: 10 }}
+							display={{ xs: 'none', md: 'flex' }}
+						>
+							<PreviewButton display="block" />
+							<BuynowButton display="block" />
+						</Stack>
+						<Stack
+							direction="row"
+							spacing={{ xs: 2, sm: 2 }}
+							display={{ xs: 'flex', md: 'none' }}
+							paddingLeft={{ xs: 0, sm: 0 }}
+							mb={{ xs: 0, sm: 5, md: 0 }}
+						>
+							<PreviewButton display="block" />
+							<BuynowButton display="block" />
+						</Stack>
+					</Grid>
+				</Grid>
 			</div>
 			<WomansWorthText />
 			<Footer />

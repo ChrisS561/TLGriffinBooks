@@ -9,7 +9,6 @@ export default function UpcomingEventsText() {
 
    While you're embracing the holiday spirit, make a stop at her book signing station, where she'll be ready to personalize copies of her latest book, A Winter's Tale, just for you. It's the perfect opportunity to get a signed copy and immerse yourself in a world of imagination and storytelling amid the twinkling lights and festive cheer.
    `;
-
 	return (
 		<Typography
 			variant="body1"
@@ -21,14 +20,9 @@ export default function UpcomingEventsText() {
 				fontFamily: 'inter',
 				fontSize: { xs: 16, md: 18, lg: 20 },
 				color: '#72320A',
-				backgroundColor: { xs: 'white', sm: '#F9F3E9' }, // White background on small screens
+				backgroundColor: 'white', 
 				borderRadius: 8,
 				whiteSpace: 'pre-line',
-				transition: 'transform 0.2s ease-in-out',
-				'&:hover': {
-					transform: 'scale(1.02)',
-					backgroundColor: '#FFE0B2',
-				},
 			}}
 			gutterBottom
 		>
