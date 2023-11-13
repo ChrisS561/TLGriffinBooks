@@ -19,14 +19,11 @@ export default function BuynowButton({ display }) {
 					animation: 'shake 0.5s',
 				},
 				display,
-				// width: '100%',
-				maxWidth: { xs: '8rem', sm: '9rem' },
+				width: 'auto',
 				fontFamily: 'inter',
 				fontSize: '15px',
 				letterSpacing: '2px',
 				textAlign: 'center',
-				// marginLeft: { sm: '5rem', md: '4rem', lg: '4rem', xl: '8rem' },
-				// marginBottom: { xs: 5, sm: 0 },
 			}}
 		>
 			Buy Now

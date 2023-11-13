@@ -1,7 +1,6 @@
 import React from 'react';
 import { Box, Stack, Typography } from '@mui/material';
 import '../index.css';
-
 import Navbar from '../Components/Navigation/NavBar';
 import Footer from '../Components/Footer/Footer';
 import UpcomingEventsText from './UpcomingEventsText';
@@ -17,8 +16,6 @@ export default function UpcomingEvents() {
 					display: 'flex',
 					alignItems: 'center',
 					justifyContent: 'flex-end',
-					height: '100vh',
-					width: '100vw',
 					paddingTop: '11rem',
 				}}
 			>
@@ -59,10 +56,10 @@ export default function UpcomingEvents() {
 						variant="h3"
 						sx={{
 							display: 'block',
-							width: '100%',
+							width: 'auto',
 							color: '#72320A',
 							textTransform: 'capitalize',
-							paddingLeft: { xs: 2, sm: 4, md: 10 },
+							paddingLeft: { xs: 2, sm: 4, md: 8 },
 							textAlign: 'left',
 							letterSpacing: { xs: '2px', sm: '1px' },
 							fontFamily: 'Inter, sans-serif',
@@ -76,11 +73,11 @@ export default function UpcomingEvents() {
 						variant="h3"
 						sx={{
 							display: 'block',
-							width: '100%',
+							width: 'auto',
 							color: '#72320A',
 							textTransform: 'capitalize',
 							fontWeight: 'bold',
-							paddingLeft: { xs: 2, sm: 4, md: 10 },
+							paddingLeft: { xs: 2, sm: 4, md: 8 },
 							textAlign: 'left',
 							letterSpacing: { xs: '5px', sm: '10px' },
 							fontFamily: 'Inter, sans-serif',
@@ -93,11 +90,11 @@ export default function UpcomingEvents() {
 						variant="h3"
 						sx={{
 							display: 'block',
-							width: '100%',
+							width: 'auto',
 							color: '#72320A',
 							textTransform: 'capitalize',
 							fontWeight: 'bold',
-							paddingLeft: { xs: 2, sm: 4, md: 10 },
+							paddingLeft: { xs: 2, sm: 4, md: 8 },
 							textAlign: 'left',
 							letterSpacing: { xs: '5px', sm: '10px' },
 							fontFamily: 'Inter, sans-serif',

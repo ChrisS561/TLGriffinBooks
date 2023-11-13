@@ -44,6 +44,7 @@ export default function Landingpage() {
 				sx={{
 					display: 'flex',
 					color: '#72320A',
+					width:"auto",
 					textTransform: 'capitalize',
 					fontWeight: 'bold',
 					textAlign: 'center',
