@@ -11,9 +11,11 @@ export default function AuthorPicture() {
 			<Box
 				sx={{
 					display: { xs: 'none', sm: 'flex' },
+					justifyContent:'center',
+					alignItems:'center',
 					marginLeft: { sm: '5rem', md: '8rem', lg: '15rem', xl: '25rem' },
 					marginRight: { md: '2rem' },
-					marginBottom: { md: '8rem' },
+					marginBottom: { sm: '8rem' },
 				}}
 			>
 				<img

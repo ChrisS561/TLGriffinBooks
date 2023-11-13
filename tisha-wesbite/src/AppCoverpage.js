@@ -8,7 +8,7 @@ import Landingpage from './Components/Homepage/Landingpage';
 
 export default function AppCoverpage() {
 	return (
-		<div style={{ maxWidth: '100vw', overflow: 'hidden' }}>
+		<div style={{maxWidth: '100vw', overflow: 'hidden' }}>
 			<NavBar />
 			<Landingpage />
 			<Homepage />
