@@ -69,15 +69,16 @@ code {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  min-width: 100vw;
+  box-sizing: border-box;
 }
 
 .book-display {
-  height: 100vh;
-  width: 100vw;
+min-height: 100vh;
+  min-width: 100vw;
+  box-sizing: border-box;
   background-color: #E6E2DF;
-
 }
 
 .MuiButton-contained {
@@ -91,12 +92,12 @@ color: black !important;
 }
 
 .events{ 
-  height: 80vh;
+  height: 100vh;
     width: 100vw;
     background-color: #FFFFFF;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 599px) {
   .events{ 
     height: 60vh;
   }
@@ -107,8 +108,8 @@ color: black !important;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  min-width: 100vw;
    
 }
 
@@ -135,8 +136,7 @@ background-color: #E6E2DF;
 }
 
 .upcoming-events{ 
-  background-color: white;
-    background-image: linear-gradient(to bottom, #faf9f8 28%, #E9E7E2 28%);
+  background-color: #E6E2DF;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

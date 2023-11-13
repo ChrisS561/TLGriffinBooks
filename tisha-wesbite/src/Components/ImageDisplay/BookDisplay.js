@@ -27,13 +27,23 @@ export default function BookDisplay({
 					marginTop,
 					marginLeft,
 					marginRight,
+					margin,
+					overflow: 'hidden',
+					justifyContent: 'center',
+					alignItems: 'center',
 				}}
 			>
 				<img
 					src={BookPic}
 					alt="Profile"
 					loading="lazy"
-					style={{ objectFit: 'cover' }}
+					style={{
+						objectFit: 'cover',
+						height: '100%',
+						width: '100%',
+						maxWidth:"100%",
+						display: 'block',
+					}}
 				/>
 			</Paper>
 		</>

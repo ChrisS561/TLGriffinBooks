@@ -12,7 +12,6 @@ export default function AuthorBio() {
 					display: 'flex',
 					alignItems: 'center',
 					justifyContent: 'flex-end',
-					height: '100vh',
 					paddingTop: '6rem',
 				}}
 			>
@@ -60,7 +59,7 @@ export default function AuthorBio() {
 							textAlign: 'left',
 							marginLeft: { xs: 2, sm: 0 },
 							alignSelf: 'center',
-							width: { xs: '100%', sm: '100%', xl: '80%' },
+							width:"auto",
 							marginBottom: 3,
 							fontFamily: 'inter',
 							fontSize: { xs: 14, lg: 16 },

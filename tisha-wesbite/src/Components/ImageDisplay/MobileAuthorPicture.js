@@ -10,15 +10,15 @@ export default function MobileAuthorPicture() {
 			<Box
 				sx={{
 					display: { xs: 'flex', sm: 'none' },
-					marginLeft: 2,
-					height: { xs: '26rem' },
+					margin:3
+					
 				}}
 			>
 				<img
 					src={pic}
 					alt="Profile"
 					loading="lazy"
-					style={{ objectFit: 'cover' }}
+					style={{ objectFit: 'cover',width:"100%",height:"100%" }}
 				/>
 			</Box>
 		</>
