@@ -1,9 +1,10 @@
 import { Button } from '@mui/material';
 import React from 'react';
 
+
 export default function BuynowButton({ display }) {
 	const handleBuyNow = () => {
-		console.log('click');
+			window.location.replace('https://buy.stripe.com/test_aEUaFmgHbaIsgnu7ss');
 	};
 	return (
 		<Button
