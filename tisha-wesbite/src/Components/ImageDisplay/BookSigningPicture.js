@@ -10,12 +10,9 @@ export default function BookSigningPicture() {
 		<>
 			<Box
 				sx={{
-					display: { xs: 'none', sm: 'flex' },
-					height: { sm: '30rem', md: '33rem', lg: '35rem', xl: '40rem' },
-					marginLeft: { md: '8rem', lg: '10rem', xl: '25rem' },
-					marginRight: { md: '2rem' },
-					marginBottom: { md: '1rem' },
-					marginTop: { sm: 15, md: 20, lg: 0 },
+					display: "flex",
+					// marginBottom:10,
+					marginTop:{xs:10,sm:25},
 					overflow: 'hidden',
 					justifyContent: 'center',
 					alignItems: 'center',
@@ -29,10 +26,10 @@ export default function BookSigningPicture() {
 						objectFit: 'cover',
 						width: '100%',
 						height: '100%',
+						maxWidth: '100%',
 					}}
 				/>
 			</Box>
-			<MobileBookSigningPicture />
 		</>
 	);
 }

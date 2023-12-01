@@ -1,126 +1,82 @@
 import React from 'react';
-import { Box, Stack, Typography } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
 import '../index.css';
 import Navbar from '../Components/Navigation/NavBar';
-import Footer from '../Components/Footer/Footer';
-import UpcomingEventsText from './UpcomingEventsText';
 import BookSigningPicture from '../Components/ImageDisplay/BookSigningPicture';
-import MobileBookSigningPicture from '../Components/ImageDisplay/MobileBookSigningPicture';
+import UpcomingEventsText from '../Pages/UpcomingEventsText';
+import Footer from '../Components/Footer/Footer';
 
 export default function UpcomingEvents() {
 	return (
-		<>
-			<div
-				className="upcoming-events"
-				style={{
-					display: 'flex',
-					alignItems: 'center',
-					justifyContent: 'flex-end',
-					paddingTop: '11rem',
-				}}
+		<Grid
+			container
+			className="upcoming-events"
+			alignItems="center"
+			justifyContent={{ md: 'center' }}
+		>
+			<Navbar />
+
+			<Grid item xs={12} sm={6} md={5} lg={3} margin={{ xs: 2, sm: 0 }}>
+				<BookSigningPicture />
+			</Grid>
+			<Grid
+				item
+				display="flex"
+				flexDirection="column"
+				justifyContent="center"
+				textAlign={{ xs: 'left', md: 'left' }}
 			>
-				<Navbar />
-				<Stack
-					direction="column"
-					display={{ xs: 'none', sm: 'flex' }}
+				<Typography
+					variant="h3"
 					sx={{
-						alignItems: 'center',
-						paddingBottom: { sm: '12rem', md: '9rem', lg: 0 },
+						color: '#72320A',
+						textTransform: 'capitalize',
+						letterSpacing: { xs: '2px', sm: '1px' },
+						fontFamily: 'Inter, sans-serif',
+						fontSize: { xs: 21, sm: 25, lg: 25 },
+						paddingLeft: { xs: 2, sm: 4, md: 4 },
+						mt:{sm:15}
+					}}
+					gutterBottom
+				>
+					A Woman's Worth
+				</Typography>
+				<Typography
+					variant="h3"
+					sx={{
+						color: '#72320A',
+						textTransform: 'capitalize',
+						fontWeight: 'bold',
+						letterSpacing: { xs: '5px', sm: '10px' },
+						fontFamily: 'Inter, sans-serif',
+						fontSize: { xs: 36, sm: 48, lg: 60 },
+						paddingLeft: { xs: 2, sm: 4, md: 4 },
 					}}
 				>
-					<Box>
-						<BookSigningPicture
-							display={{ xs: 'none', sm: 'flex' }}
-							height={{
-								sm: '25rem',
-								md: '32rem',
-								lg: '33rem',
-								xl: '36rem',
-							}}
-						/>
-					</Box>
-				</Stack>
-				<Box
+					BOOK
+				</Typography>
+				<Typography
+					variant="h3"
 					sx={{
-						display: 'block',
-						paddingRight: { xs: 2, sm: 4, md: 15, lg: 35, xl: 80 },
-						paddingTop: { sm: 14, md: 17, lg: 10, xl: 6 },
-						paddingBottom: { md: 15, lg: 9, xl: 9 },
+						color: '#72320A',
+						textTransform: 'capitalize',
+						fontWeight: 'bold',
+						letterSpacing: { xs: '5px', sm: '10px' },
+						fontFamily: 'Inter, sans-serif',
+						fontSize: { xs: 36, sm: 48, lg: 60 },
+						paddingLeft: { xs: 2, sm: 4, md: 4 },
 					}}
+					gutterBottom
 				>
-					<Box>
-						<MobileBookSigningPicture
-						/>
-					</Box>
-					<Typography
-						variant="h3"
-						sx={{
-							display: 'block',
-							width: 'auto',
-							color: '#72320A',
-							textTransform: 'capitalize',
-							paddingLeft: { xs: 2, sm: 4, md: 8 },
-							textAlign: 'left',
-							letterSpacing: { xs: '2px', sm: '1px' },
-							fontFamily: 'Inter, sans-serif',
-							fontSize: { xs: 21, sm: 25, lg: 25 },
-						}}
-						gutterBottom
-					>
-						A Woman's Worth
-					</Typography>
-					<Typography
-						variant="h3"
-						sx={{
-							display: 'block',
-							width: 'auto',
-							color: '#72320A',
-							textTransform: 'capitalize',
-							fontWeight: 'bold',
-							paddingLeft: { xs: 2, sm: 4, md: 8 },
-							textAlign: 'left',
-							letterSpacing: { xs: '5px', sm: '10px' },
-							fontFamily: 'Inter, sans-serif',
-							fontSize: { xs: 36, sm: 48, lg: 60 },
-						}}
-					>
-						BOOK
-					</Typography>
-					<Typography
-						variant="h3"
-						sx={{
-							display: 'block',
-							width: 'auto',
-							color: '#72320A',
-							textTransform: 'capitalize',
-							fontWeight: 'bold',
-							paddingLeft: { xs: 2, sm: 4, md: 8 },
-							textAlign: 'left',
-							letterSpacing: { xs: '5px', sm: '10px' },
-							fontFamily: 'Inter, sans-serif',
-							fontSize: { xs: 36, sm: 48, lg: 60 },
-							marginBottom: { sm: 20, md: 0 },
-						}}
-						gutterBottom
-					>
-						SIGNING
-					</Typography>
-				</Box>
-			</div>
-			<Stack
-				direction="row"
-				spacing={{ sm: 3, md: 9 }}
-				sx={{ display: { xs: 'none', sm: 'flex' }, padding: { sm: 6, lg: 10 } }}
-			>
+					SIGNING
+				</Typography>
+			</Grid>
+			<Grid item xs={12} mt={{xs:10,sm:15}}>
 				<UpcomingEventsText />
-			</Stack>
-			<Stack
-				direction="column"
-				sx={{ display: { xs: 'flex', sm: 'none' }}}
-			>
-				<UpcomingEventsText />
-			</Stack>
-			<Footer />
-		</>
+			</Grid>
+			<Grid item xs={12}>
+				<Footer />
+			</Grid>
+		</Grid>
 	);
 }
