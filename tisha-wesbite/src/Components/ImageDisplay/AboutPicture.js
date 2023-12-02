@@ -22,14 +22,19 @@ export default function AboutPicture({
 					marginBottom,
 					marginRight,
 					marginLeft,
-					marginTop
+					marginTop,
 				}}
 			>
 				<img
 					src={AboutPic}
 					alt="Profile"
 					loading="lazy"
-					style={{ objectFit: 'cover' }}
+					style={{
+						objectFit: 'cover',
+						width: '100%',
+						height: '100%',
+						maxWidth: '100%',
+					}}
 				/>
 			</Box>
 		</>
