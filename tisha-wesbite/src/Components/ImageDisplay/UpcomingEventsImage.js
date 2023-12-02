@@ -2,7 +2,6 @@ import React from 'react';
 import UpcomingeventsPic from '../../Images/UpcomingEvents.jpg';
 import '../../index.css';
 import { Box } from '@mui/material';
-import MobileUpcomingEventsImage from './MobileUpcomingEventsImage';
 
 export default function UpcomingEventsImage() {
 	return (
@@ -22,7 +21,6 @@ export default function UpcomingEventsImage() {
 					style={{ objectFit: 'cover' }}
 				/>
 			</Box>
-			<MobileUpcomingEventsImage />
 		</>
 	);
 }
