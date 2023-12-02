@@ -18,14 +18,14 @@ const titleStyles = {
 	display: 'block',
 	width: 'auto',
 	color: '#72320A',
-	alignItems:"center",
+	alignItems: 'center',
 	fontWeight: 'bold',
 	paddingLeft: { xs: 0, sm: 3, md: 10 },
 	textAlign: 'left',
 	letterSpacing: { xs: '5px', sm: '10px' },
 	fontFamily: 'inter',
 	fontSize: { xs: 36, sm: 48, lg: 60 },
-	marginTop: { xs:2,sm:1,md: 6, lg: 15, xl: 25 },
+	marginTop: { xs: 2, sm: 1, md: 6, lg: 15, xl: 25 },
 };
 
 const womansWorthContainerStyle = {
@@ -42,7 +42,7 @@ export default function WomansWorth() {
 				<Grid container>
 					<Grid
 						item
-						ml={{ sm:10,md: 15, lg: 35, xl: 40 }}
+						ml={{ sm: 10, md: 15, lg: 35, xl: 40 }}
 						mt={{ sm: 10, md: 5, xl: 5 }}
 						xs={12}
 						sm={1}

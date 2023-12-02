@@ -21,7 +21,7 @@ export default function UpcomingEventsText() {
 				fontSize: { xs: 16, md: 18, lg: 20 },
 				color: '#72320A',
 				backgroundColor: 'white', 
-				borderRadius: 8,
+				// borderRadius: 8,
 				whiteSpace: 'pre-line',
 			}}
 			gutterBottom
