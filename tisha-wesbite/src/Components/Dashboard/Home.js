@@ -23,9 +23,15 @@ const Home = () => {
 			<Typography
 				variant="h6"
 				color="primary"
-				sx={{ mt: 4, fontWeight: 'bold' }}
+				sx={{ mt: 2, fontWeight: 'bold' }}
 			>
-				Coming Soon: View Stripe Profits
+				Coming Soon:
+			</Typography>
+			<Typography variant="h6" color="primary" sx={{ mt: 1 }}>
+				View Stripe Profits
+			</Typography>
+			<Typography variant="h6" color="primary" sx={{ mt: 1 }}>
+				Sending Newsletters
 			</Typography>
 			<Typography
 				sx={{ color: 'red', mt: 4, fontStyle: 'italic', textAlign: 'center' }}
