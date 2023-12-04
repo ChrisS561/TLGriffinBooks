@@ -1,9 +1,8 @@
 import * as React from 'react';
-import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import MuiDrawer from '@mui/material/Drawer';
+
 import Box from '@mui/material/Box';
-import MuiAppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
@@ -16,61 +15,20 @@ import Button from '@mui/material/Button';
 import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
 import { useNavigate } from 'react-router';
 import Newsletter from './Newsletter';
+import Subscribers from './Subscribers';
+import Home from './Home';
+import { AppBar, Drawer } from '../../Style/Styling';
 
-const drawerWidth = 240;
-
-// Styled Components
-const AppBar = styled(MuiAppBar, {
-	shouldForwardProp: (prop) => prop !== 'open',
-})(({ theme, open }) => ({
-	zIndex: theme.zIndex.drawer + 1,
-	transition: theme.transitions.create(['width', 'margin'], {
-		easing: theme.transitions.easing.sharp,
-		duration: theme.transitions.duration.leavingScreen,
-	}),
-	...(open && {
-		marginLeft: drawerWidth,
-		width: `calc(100% - ${drawerWidth}px)`,
-		transition: theme.transitions.create(['width', 'margin'], {
-			easing: theme.transitions.easing.sharp,
-			duration: theme.transitions.duration.enteringScreen,
-		}),
-	}),
-}));
-
-const Drawer = styled(MuiDrawer, {
-	shouldForwardProp: (prop) => prop !== 'open',
-})(({ theme, open }) => ({
-	'& .MuiDrawer-paper': {
-		position: 'relative',
-		whiteSpace: 'nowrap',
-		width: drawerWidth,
-		transition: theme.transitions.create('width', {
-			easing: theme.transitions.easing.sharp,
-			duration: theme.transitions.duration.enteringScreen,
-		}),
-		boxSizing: 'border-box',
-		...(!open && {
-			overflowX: 'hidden',
-			transition: theme.transitions.create('width', {
-				easing: theme.transitions.easing.sharp,
-				duration: theme.transitions.duration.leavingScreen,
-			}),
-			width: theme.spacing(7),
-			[theme.breakpoints.up('sm')]: {
-				width: theme.spacing(9),
-			},
-		}),
-	},
-}));
-
-const defaultTheme = createTheme();
-//TODO ADD a message to make sure signout 
+//TODO ADD a message to make sure signout
 // Main Dashboard Component
 export default function Dashboard() {
 	const [open, setOpen] = React.useState(true);
 	const [showNewsletter, setShowNewsletter] = React.useState(false);
+	const [showSubscribers, setSubscribers] = React.useState(false);
+	const [showData, setShowData] = React.useState(false);
+	const [showHome, setShowHome] = React.useState(true);
 	const [user, setUser] = React.useState(null);
+	const defaultTheme = createTheme();
 	const auth = getAuth();
 	const navigate = useNavigate();
 
@@ -82,7 +40,38 @@ export default function Dashboard() {
 	// Handle Create Newsletter Click
 	const handleCreateNewsletterClick = () => {
 		setShowNewsletter(true);
+		setSubscribers(false);
+		setShowData(false);
+		setShowHome(false);
 	};
+
+	const handleShowSubscribers = () => {
+		setSubscribers(true);
+		setShowNewsletter(false);
+		setShowData(true);
+		setShowHome(false);
+	};
+
+	const handleShowData = () => {
+		setSubscribers(false);
+		setShowNewsletter(false);
+		setShowData(true);
+		setShowHome(false);
+	};
+
+	const handleCloseData = () => {
+		setSubscribers(false);
+		setShowNewsletter(false);
+		setShowData(true);
+		setShowHome(false);
+	};
+
+	const handleShowHome = () => { 
+		setSubscribers(false);
+		setShowNewsletter(false);
+		setShowData(false);
+		setShowHome(true)
+	}
 
 	// Handle Signout
 	const handleSignout = () => {
@@ -164,18 +153,28 @@ export default function Dashboard() {
 						</IconButton>
 					</Toolbar>
 					<Divider />
-					{/* TODO Fix the buttons so that the whole button is able to be clicked */}
 					<List component="nav">
 						<ListItemButton
 							sx={{
 								padding: '5px',
 								borderRadius: '8px',
-								// backgroundColor: '#4CAF50',
 								color: 'Black',
-								'&:hover': {
-									backgroundColor: '#4CAF50',
-									color: 'white',
-								},
+							}}
+						>
+							<Button
+								color="inherit"
+								sx={{ textDecoration: 'none' }}
+								onClick={handleShowHome}
+							>
+								<Typography variant="subtitle2">Home</Typography>
+							</Button>
+						</ListItemButton>
+						<Divider sx={{ my: 1 }} />
+						<ListItemButton
+							sx={{
+								padding: '5px',
+								borderRadius: '8px',
+								color: 'Black',
 							}}
 						>
 							<Button
@@ -192,10 +191,22 @@ export default function Dashboard() {
 								padding: '5px',
 								borderRadius: '8px',
 								color: 'Black',
-								'&:hover': {
-									backgroundColor: '#4CAF50',
-									color: 'white',
-								},
+							}}
+						>
+							<Button
+								color="inherit"
+								sx={{ textDecoration: 'none' }}
+								onClick={handleShowData}
+							>
+								<Typography variant="subtitle2">Subscribers</Typography>
+							</Button>
+						</ListItemButton>
+						<Divider sx={{ my: 1 }} />
+						<ListItemButton
+							sx={{
+								padding: '5px',
+								borderRadius: '8px',
+								color: 'Black',
 							}}
 						>
 							<Button
@@ -221,7 +232,27 @@ export default function Dashboard() {
 					}}
 				>
 					<Toolbar />
+					{showHome && <Home/>}
 					{showNewsletter && <Newsletter />}
+					{showData ? (
+						<Box
+							sx={{
+								display: 'flex',
+								flexDirection: 'column',
+								alignItems: 'center',
+								textAlign: 'center',
+							}}
+						>
+							<Button onClick={handleShowSubscribers}>Show Data</Button>
+							<Button onClick={handleCloseData}>Close Data</Button>
+							<Typography sx={{ color: 'red', mt: 2 }}>
+								Warning: Each time you show data, it may result in increased
+								database reads.
+							</Typography>
+						</Box>
+					) : null}
+
+					{showSubscribers && <Subscribers />}
 				</Box>
 			</Box>
 		</ThemeProvider>

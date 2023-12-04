@@ -9,7 +9,7 @@ import SuccessPayment from './StripeFrontend/SuccessPayment';
 import FailedPayment from './StripeFrontend/FailedPayment';
 import SignIn from './Components/Login/Signin';
 import Dashboard from './Components/Dashboard/Dashboard';
-//TODO implement a private Route
+
 function App() {
 	return (
 		<RecoilRoot>
