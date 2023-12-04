@@ -2,6 +2,8 @@ import { Button, Stack, TextField } from '@mui/material';
 import React, { useState } from 'react';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import validator from 'validator';
+import { addDoc, collection } from 'firebase/firestore';
+import { db } from '../../Firebase/Firebase';
 
 export default function SubmitButtonFormControl() {
 	const [inputForm, setInputForm] = useState({
@@ -19,7 +21,8 @@ export default function SubmitButtonFormControl() {
 		});
 	};
 
-	const handleSubmit = (event) => {
+	const handleSubmit = async (event) => {
+		const usersCollection = collection(db, 'users');
 		event.preventDefault();
 		const { firstname, lastname, email } = inputForm;
 		if (!firstname || !lastname || !email) {
@@ -32,7 +35,12 @@ export default function SubmitButtonFormControl() {
 		}
 		setError(false);
 		setSuccess(true);
-		console.log(inputForm);
+		try {
+			const newDoc = await addDoc(usersCollection, inputForm);
+			console.log(`Your doc was created at ${newDoc.id}`);
+		} catch (e) {
+			console.error('Error adding document: ', e.message);
+		}
 	};
 
 	return (

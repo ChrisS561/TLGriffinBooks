@@ -1,7 +1,7 @@
 import { Box, Stack, Typography } from '@mui/material';
 import React from 'react';
 
-//TODO Make this responsive
+
 export default function DateHomepage() {
 	return (
 		<div>
