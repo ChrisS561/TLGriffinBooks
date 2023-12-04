@@ -1,10 +1,14 @@
 import * as React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '../../Firebase/Firebase';
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
 
 const columns = [
-	{ field: 'id', headerName: 'ID', width: 90 },
-	{ field: 'firstName', headerName: 'First name', width: 150 },
-	{ field: 'lastName', headerName: 'Last name', width: 150 },
+	{ field: 'id', headerName: 'ID', width: 200 },
+	{ field: 'firstName', headerName: 'First name', width: 200 },
+	{ field: 'lastName', headerName: 'Last name', width: 200 },
 	{
 		field: 'email',
 		headerName: 'Email',
@@ -13,21 +17,49 @@ const columns = [
 	},
 ];
 
-const rows = [
-	{ id: 1, lastName: 'Snow', firstName: 'Jon', email: 35 },
-	{ id: 2, lastName: 'Lannister', firstName: 'Cersei', email: 42 },
-	{ id: 3, lastName: 'Lannister', firstName: 'Jaime', email: 45 },
-	{ id: 4, lastName: 'Stark', firstName: 'Arya', email: 16 },
-	{ id: 5, lastName: 'Targaryen', firstName: 'Daenerys', email: null },
-	{ id: 6, lastName: 'Melisandre', firstName: null, email: 150 },
-	{ id: 7, lastName: 'Clifford', firstName: 'Ferrara', email: 44 },
-	{ id: 8, lastName: 'Frances', firstName: 'Rossini', email: 36 },
-	{ id: 9, lastName: 'Roxie', firstName: 'Harvey', email: 65 },
-];
+async function fetchData() {
+	const querySnapshot = await getDocs(collection(db, 'users'));
+	const rows = querySnapshot.docs.map((doc) => ({
+		id: doc.id,
+		lastName: doc.data().lastname,
+		firstName: doc.data().firstname,
+		email: doc.data().email,
+	}));
+	return rows;
+}
 
-export default function Subscribers() {
-	return (
-		<div style={{ height: "100vh", width: '100%' }}>
+export default function Subscribers(props) {
+	const [rows, setRows] = React.useState([]);
+	const [loading, setloading] = React.useState(true);
+
+	React.useEffect(() => {
+		const getData = async () => {
+			try {
+				const data = await fetchData();
+				setRows(data);
+			} catch (error) {
+				console.error('Error fetching data:', error);
+			} finally {
+				setloading(false);
+			}
+		};
+
+		getData();
+	}, []);
+
+	return loading ? (
+		<Box
+			sx={{
+				display: 'flex',
+				justifyContent: 'center',
+				alignItems: 'center',
+				height: '100vh',
+			}}
+		>
+			<CircularProgress size={100} />
+		</Box>
+	) : (
+		<div style={{ height: '100vh', width: '100%' }}>
 			<DataGrid
 				rows={rows}
 				columns={columns}
@@ -37,7 +69,6 @@ export default function Subscribers() {
 					},
 				}}
 				pageSizeOptions={[10, 20]}
-			
 			/>
 		</div>
 	);

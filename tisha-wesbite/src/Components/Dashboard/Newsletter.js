@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, TextField, Button, TextareaAutosize } from '@mui/material';
+import { Container, TextField, Button, TextareaAutosize, Typography } from '@mui/material';
 
 export default function Newsletter() {
 	const [name, setName] = useState('');
@@ -22,6 +22,9 @@ export default function Newsletter() {
 
 	return (
 		<Container maxWidth="sm" style={{ textAlign: 'center', marginTop: '50px' }}>
+			<Typography variant="h2" color="initial">
+				Your Subscribers Are Waiting!
+			</Typography>
 			<form onSubmit={handleSubmit}>
 				<TextField
 					label="Name"

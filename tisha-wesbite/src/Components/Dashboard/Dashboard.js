@@ -232,7 +232,7 @@ export default function Dashboard() {
 					}}
 				>
 					<Toolbar />
-					{showHome && <Home/>}
+					{showHome && <Home />}
 					{showNewsletter && <Newsletter />}
 					{showData ? (
 						<Box
@@ -245,7 +245,13 @@ export default function Dashboard() {
 						>
 							<Button onClick={handleShowSubscribers}>Show Data</Button>
 							<Button onClick={handleCloseData}>Close Data</Button>
-							<Typography sx={{ color: 'red', mt: 2 }}>
+							<Typography
+								sx={{
+									color: 'red',
+									fontStyle: 'italic',
+									textAlign: 'center',
+								}}
+							>
 								Warning: Each time you show data, it may result in increased
 								database reads.
 							</Typography>
