@@ -65,6 +65,18 @@ export default function Footer({ toolbarColor }) {
 										<Grid item>
 											<SubscribeButton />
 										</Grid>
+										<Grid item>
+											<Button
+												sx={{
+													fontFamily: 'inter',
+													color: '#72320A',
+													margin: '1rem',
+												}}
+												href="/Signin"
+											>
+												Login
+											</Button>
+										</Grid>
 									</Grid>
 									<Divider sx={{ width: '100vw' }} />
 									<Typography
