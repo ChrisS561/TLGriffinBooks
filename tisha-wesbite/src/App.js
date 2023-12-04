@@ -1,4 +1,3 @@
-import "./App.css";
 import AppCoverpage from "./AppCoverpage";
 import {
   RecoilRoot,

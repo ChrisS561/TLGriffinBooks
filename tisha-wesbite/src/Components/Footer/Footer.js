@@ -3,16 +3,12 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import { Button, Divider, Grid, Typography } from '@mui/material';
 import SubscribeButton from '../SubscribeButtonDisplay/SubscribeButton';
-import { useAuth0 } from '@auth0/auth0-react';
-import LoginButton from '../Login/LoginButton';
-import LogoutButton from '../Login/LogoutButton';
 import BooksButton from '../Books/BooksButton';
 import MobileFooter from './MobileFooter';
 import { StyledToolbar } from '../../Style/Styling';
 
 export default function Footer({ toolbarColor }) {
 	// Auth0 functionality
-	const { user, isLoading } = useAuth0();
 
 	return (
 		<footer>
@@ -68,10 +64,6 @@ export default function Footer({ toolbarColor }) {
 										</Grid>
 										<Grid item>
 											<SubscribeButton />
-										</Grid>
-										<Grid item>
-											{!isLoading && !user && <LoginButton />}
-											{!isLoading && user && <LogoutButton />}
 										</Grid>
 									</Grid>
 									<Divider sx={{ width: '100vw' }} />

@@ -1,10 +1,10 @@
 import { Button } from '@mui/material';
 import React from 'react';
 
-
 export default function BuynowButton({ display }) {
+	const stripeURL = process.env.REACT_APP_STRIPE_URL;
 	const handleBuyNow = () => {
-			window.location.replace('https://buy.stripe.com/test_aEUaFmgHbaIsgnu7ss');
+			window.location.replace(`${stripeURL}`);
 	};
 	return (
 		<Button
