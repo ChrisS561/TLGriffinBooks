@@ -4,7 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
-/server/ServiceAccount
+server/ServiceAccount
 
 
 # testing
@@ -20,7 +20,6 @@
 .env.test.local
 .env.production.local
 .env
-/server/.env.local
 
 npm-debug.log*
 yarn-debug.log*
