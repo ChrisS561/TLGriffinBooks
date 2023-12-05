@@ -20,7 +20,6 @@ import Home from './Home';
 import { AppBar, Drawer } from '../../Style/Styling';
 import { Link } from 'react-router-dom';
 
-//TODO ADD a message to make sure signout
 // Main Dashboard Component
 export default function Dashboard() {
 	const [open, setOpen] = React.useState(true);

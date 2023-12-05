@@ -1,16 +1,55 @@
 import React, { useState } from 'react';
-import { Container, TextField, Button, TextareaAutosize, Typography,List,ListItem } from '@mui/material';
+import {
+	Container,
+	TextField,
+	Button,
+	TextareaAutosize,
+	Typography,
+	List,
+	ListItem,
+} from '@mui/material';
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
+import axios from 'axios';
 
 export default function Newsletter() {
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
 	const [subject, setSubject] = useState('');
 	const [message, setMessage] = useState('');
+	const [loading, setLoading] = useState(false);
 
-	const handleSubmit = (e) => {
+	const PostData = async () => {
+		setLoading(true);
+		axios
+			.post(
+				process.env.REACT_APP_SERVER_API,
+				{
+					name,
+					email,
+					subject,
+					message,
+				},
+				{
+					headers: {
+						'Content-Type': 'application/json',
+					},
+				}
+			)
+			.then((response) => {
+				console.log(response.data);
+				handleClear();
+			})
+			.catch((error) => {
+				console.error(`Post error: ${error.message}`);
+			})
+			.finally(() => setLoading(false));
+	};
+
+	const handleSubmit = async (e) => {
 		e.preventDefault();
-		// Add your logic to handle form submission here
 		console.log('Form submitted:', name, email, subject, message);
+		await PostData();
 	};
 
 	const handleClear = () => {
@@ -19,7 +58,7 @@ export default function Newsletter() {
 		setSubject('');
 		setMessage('');
 	};
-
+//TODO Create a preview of how the email would look first. 
 	return (
 		<Container maxWidth="sm" style={{ textAlign: 'center', marginTop: '50px' }}>
 			<Typography variant="h2" color="initial">
@@ -78,22 +117,41 @@ export default function Newsletter() {
 					required
 				/>
 				<br />
-				<Button
-					type="submit"
-					variant="contained"
-					color="primary"
-					style={{ margin: '16px 8px' }}
-				>
-					Submit
-				</Button>
-				<Button
-					type="button"
-					onClick={handleClear}
-					variant="contained"
-					color="secondary"
-				>
-					Clear
-				</Button>
+				{loading ? (
+					<Box
+						sx={{
+							flexDirection: 'column',
+							alignItems: 'center',
+							justifyContent: 'center',
+							height: '100vh',
+						}}
+					>
+						<CircularProgress />
+						<Typography sx={{ marginTop: 2, textAlign: 'center' }}>
+							Your newsletter is being sent
+						</Typography>
+					</Box>
+				) : (
+					<>
+						<Button
+							type="submit"
+							variant="contained"
+							color="primary"
+							disabled={loading}
+							style={{ margin: '16px 8px' }}
+						>
+							Submit
+						</Button>
+						<Button
+							type="button"
+							onClick={handleClear}
+							variant="contained"
+							color="secondary"
+						>
+							Clear
+						</Button>
+					</>
+				)}
 			</form>
 		</Container>
 	);
