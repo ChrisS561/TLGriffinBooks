@@ -3,7 +3,7 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 const sgMail = require('@sendgrid/mail');
 var admin = require('firebase-admin');
-
+"./"
 dotenv.config();
 
 const app = express();
