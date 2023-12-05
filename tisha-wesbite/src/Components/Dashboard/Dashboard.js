@@ -18,6 +18,7 @@ import Newsletter from './Newsletter';
 import Subscribers from './Subscribers';
 import Home from './Home';
 import { AppBar, Drawer } from '../../Style/Styling';
+import { Link } from 'react-router-dom';
 
 //TODO ADD a message to make sure signout
 // Main Dashboard Component
@@ -161,13 +162,13 @@ export default function Dashboard() {
 								color: 'Black',
 							}}
 						>
-							<Button
+							<Link
 								color="inherit"
-								sx={{ textDecoration: 'none' }}
+								style={{ textDecoration: 'none' }}
 								onClick={handleShowHome}
 							>
 								<Typography variant="subtitle2">Home</Typography>
-							</Button>
+							</Link>
 						</ListItemButton>
 						<Divider sx={{ my: 1 }} />
 						<ListItemButton
@@ -177,13 +178,13 @@ export default function Dashboard() {
 								color: 'Black',
 							}}
 						>
-							<Button
+							<Link
 								color="inherit"
-								sx={{ textDecoration: 'none' }}
+								style={{ textDecoration: 'none' }}
 								onClick={handleCreateNewsletterClick}
 							>
 								<Typography variant="subtitle2">Create Newsletter</Typography>
-							</Button>
+							</Link>
 						</ListItemButton>
 						<Divider sx={{ my: 1 }} />
 						<ListItemButton
@@ -193,13 +194,13 @@ export default function Dashboard() {
 								color: 'Black',
 							}}
 						>
-							<Button
+							<Link
 								color="inherit"
-								sx={{ textDecoration: 'none' }}
+								style={{ textDecoration: 'none' }}
 								onClick={handleShowData}
 							>
 								<Typography variant="subtitle2">Subscribers</Typography>
-							</Button>
+							</Link>
 						</ListItemButton>
 						<Divider sx={{ my: 1 }} />
 						<ListItemButton
@@ -209,13 +210,13 @@ export default function Dashboard() {
 								color: 'Black',
 							}}
 						>
-							<Button
+							<Link
 								color="inherit"
-								sx={{ textDecoration: 'none' }}
+								style={{ textDecoration: 'none' }}
 								onClick={handleSignout}
 							>
 								<Typography variant="subtitle2">Signout</Typography>
-							</Button>
+							</Link>
 						</ListItemButton>
 					</List>
 				</Drawer>

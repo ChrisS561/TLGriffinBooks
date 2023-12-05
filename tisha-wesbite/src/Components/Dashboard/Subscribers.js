@@ -69,6 +69,7 @@ export default function Subscribers(props) {
 					},
 				}}
 				pageSizeOptions={[10, 20]}
+				checkboxSelection
 			/>
 		</div>
 	);

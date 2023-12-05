@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, TextField, Button, TextareaAutosize, Typography } from '@mui/material';
+import { Container, TextField, Button, TextareaAutosize, Typography,List,ListItem } from '@mui/material';
 
 export default function Newsletter() {
 	const [name, setName] = useState('');
@@ -25,6 +25,23 @@ export default function Newsletter() {
 			<Typography variant="h2" color="initial">
 				Your Subscribers Are Waiting!
 			</Typography>
+			<Typography variant="subtitle2" color="initial" ml={2}>
+				<List sx={{ listStyleType: 'disc' }}>
+					<ListItem sx={{ display: 'list-item' }}>
+						Name: The name you want your subscribers to see or leave it blank.
+					</ListItem>
+					<ListItem sx={{ display: 'list-item' }}>
+						Email: The email you want to use to send to the subscribers.
+						(Required*)
+					</ListItem>
+					<ListItem sx={{ display: 'list-item' }}>
+						Subject: The subject of your newsletter. (Required*)
+					</ListItem>
+					<ListItem sx={{ display: 'list-item' }}>
+						Message: The message of your newsletter. (Required*)
+					</ListItem>
+				</List>
+			</Typography>
 			<form onSubmit={handleSubmit}>
 				<TextField
 					label="Name"
@@ -41,6 +58,7 @@ export default function Newsletter() {
 					onChange={(e) => setEmail(e.target.value)}
 					fullWidth
 					margin="normal"
+					required
 				/>
 				<TextField
 					label="Subject"
@@ -49,6 +67,7 @@ export default function Newsletter() {
 					onChange={(e) => setSubject(e.target.value)}
 					fullWidth
 					margin="normal"
+					required
 				/>
 				<TextareaAutosize
 					rowsmin={3}
@@ -56,6 +75,7 @@ export default function Newsletter() {
 					value={message}
 					onChange={(e) => setMessage(e.target.value)}
 					style={{ width: '100%', marginTop: '16px' }}
+					required
 				/>
 				<br />
 				<Button
