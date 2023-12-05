@@ -1,2 +1,3 @@
 .env
-ServiceAccount
+/ServiceAccount
+/node_modules
