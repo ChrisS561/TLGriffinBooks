@@ -11,6 +11,7 @@ import {
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
 import axios from 'axios';
+import PreviewEmail from './PreviewEmail';
 
 export default function Newsletter() {
 	const [name, setName] = useState('');
@@ -58,7 +59,6 @@ export default function Newsletter() {
 		setSubject('');
 		setMessage('');
 	};
-//TODO Create a preview of how the email would look first. 
 	return (
 		<Container maxWidth="sm" style={{ textAlign: 'center', marginTop: '50px' }}>
 			<Typography variant="h2" color="initial">
@@ -67,19 +67,26 @@ export default function Newsletter() {
 			<Typography variant="subtitle2" color="initial" ml={2}>
 				<List sx={{ listStyleType: 'disc' }}>
 					<ListItem sx={{ display: 'list-item' }}>
-						Name: The name you want your subscribers to see or leave it blank.
+						<strong>Name:</strong> The name or header you want your subscribers
+						to see, or leave it blank. <br />
+						(e.g., "Dear Subscribers","Hello Readers")
 					</ListItem>
 					<ListItem sx={{ display: 'list-item' }}>
-						Email: The email you want to use to send to the subscribers.
+						<strong>Email:</strong> Your email you want to use to send to the
+						subscribers. (Required*)
+					</ListItem>
+					<ListItem sx={{ display: 'list-item' }}>
+						<strong>Subject:</strong>The subject of your newsletter. (Required*)
+					</ListItem>
+					<ListItem sx={{ display: 'list-item' }}>
+						<strong>Message:</strong> The message of your newsletter.
 						(Required*)
 					</ListItem>
-					<ListItem sx={{ display: 'list-item' }}>
-						Subject: The subject of your newsletter. (Required*)
-					</ListItem>
-					<ListItem sx={{ display: 'list-item' }}>
-						Message: The message of your newsletter. (Required*)
-					</ListItem>
 				</List>
+				<Typography variant="subtitle2" color="textSecondary" paragraph>
+					Fill in the details below to send your newsletter. You can use HTML
+					tags to style your message.
+				</Typography>
 			</Typography>
 			<form onSubmit={handleSubmit}>
 				<TextField
@@ -93,6 +100,7 @@ export default function Newsletter() {
 				<TextField
 					label="Email"
 					type="email"
+					defaultValue="chirs"
 					value={email}
 					onChange={(e) => setEmail(e.target.value)}
 					fullWidth
@@ -153,6 +161,19 @@ export default function Newsletter() {
 					</>
 				)}
 			</form>
+			<Typography
+				variant="h6"
+				color="primary"
+				style={{ margin: '40px 0 20px' }}
+			>
+				Preview of Your Newsletter
+			</Typography>
+			<PreviewEmail
+				name={name}
+				subject={subject}
+				fromEmail={email}
+				message={message}
+			/>
 		</Container>
 	);
 }
