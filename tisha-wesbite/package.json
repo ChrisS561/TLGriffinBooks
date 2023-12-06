@@ -10,7 +10,7 @@
 		"@fontsource/playfair-display": "^5.0.12",
 		"@fontsource/roboto": "^5.0.8",
 		"@mui/icons-material": "^5.14.8",
-		"@mui/material": "^5.14.8",
+		"@mui/material": "^5.14.20",
 		"@mui/styled-engine-sc": "^5.14.8",
 		"@mui/x-data-grid": "^6.18.3",
 		"@testing-library/jest-dom": "^5.17.0",
