@@ -54,7 +54,7 @@ export default function Footer({ toolbarColor }) {
 													color: '#72320A',
 													margin: '1rem',
 												}}
-												href="/About"
+												href="/about"
 											>
 												About
 											</Button>
@@ -72,7 +72,7 @@ export default function Footer({ toolbarColor }) {
 													color: '#72320A',
 													margin: '1rem',
 												}}
-												href="/Signin"
+												href="/signin"
 											>
 												Login
 											</Button>

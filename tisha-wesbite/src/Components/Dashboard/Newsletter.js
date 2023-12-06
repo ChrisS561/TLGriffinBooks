@@ -24,7 +24,7 @@ export default function Newsletter() {
 		setLoading(true);
 		axios
 			.post(
-				process.env.REACT_APP_SERVER_API,
+				process.env.REACT_APP_SERVER_NEWSLETTER_API,
 				{
 					name,
 					email,
@@ -39,10 +39,12 @@ export default function Newsletter() {
 			)
 			.then((response) => {
 				console.log(response.data);
+				alert('Success: Newsletter sent successfully!');
 				handleClear();
 			})
 			.catch((error) => {
 				console.error(`Post error: ${error.message}`);
+				alert('Error: Failed to send newsletter. Please try again later.');
 			})
 			.finally(() => setLoading(false));
 	};

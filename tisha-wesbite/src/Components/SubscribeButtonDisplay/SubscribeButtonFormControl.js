@@ -29,6 +29,9 @@ export default function SubmitButtonFormControl() {
 			setError(true);
 			return;
 		}
+
+		const lowercaseEmail = email.toLowerCase(); 
+		
 		if (!validator.isEmail(email)) {
 			alert('Please enter a valid email address.');
 			return;
@@ -36,7 +39,11 @@ export default function SubmitButtonFormControl() {
 		setError(false);
 		setSuccess(true);
 		try {
-			const newDoc = await addDoc(usersCollection, inputForm);
+			const newDoc = await addDoc(usersCollection, {
+				firstname,
+				lastname,
+				email: lowercaseEmail,
+			});
 			console.log(`Your doc was created at ${newDoc.id}`);
 		} catch (e) {
 			console.error('Error adding document: ', e.message);

@@ -9,20 +9,22 @@ import SuccessPayment from './StripeFrontend/SuccessPayment';
 import FailedPayment from './StripeFrontend/FailedPayment';
 import SignIn from './Components/Login/Signin';
 import Dashboard from './Components/Dashboard/Dashboard';
+import Unsubscribe from './Components/Dashboard/Unsubscribe';
 
 function App() {
 	return (
 		<RecoilRoot>
 			<Routes>
 				<Route path="/" element={<AppCoverpage />} />
-				<Route path="/About" element={<About />} />
-				<Route path="/Preview" element={<PreviewPage />} />
-				<Route path="/Upcoming-Events" element={<Events />} />
-				<Route path="/A-Womans-Worth" element={<WomansWorth />} />
-				<Route path="/Success" element={<SuccessPayment />} />
-				<Route path="/Failed" element={<FailedPayment />} />
-				<Route path="/Signin" element={<SignIn />} />
-				<Route path="/DashBoard" element={<Dashboard />} />
+				<Route path="/about" element={<About />} />
+				<Route path="/preview" element={<PreviewPage />} />
+				<Route path="/upcoming-events" element={<Events />} />
+				<Route path="/a-womans-worth" element={<WomansWorth />} />
+				<Route path="/success" element={<SuccessPayment />} />
+				<Route path="/failed" element={<FailedPayment />} />
+				<Route path="/signin" element={<SignIn />} />
+				<Route path="/dashboard" element={<Dashboard />} />
+				<Route path="/unsubscribe" element={<Unsubscribe />} />
 			</Routes>
 		</RecoilRoot>
 	);
