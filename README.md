@@ -16,7 +16,6 @@ This project is a dynamic and user-friendly website developed for our client, [T
 
 # Contact
 * Chris Smith: Email:Chrissmithjr97@gmail.com & URL: www.christopersmithjr.com
-* Brock Bloomquist: URL:https://brockabloomquist.com/
 
 # Contribution
 Issue Tracker: https://github.com/ChrisS561/Tisha-BookWebsite/issues
