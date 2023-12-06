@@ -74,12 +74,12 @@ app.post('/api/newsletter', async (req, res) => {
 app.post('/api/welcome', async (req, res) => {
 	const unsubscribeLink = process.env.UNSUBSCRIBE_URL;
 	const authorsName = 'T.L Griffin';
-	const { name, email, message, subject } = req.body;
+	const { name, email } = req.body;
 	try {
 		const msg = {
-			to: usersEmail,
-			from: email,
-			subject: subject,
+			to: email,
+			from: 'chrissmithjr97@gmail.com',
+			subject: 'Unlock Exclusive Stories and Updates!📚',
 			html: `<div style="font-family: 'Arial', sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); display: flex; flex-direction: column; align-items: center; justify-content: center;">
 					<h2 style="color: #333333; margin-bottom: 20px;">
 						Welcome to ${authorsName}'s Newsletter!
