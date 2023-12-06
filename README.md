@@ -14,6 +14,8 @@ This project is a dynamic and user-friendly website developed for our client, [T
 
 * *`Material UI`*: Material UI is used for creating a visually appealing and responsive design.
 
+* *`SendGrid API`*: SendGrid is integrated for handling, managing, and sending transactional, marketing emails and newsletters, providing reliable email delivery and tracking capabilities.
+
 # Contact
 * Chris Smith: Email:Chrissmithjr97@gmail.com & URL: www.christopersmithjr.com
 
