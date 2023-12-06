@@ -14,23 +14,31 @@ const Home = () => {
 				padding: 2,
 			}}
 		>
-			<Typography variant="h2" gutterBottom>
+			<Typography variant="h2" gutterBottom sx={{ textAlign: 'center' }}>
 				Welcome to Your Dashboard
 			</Typography>
-			<Typography variant="subtitle1" gutterBottom>
+			<Typography variant="subtitle1" gutterBottom sx={{ textAlign: 'center' }}>
 				Explore and manage your data here.
 			</Typography>
 			<Typography
 				variant="h6"
 				color="primary"
-				sx={{ mt: 2, fontWeight: 'bold' }}
+				sx={{ mt: 2, fontWeight: 'bold', textAlign: 'center' }}
 			>
 				Coming Soon:
 			</Typography>
-			<Typography variant="h6" color="primary" sx={{ mt: 1 }}>
+			<Typography
+				variant="h6"
+				color="primary"
+				sx={{ mt: 1, textAlign: 'center' }}
+			>
 				View Stripe Profits
 			</Typography>
-			<Typography variant="h6" color="primary" sx={{ mt: 1 }}>
+			<Typography
+				variant="h6"
+				color="primary"
+				sx={{ mt: 1, textAlign: 'center' }}
+			>
 				Sending Newsletters
 			</Typography>
 			<Typography
