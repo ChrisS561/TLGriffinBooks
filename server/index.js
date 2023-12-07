@@ -27,6 +27,21 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.json());
 
+/**
+ * API endpoint for sending custom newsletters to all subscribed users.
+ *
+ * @param {Object} req - Express request object containing user data.
+ *                      Parameters:
+ *                        - name: Name of the sender.
+ *                        - email: Email address of the sender.
+ *                        - message: Content of the newsletter.
+ *                        - subject: Subject of the newsletter.
+ * @param {Object} res - Express response object.
+ * @returns {Object} JSON response indicating success or failure.
+ *                    Properties:
+ *                      - success: Boolean indicating the success status.
+ *                      - error: String containing error details (if any).
+ */
 app.post('/api/newsletter', async (req, res) => {
 	const unsubscribeLink = process.env.UNSUBSCRIBE_URL;
 	const { name, email, message, subject } = req.body;
@@ -70,6 +85,19 @@ app.post('/api/newsletter', async (req, res) => {
 	}
 });
 
+/**
+ * API endpoint for sending a welcome email to users who sign up for the newsletter.
+ *
+ * @param {Object} req - Express request object containing user data.
+ *                      Parameters:
+ *                        - firstname: First name of the subscriber.
+ *                        - email: Email address of the subscriber.
+ * @param {Object} res - Express response object.
+ * @returns {Object} JSON response indicating success or failure.
+ *                    Properties:
+ *                      - success: Boolean indicating the success status.
+ *                      - error: String containing error details (if any).
+ */
 app.post('/api/welcome', async (req, res) => {
 	const unsubscribeLink = process.env.UNSUBSCRIBE_URL;
 	const authorsName = 'T.L Griffin';
