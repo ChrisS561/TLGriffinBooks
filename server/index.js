@@ -27,7 +27,6 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.json());
 
-//TODO Implement the unsubscribe button for users
 app.post('/api/newsletter', async (req, res) => {
 	const unsubscribeLink = process.env.UNSUBSCRIBE_URL;
 	const { name, email, message, subject } = req.body;
@@ -74,22 +73,22 @@ app.post('/api/newsletter', async (req, res) => {
 app.post('/api/welcome', async (req, res) => {
 	const unsubscribeLink = process.env.UNSUBSCRIBE_URL;
 	const authorsName = 'T.L Griffin';
-	const { name, email } = req.body;
+	const { firstname, email } = req.body;
 	try {
 		const msg = {
 			to: email,
-			from: 'chrissmithjr97@gmail.com',
+			from: process.env.CLIENTS_EMAIL_ADDRESS,
 			subject: 'Unlock Exclusive Stories and Updates!📚',
 			html: `<div style="font-family: 'Arial', sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); display: flex; flex-direction: column; align-items: center; justify-content: center;">
-					<h2 style="color: #333333; margin-bottom: 20px;">
+					<h2 style="color: #333333; margin-bottom: 20px; text-align: center;">
 						Welcome to ${authorsName}'s Newsletter!
 					</h2>
 					<div style="color: #555555; font-size: 16px; line-height: 1.6; text-align: center;">
 						<p style="font-size: 18px; margin-bottom: 10px;">
-							Dear ${name},
+							Dear ${firstname},
 						</p>
 						<p>
-							Thank you for joining ${authorsName}'s newsletter community. We're
+							Thank you for joining ${authorsName}'s newsletter community. I am 
 							delighted to have you on board!
 						</p>
 						<p>
@@ -106,14 +105,14 @@ app.post('/api/welcome', async (req, res) => {
 						<p>${authorsName}</p>
 					</div>
 					<p style="margin-top: 20px; color: #777777; font-size: 14px;">
-						Stay connected on social media:{' '}
+						Stay connected on social media:
 						<a
 							href="https://twitter.com/example"
 							style="color: #3498db; text-decoration: none;"
 						>
 							Twitter
 						</a>
-						,{' '}
+						,
 						<a
 							href="https://facebook.com/example"
 							style="color: #3b5998; text-decoration: none;"
@@ -122,7 +121,7 @@ app.post('/api/welcome', async (req, res) => {
 						</a>
 					</p>
 					<p style="margin-top: 20px; color: #777777; font-size: 14px;">
-						To unsubscribe, click{' '}
+						To unsubscribe, click
 						<a
 							href="${unsubscribeLink}"
 							style="color: #e74c3c; text-decoration: none;"

@@ -4,6 +4,7 @@ import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import validator from 'validator';
 import { addDoc, collection } from 'firebase/firestore';
 import { db } from '../../Firebase/Firebase';
+import axios from 'axios';
 
 export default function SubmitButtonFormControl() {
 	const [inputForm, setInputForm] = useState({
@@ -21,23 +22,48 @@ export default function SubmitButtonFormControl() {
 		});
 	};
 
+	const PostData = async () => {
+		const { firstname, email } = inputForm;
+		axios
+			.post(
+				process.env.REACT_APP_SERVER_NEWSLETTER_WELCOME_API,
+				{
+					firstname,
+					email,
+				},
+				{
+					headers: {
+						'Content-Type': 'application/json',
+					},
+				}
+			)
+			.then((response) => {
+				console.log(response.data);
+			})
+			.catch((error) => {
+				console.error(`Post error: ${error.message}`);
+			});
+	};
+
 	const handleSubmit = async (event) => {
-		const usersCollection = collection(db, 'users');
 		event.preventDefault();
+		const usersCollection = collection(db, 'users');
 		const { firstname, lastname, email } = inputForm;
+
 		if (!firstname || !lastname || !email) {
 			setError(true);
 			return;
 		}
 
-		const lowercaseEmail = email.toLowerCase(); 
-		
+		const lowercaseEmail = email.toLowerCase();
+
 		if (!validator.isEmail(email)) {
 			alert('Please enter a valid email address.');
 			return;
 		}
+
 		setError(false);
-		setSuccess(true);
+
 		try {
 			const newDoc = await addDoc(usersCollection, {
 				firstname,
@@ -45,6 +71,9 @@ export default function SubmitButtonFormControl() {
 				email: lowercaseEmail,
 			});
 			console.log(`Your doc was created at ${newDoc.id}`);
+
+			setSuccess(true);
+			await PostData();
 		} catch (e) {
 			console.error('Error adding document: ', e.message);
 		}
