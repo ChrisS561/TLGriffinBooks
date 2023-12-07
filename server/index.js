@@ -3,7 +3,6 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 const sgMail = require('@sendgrid/mail');
 var admin = require('firebase-admin');
-"/server/node_modules"
 dotenv.config();
 
 const app = express();
@@ -28,7 +27,23 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.json());
 
+/**
+ * API endpoint for sending custom newsletters to all subscribed users.
+ *
+ * @param {Object} req - Express request object containing user data.
+ *                      Parameters:
+ *                        - name: Name of the sender.
+ *                        - email: Email address of the sender.
+ *                        - message: Content of the newsletter.
+ *                        - subject: Subject of the newsletter.
+ * @param {Object} res - Express response object.
+ * @returns {Object} JSON response indicating success or failure.
+ *                    Properties:
+ *                      - success: Boolean indicating the success status.
+ *                      - error: String containing error details (if any).
+ */
 app.post('/api/newsletter', async (req, res) => {
+	const unsubscribeLink = process.env.UNSUBSCRIBE_URL;
 	const { name, email, message, subject } = req.body;
 	try {
 		const snapshot = await admin.firestore().collection('users').get();
@@ -68,10 +83,90 @@ app.post('/api/newsletter', async (req, res) => {
 	} catch (error) {
 		res.json({ success: false, error: error.toString() });
 	}
-}); // Add a closing parenthesis for the app.post function
+});
+
+/**
+ * API endpoint for sending a welcome email to users who sign up for the newsletter.
+ *
+ * @param {Object} req - Express request object containing user data.
+ *                      Parameters:
+ *                        - firstname: First name of the subscriber.
+ *                        - email: Email address of the subscriber.
+ * @param {Object} res - Express response object.
+ * @returns {Object} JSON response indicating success or failure.
+ *                    Properties:
+ *                      - success: Boolean indicating the success status.
+ *                      - error: String containing error details (if any).
+ */
+app.post('/api/welcome', async (req, res) => {
+	const unsubscribeLink = process.env.UNSUBSCRIBE_URL;
+	const authorsName = 'T.L Griffin';
+	const { firstname, email } = req.body;
+	try {
+		const msg = {
+			to: email,
+			from: process.env.CLIENTS_EMAIL_ADDRESS,
+			subject: 'Unlock Exclusive Stories and Updates!📚',
+			html: `<div style="font-family: 'Arial', sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); display: flex; flex-direction: column; align-items: center; justify-content: center;">
+					<h2 style="color: #333333; margin-bottom: 20px; text-align: center;">
+						Welcome to ${authorsName}'s Newsletter!
+					</h2>
+					<div style="color: #555555; font-size: 16px; line-height: 1.6; text-align: center;">
+						<p style="font-size: 18px; margin-bottom: 10px;">
+							Dear ${firstname},
+						</p>
+						<p>
+							Thank you for joining ${authorsName}'s newsletter community. I am 
+							delighted to have you on board!
+						</p>
+						<p>
+							Get ready for an exclusive literary journey. As a subscriber,
+							you'll receive sneak peeks into upcoming works, behind-the-scenes
+							insights, and special promotions just for you.
+						</p>
+						<p>
+							Feel free to reply to this email with any thoughts, questions, or
+							topics you'd like ${authorsName} to cover in future newsletters.
+							Your input is invaluable!
+						</p>
+						<p style="margin-top: 20px;">Best regards,</p>
+						<p>${authorsName}</p>
+					</div>
+					<p style="margin-top: 20px; color: #777777; font-size: 14px;">
+						Stay connected on social media:
+						<a
+							href="https://twitter.com/example"
+							style="color: #3498db; text-decoration: none;"
+						>
+							Twitter
+						</a>
+						,
+						<a
+							href="https://facebook.com/example"
+							style="color: #3b5998; text-decoration: none;"
+						>
+							Facebook
+						</a>
+					</p>
+					<p style="margin-top: 20px; color: #777777; font-size: 14px;">
+						To unsubscribe, click
+						<a
+							href="${unsubscribeLink}"
+							style="color: #e74c3c; text-decoration: none;"
+						>
+							here
+						</a>
+						.
+					</p>
+				</div>`,
+		};
+		res.json({ success: true });
+		return sgMail.send(msg);
+	} catch (error) {
+		res.json({ success: false, error: error.toString() });
+	}
+});
 
 app.listen(port, () => {
 	console.log(`Server is running on port ${port}`);
 });
-
-//test

@@ -133,7 +133,7 @@ export default function HideAppBar(props) {
 												color: '#72320A',
 												margin: '0 auto',
 											}}
-											href="/About"
+											href="/about"
 										>
 											About
 										</Button>
@@ -194,7 +194,7 @@ export default function HideAppBar(props) {
 										fontFamily: 'inter',
 										margin: '1rem',
 									}}
-									href="/About"
+									href="/about"
 								>
 									About
 								</Button>

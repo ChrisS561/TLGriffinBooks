@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router';
 export default function BooksButton() {
 	const [anchorEl, setAnchorEl] = React.useState(null);
 	const [books, setBooks] = React.useState('');
-	const bookLinks = ['/A-Womans-Worth'];
+	const bookLinks = ['/a-womans-worth'];
 	const navigate = useNavigate();
 	const open = Boolean(anchorEl);
 	const handleClick = (event) => {
