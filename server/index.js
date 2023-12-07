@@ -3,7 +3,6 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 const sgMail = require('@sendgrid/mail');
 var admin = require('firebase-admin');
-const fs = require('fs');
 dotenv.config();
 
 const app = express();
@@ -45,7 +44,7 @@ app.use(express.json());
  */
 app.post('/api/newsletter', async (req, res) => {
 	const unsubscribeLink = process.env.UNSUBSCRIBE_URL;
-	const { name, email, message, subject } = req.body;
+	const { name, message, subject, image } = req.body;
 	try {
 		const snapshot = await admin.firestore().collection('users').get();
 		const newsletterEmails = snapshot.docs.map((doc) => doc.data().email);
@@ -53,24 +52,169 @@ app.post('/api/newsletter', async (req, res) => {
 		const emailPromises = newsletterEmails.map((usersEmail) => {
 			const msg = {
 				to: usersEmail,
-				from: email,
+				from: process.env.CLIENTS_EMAIL_ADDRESS,
 				subject: subject,
 				html: `
-      <div style="font-family: 'Arial', sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); display: flex; flex-direction: column; align-items: center; justify-content: center;">
-        <h2 style="color: #333333; margin-bottom: 20px;">${subject}</h2>
-        <div style="color: #555555; font-size: 16px; line-height: 1.6; text-align: center;">
-          ${
-						name
-							? `<p style="font-size: 18px; margin-bottom: 10px;">Dear ${name},</p>`
-							: ''
-					}
-          <p>${message}</p>
-          <p style="margin-top: 20px;">Best regards,</p>
-          <p>The Newsletter Team</p>
-        </div>
-        <p style="margin-top: 20px; color: #777777; font-size: 14px;">Follow us on social media: <a href="https://twitter.com/example" style="color: #3498db; text-decoration: none;">Twitter</a>, <a href="https://facebook.com/example" style="color: #3b5998; text-decoration: none;">Facebook</a></p>
-        <p style="margin-top: 20px; color: #777777; font-size: 14px;">To unsubscribe, click <a href="${unsubscribeLink}" style="color: #e74c3c; text-decoration: none;">here</a>.</p>
-      </div>
+      <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>T.L Griffin Weekly Newsletter</title>
+    <style type="text/css">
+
+    /* Reset styles */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100% !important;
+      width: 100% !important;
+    }
+
+    * {
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    table, td {
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+    }
+
+    table {
+      border-spacing: 0 !important;
+    }
+
+    img {
+      -ms-interpolation-mode: bicubic;
+    }
+
+    /* Responsive styles */
+    @media screen and (max-width: 600px) {
+      .email-container {
+        width: 100% !important;
+      }
+
+      img[class="fluid"],
+      img[class="fluid-centered"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        margin: auto !important;
+        display: block !important;
+      }
+
+      td[class="stack-column"],
+      td[class="stack-column-center"] {
+        display: block !important;
+        width: 100% !important;
+        direction: ltr !important;
+      }
+
+      td[class="stack-column-center"] {
+        text-align: center !important;
+      }
+
+      /* Data Table Styles */
+      td[class="data-table-th"],
+      td[class="data-table-td"],
+      td[class="data-table-td-title"] {
+        display: block !important;
+        width: 100% !important;
+        border: 0 !important;
+      }
+
+      td[class="data-table-td-title"] {
+        font-weight: bold;
+        color: #333333;
+        padding: 10px 0 0 0 !important;
+        border-top: 2px solid #eeeeee !important;
+      }
+
+      td[class="data-table-td"] {
+        padding: 5px 0 0 0 !important;
+      }
+
+      td[class="data-table-mobile-divider"] {
+        display: block !important;
+        height: 20px;
+      }
+    }
+
+  </style>
+</head>
+
+<body bgcolor="#222222" style="margin: 0; padding: 0; -webkit-text-size-adjust: none; -ms-text-size-adjust: none;">
+  <table cellpadding="0" cellspacing="0" border="0" height="100%" width="100%" bgcolor="#222222" style="border-collapse: collapse;">
+    <tr>
+      <td>
+        <!-- Email wrapper : BEGIN -->
+        <table border="0" width="600" cellpadding="0" cellspacing="0" align="center" style="width: 600px; margin: auto;" class="email-container">
+          <tr>
+            <td>
+              <!-- Logo + Links : BEGIN -->
+              <table border="0" width="100%" cellpadding="0" cellspacing="0">
+                <!-- Your logo and links here -->
+              </table>
+              <!-- Logo + Links : END -->
+
+              <!-- Main Email Body : BEGIN -->
+              <table border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="border: 1px solid #e0e0e0; border-radius: 5px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <!-- Dynamic Image : BEGIN -->
+                <tr>
+                  <td valign="middle" align="center">
+                    <img src="${image}" alt="Exclusive Preview: T.L Griffin's Newsletter" height="300" width="600" align="center" border="0" style="margin: auto;" class="fluid">
+                  </td>
+                </tr>
+                <!-- Dynamic Image : END -->
+
+                <!-- Dynamic Message : BEGIN -->
+                <tr>
+                  <td style="padding: 2%; font-family: sans-serif; font-size: 16px; line-height: 1.3; color: #666666; text-align: left;">
+                    ${name},
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 2%; font-family: sans-serif; font-size: 16px; line-height: 1.3; color: #666666; text-align: left;">
+                    ${message}
+                  </td>
+                </tr>
+                <!-- Dynamic Message : END -->
+
+                <!-- Full Width, Fluid Column : BEGIN -->
+                <!-- Additional content here if needed -->
+                <!-- Full Width, Fluid Column : END -->
+
+              </table>
+              <!-- Main Email Body : END -->
+
+            </td>
+          </tr>
+
+          <!-- Footer : BEGIN -->
+          <tr>
+            <td style="text-align: center; padding: 4% 0; font-family: sans-serif; font-size: 13px; line-height: 1.2; color: #666666;">
+              You received this email because you opted in to our newsletter.
+              <br><br>Stay connected on social media:
+              <a href="https://facebook.com/example" style="color: #3b5998; text-decoration: none;">Facebook</a>
+              <br><br>
+              <a href="${unsubscribeLink}" style="color: #e74c3c; text-decoration: underline;">Unsubscribe</a>
+            </td>
+          </tr>
+          <!-- Footer : END -->
+
+        </table>
+        <!-- Email wrapper : END -->
+
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>
+
     `,
 			};
 
@@ -104,8 +248,6 @@ app.post('/api/welcome', async (req, res) => {
 	const authorsName = 'T.L Griffin';
 	const { firstname, email } = req.body;
 	try {
-		const imageFilePath = './newsletterImage.jpg';
-		const imageContent = fs.readFileSync(imageFilePath, { encoding: 'base64' });
 		const msg = {
 			to: email,
 			from: process.env.CLIENTS_EMAIL_ADDRESS,
@@ -230,7 +372,7 @@ app.post('/api/welcome', async (req, res) => {
                 <!-- Single Fluid Image, No Crop : BEGIN -->
                 <tr>
                   <td valign="middle" align="center">
-                    <img src="cid:newsletterImage" alt="Exclusive Preview: T.L Griffin's Newsletter" height="300" width="600" align="center" border="0" style="margin: auto;" class="fluid">
+                    <img src="${process.env.WELCOME_IMAGE_URL}" alt="Exclusive Preview: T.L Griffin's Newsletter" height="300" width="600" align="center" border="0" style="margin: auto;" class="fluid">
                   </td>
                 </tr>
                 <!-- Single Fluid Image, No Crop : END -->
@@ -305,16 +447,6 @@ Feel free to reply to this email with any thoughts, questions, or topics you'd l
 
 Best regards,
 ${authorsName}`,
-			attachments: [
-				{
-					content: imageContent,
-					filename: 'newsletterImage.jpg',
-					type: 'image/jpg',
-					disposition: 'inline',
-					contentId: 'newsletterImage',
-					content_id: 'newsletterImage',
-				},
-			],
 		};
 		res.json({ success: true });
 		return sgMail.send(msg);

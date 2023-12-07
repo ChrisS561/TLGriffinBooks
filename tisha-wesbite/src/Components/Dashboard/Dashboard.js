@@ -17,6 +17,7 @@ import { useNavigate } from 'react-router';
 import Newsletter from './Newsletter';
 import Subscribers from './Subscribers';
 import Home from './Home';
+import ImageUrl from './ImageURL'; // Assuming you have the ImageURL component
 import { AppBar, Drawer } from '../../Style/Styling';
 import { Link } from 'react-router-dom';
 
@@ -25,8 +26,10 @@ export default function Dashboard() {
 	const [open, setOpen] = React.useState(true);
 	const [showNewsletter, setShowNewsletter] = React.useState(false);
 	const [showSubscribers, setSubscribers] = React.useState(false);
-	const [showData, setShowData] = React.useState(false);
+	const [showSubscriberData, setShowSubscriberData] = React.useState(false);
+	const [showImageURLData, setShowImageURLData] = React.useState(false);
 	const [showHome, setShowHome] = React.useState(true);
+	const [showImagesURL, setShowImagesURL] = React.useState(false);
 	const [user, setUser] = React.useState(null);
 	const defaultTheme = createTheme();
 	const auth = getAuth();
@@ -41,37 +44,66 @@ export default function Dashboard() {
 	const handleCreateNewsletterClick = () => {
 		setShowNewsletter(true);
 		setSubscribers(false);
-		setShowData(false);
+		setShowSubscriberData(false);
 		setShowHome(false);
+		setShowImagesURL(false);
 	};
 
 	const handleShowSubscribers = () => {
 		setSubscribers(true);
 		setShowNewsletter(false);
-		setShowData(true);
+		setShowSubscriberData(true);
 		setShowHome(false);
+		setShowImagesURL(false);
 	};
 
-	const handleShowData = () => {
+	const handleSubscriberShowData = () => {
 		setSubscribers(false);
 		setShowNewsletter(false);
-		setShowData(true);
+		setShowSubscriberData(true);
 		setShowHome(false);
+		setShowImagesURL(false);
 	};
 
-	const handleCloseData = () => {
+	const handleSubscriberCloseData = () => {
 		setSubscribers(false);
 		setShowNewsletter(false);
-		setShowData(true);
+		setShowSubscriberData(true);
 		setShowHome(false);
+		setShowImagesURL(false);
 	};
 
-	const handleShowHome = () => { 
+	const handleShowHome = () => {
 		setSubscribers(false);
 		setShowNewsletter(false);
-		setShowData(false);
-		setShowHome(true)
-	}
+		setShowSubscriberData(false);
+		setShowImagesURL(false);
+		setShowHome(true);
+	};
+
+	const handleShowImagesURL = () => {
+		setSubscribers(false);
+		setShowNewsletter(false);
+		setShowSubscriberData(false);
+		setShowHome(false);
+		setShowImagesURL(true);
+		setShowImageURLData(false);
+	};
+
+	const handleImageUrlShowData = () => {
+		setSubscribers(false);
+		setShowNewsletter(false);
+		setShowSubscriberData(false);
+		setShowHome(false);
+		setShowImagesURL(true);
+		setShowImageURLData(true);
+	};
+
+	const handleImageUrlCloseData = () => {
+		setShowImagesURL(false);
+		setShowImageURLData(false);
+		setShowImagesURL(true)
+	};
 
 	// Handle Signout
 	const handleSignout = () => {
@@ -111,11 +143,7 @@ export default function Dashboard() {
 			<Box sx={{ display: 'flex' }}>
 				<CssBaseline />
 				<AppBar position="absolute" open={open}>
-					<Toolbar
-						sx={{
-							pr: '24px',
-						}}
-					>
+					<Toolbar sx={{ pr: '24px' }}>
 						<IconButton
 							edge="start"
 							color="inherit"
@@ -196,7 +224,23 @@ export default function Dashboard() {
 							<Link
 								color="inherit"
 								style={{ textDecoration: 'none' }}
-								onClick={handleShowData}
+								onClick={handleShowImagesURL}
+							>
+								<Typography variant="subtitle2">Images URL's</Typography>
+							</Link>
+						</ListItemButton>
+						<Divider sx={{ my: 1 }} />
+						<ListItemButton
+							sx={{
+								padding: '5px',
+								borderRadius: '8px',
+								color: 'Black',
+							}}
+						>
+							<Link
+								color="inherit"
+								style={{ textDecoration: 'none' }}
+								onClick={handleSubscriberShowData}
 							>
 								<Typography variant="subtitle2">Subscribers</Typography>
 							</Link>
@@ -234,7 +278,7 @@ export default function Dashboard() {
 					<Toolbar />
 					{showHome && <Home />}
 					{showNewsletter && <Newsletter />}
-					{showData ? (
+					{showSubscriberData ? (
 						<Box
 							sx={{
 								display: 'flex',
@@ -244,7 +288,7 @@ export default function Dashboard() {
 							}}
 						>
 							<Button onClick={handleShowSubscribers}>Show Data</Button>
-							<Button onClick={handleCloseData}>Close Data</Button>
+							<Button onClick={handleSubscriberCloseData}>Close Data</Button>
 							<Typography
 								sx={{
 									color: 'red',
@@ -252,13 +296,43 @@ export default function Dashboard() {
 									textAlign: 'center',
 								}}
 							>
-								Warning: Each time you show data, it may result in increased
-								database reads.
+								Caution: Retrieving document data incurs database reads.
+								Exercise caution when accessing documents frequently to optimize
+								performance and minimize resource usage.
 							</Typography>
 						</Box>
 					) : null}
-
 					{showSubscribers && <Subscribers />}
+					{showImagesURL && (
+						<Box
+							sx={{
+								display: 'flex',
+								flexDirection: 'column',
+								alignItems: 'center',
+								textAlign: 'center',
+							}}
+						>
+							<Button onClick={handleImageUrlShowData}>
+								Show Image URL Data
+							</Button>
+							<Button onClick={handleImageUrlCloseData}>
+								Close Image URL Data
+							</Button>
+							<Typography
+								sx={{
+									color: 'red',
+									fontStyle: 'italic',
+									textAlign: 'center',
+								}}
+							>
+								Caution: Each data retrieval operation may lead to additional
+								database reads, potentially affecting performance. Exercise
+								prudence when fetching data to optimize resource usage and
+								enhance application responsiveness.
+							</Typography>
+							{showImageURLData && <ImageUrl />}
+						</Box>
+					)}
 				</Box>
 			</Box>
 		</ThemeProvider>

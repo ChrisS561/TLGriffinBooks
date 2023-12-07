@@ -6,6 +6,7 @@ import { addDoc, collection } from 'firebase/firestore';
 import { db } from '../../Firebase/Firebase';
 import axios from 'axios';
 
+//TODO error handling to check if the email already exist. Display error messages
 export default function SubmitButtonFormControl() {
 	const [inputForm, setInputForm] = useState({
 		firstname: '',

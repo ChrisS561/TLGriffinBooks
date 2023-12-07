@@ -15,9 +15,9 @@ import PreviewEmail from './PreviewEmail';
 
 export default function Newsletter() {
 	const [name, setName] = useState('');
-	const [email, setEmail] = useState('');
 	const [subject, setSubject] = useState('');
 	const [message, setMessage] = useState('');
+	const [image, setImage] = useState('');
 	const [loading, setLoading] = useState(false);
 
 	const PostData = async () => {
@@ -27,9 +27,9 @@ export default function Newsletter() {
 				process.env.REACT_APP_SERVER_NEWSLETTER_API,
 				{
 					name,
-					email,
 					subject,
 					message,
+					image,
 				},
 				{
 					headers: {
@@ -51,15 +51,15 @@ export default function Newsletter() {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
-		console.log('Form submitted:', name, email, subject, message);
+		console.log('Form submitted:', name, subject, image, message);
 		await PostData();
 	};
 
 	const handleClear = () => {
 		setName('');
-		setEmail('');
 		setSubject('');
 		setMessage('');
+		setImage('');
 	};
 	return (
 		<Container maxWidth="sm" style={{ textAlign: 'center', marginTop: '50px' }}>
@@ -70,7 +70,7 @@ export default function Newsletter() {
 				<List sx={{ listStyleType: 'disc' }}>
 					<ListItem sx={{ display: 'list-item' }}>
 						<strong>Name:</strong> The name or header you want your subscribers
-						to see, or leave it blank. <br />
+						to see. <br />
 						(e.g., "Dear Subscribers","Hello Readers")
 					</ListItem>
 					<ListItem sx={{ display: 'list-item' }}>
@@ -79,6 +79,10 @@ export default function Newsletter() {
 					</ListItem>
 					<ListItem sx={{ display: 'list-item' }}>
 						<strong>Subject:</strong>The subject of your newsletter. (Required*)
+					</ListItem>
+					<ListItem sx={{ display: 'list-item' }}>
+						<strong>Image:</strong>Provide the URL of the image you want to
+						display in the newsletter.
 					</ListItem>
 					<ListItem sx={{ display: 'list-item' }}>
 						<strong>Message:</strong> The message of your newsletter.
@@ -97,17 +101,8 @@ export default function Newsletter() {
 					value={name}
 					onChange={(e) => setName(e.target.value)}
 					fullWidth
-					margin="normal"
-				/>
-				<TextField
-					label="Email"
-					type="email"
-					defaultValue="chirs"
-					value={email}
-					onChange={(e) => setEmail(e.target.value)}
-					fullWidth
-					margin="normal"
 					required
+					margin="normal"
 				/>
 				<TextField
 					label="Subject"
@@ -117,6 +112,14 @@ export default function Newsletter() {
 					fullWidth
 					margin="normal"
 					required
+				/>
+				<TextField
+					label="Image URL"
+					type="text"
+					value={image}
+					onChange={(e) => setImage(e.target.value)}
+					fullWidth
+					margin="normal"
 				/>
 				<TextareaAutosize
 					rowsmin={3}
@@ -173,8 +176,8 @@ export default function Newsletter() {
 			<PreviewEmail
 				name={name}
 				subject={subject}
-				fromEmail={email}
 				message={message}
+				imageUrl={image}
 			/>
 		</Container>
 	);
