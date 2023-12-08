@@ -40,7 +40,7 @@ const Home = () => {
 				color="primary"
 				sx={{ mt: 1, textAlign: 'center' }}
 			>
-				Sending Newsletters
+				The ability to change events information on the homepage
 			</Typography>
 			<Typography
 				sx={{ color: 'red', mt: 4, fontStyle: 'italic', textAlign: 'center' }}

@@ -2,9 +2,11 @@ import * as React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
-import { getStorage, ref, listAll, getDownloadURL } from 'firebase/storage';
+import { ref, listAll, getDownloadURL } from 'firebase/storage';
 import { v4 as uuidv4 } from 'uuid';
 import Button from '@mui/material/Button'
+import UploadButton from './UploadButton';
+import { storage } from '../../Firebase/Firebase';
 
 
 
@@ -20,7 +22,7 @@ export default function ImageUrl(props) {
 
 	React.useEffect(() => {
 		const getData = async () => {
-			const storage = getStorage();
+
 			const listRef = ref(storage, process.env.REACT_APP_FIREBASE_STORAGE_PATH);
 
 			try {
@@ -64,6 +66,7 @@ export default function ImageUrl(props) {
             
         </Button>
         <>
+		<UploadButton/>
 			<div style={{ height: '100vh', width: '100%' }}>
 				<DataGrid
 					rows={rows}
