@@ -12,6 +12,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
 import axios from 'axios';
 
+//TODO Add a way to dynamically change the event information
 export default function UpdateEventInfo() {
 	const [name, setName] = useState('');
 	const [location, setLocation] = useState('');
@@ -81,7 +82,7 @@ export default function UpdateEventInfo() {
 						</ListItem>
 						<ListItem sx={{ display: 'list-item' }}>
 							<strong>Date and Time:</strong> The date and time of the event.
-							(e.g., "December 30, 2023 at 1:58:25 PM UTC-6") (Required*)
+							(e.g., "Dec 30 at 1:58:25 PM UTC-6") (Required*)
 						</ListItem>
 						<ListItem sx={{ display: 'list-item' }}>
 							<strong>Message:</strong> The message or details about the event.
