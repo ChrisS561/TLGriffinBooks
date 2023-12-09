@@ -1,6 +1,39 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
+import DashboardLinks from './CardForDashboardLinks';
+
+const dashboardInformation = [
+	{
+		index: 1,
+		name: 'Firebase',
+		description:
+			'Firebase is used for backend services such as database and storage. Check reads and writes of the database and storage.',
+		links:
+			'https://console.firebase.google.com/u/0/project/tisha-bookwebsite/overview',
+	},
+	{
+		index: 2,
+		name: 'SendGrid',
+		description:
+			'SendGrid is used for sending emails. Check your daily quota of sent emails.',
+		links: 'https://app.sendgrid.com/',
+	},
+	{
+		index: 3,
+		name: 'Stripe',
+		description:
+			'Stripe is a payment processing platform. Check your profits and other financial information.',
+		links: 'https://dashboard.stripe.com/test/dashboard',
+	},
+	{
+		index: 4,
+		name: 'GoDaddy',
+		description:
+			'GoDaddy is a domain registrar. Check the status and details of your domain.',
+		links: 'https://www.godaddy.com/en-in',
+	},
+];
 
 const Home = () => {
 	return (
@@ -10,7 +43,7 @@ const Home = () => {
 				flexDirection: 'column',
 				alignItems: 'center',
 				justifyContent: 'center',
-				height: '100vh',
+				minHeight: '100vh',
 				padding: 2,
 			}}
 		>
@@ -20,6 +53,8 @@ const Home = () => {
 			<Typography variant="subtitle1" gutterBottom sx={{ textAlign: 'center' }}>
 				Explore and manage your data here.
 			</Typography>
+			{/* Section for Links to Dashboards */}
+			<DashboardLinks dashboardInformation={dashboardInformation} />
 			<Typography
 				variant="h6"
 				color="primary"
@@ -39,8 +74,9 @@ const Home = () => {
 				color="primary"
 				sx={{ mt: 1, textAlign: 'center' }}
 			>
-				Sending Newsletters
+				The ability to change events information on the homepage
 			</Typography>
+
 			<Typography
 				sx={{ color: 'red', mt: 4, fontStyle: 'italic', textAlign: 'center' }}
 			>

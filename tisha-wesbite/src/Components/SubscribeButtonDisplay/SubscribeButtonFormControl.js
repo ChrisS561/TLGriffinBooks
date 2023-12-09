@@ -2,7 +2,7 @@ import { Button, Stack, TextField } from '@mui/material';
 import React, { useState } from 'react';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import validator from 'validator';
-import { addDoc, collection } from 'firebase/firestore';
+import { addDoc, collection, getDocs, query, where } from 'firebase/firestore';
 import { db } from '../../Firebase/Firebase';
 import axios from 'axios';
 
@@ -45,6 +45,37 @@ export default function SubmitButtonFormControl() {
 			});
 	};
 
+	const addUserToDatabase = async (
+		firstname,
+		lastname,
+		lowercaseEmail,
+		usersCollection
+	) => {
+		try {
+			const emailQuery = query(
+				usersCollection,
+				where('email', '==', lowercaseEmail)
+			);
+			const emailQuerySnapshot = await getDocs(emailQuery);
+
+			if (!emailQuerySnapshot.empty) {
+				alert('Email already exists in Database');
+				return;
+			}
+			const newDoc = await addDoc(usersCollection, {
+				firstname,
+				lastname,
+				email: lowercaseEmail,
+			});
+
+			console.log(`Your doc was created at ${newDoc.id}`);
+			setSuccess(true);
+			await PostData();
+		} catch (e) {
+			console.error('Error adding document: ', e.message);
+		}
+	};
+
 	const handleSubmit = async (event) => {
 		event.preventDefault();
 		const usersCollection = collection(db, 'users');
@@ -63,20 +94,7 @@ export default function SubmitButtonFormControl() {
 		}
 
 		setError(false);
-
-		try {
-			const newDoc = await addDoc(usersCollection, {
-				firstname,
-				lastname,
-				email: lowercaseEmail,
-			});
-			console.log(`Your doc was created at ${newDoc.id}`);
-
-			setSuccess(true);
-			await PostData();
-		} catch (e) {
-			console.error('Error adding document: ', e.message);
-		}
+		addUserToDatabase(firstname, lastname, lowercaseEmail, usersCollection);
 	};
 
 	return (

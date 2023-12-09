@@ -2,7 +2,7 @@
 import React from 'react';
 import { Typography, Paper, Grid } from '@mui/material';
 
-const PreviewEmail = ({ name, subject, fromEmail, toEmail, message }) => {
+const NewsletterPreviewEmail = ({ name, message, image, unsubscribeLink }) => {
 	const createMarkup = (html) => {
 		return { __html: html };
 	};
@@ -13,59 +13,84 @@ const PreviewEmail = ({ name, subject, fromEmail, toEmail, message }) => {
 				<Paper
 					elevation={3}
 					style={{
-						padding: 20,
+						padding: '2%',
 						border: '1px solid #e0e0e0',
-						borderRadius: 10,
+						borderRadius: 5,
 						boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
 					}}
 				>
-					<div style={{ marginBottom: 20, textAlign: 'center' }}>
-						<Typography
-							variant="h5"
-							style={{ color: '#333333', marginBottom: 20 }}
-						>
-							Subject: {subject}
-						</Typography>
-						<Typography
-							style={{ color: '#555555', fontSize: 16, marginBottom: 10 }}
-						>
-							From: {fromEmail}
-						</Typography>
+					{/* Dynamic Image */}
+					<div style={{ textAlign: 'center' }}>
+						<img
+							src={image}
+							alt="Exclusive Preview: T.L Griffin's Newsletter"
+							height="300"
+							width="600"
+							style={{ margin: 'auto', maxWidth: '100%', height: 'auto' }}
+						/>
 					</div>
-					<div
-						className="email-body"
+
+					{/* Dynamic Message */}
+					<Typography
+						paragraph
 						style={{
-							color: '#555555',
+							fontFamily: 'sans-serif',
 							fontSize: 16,
-							lineHeight: 1.6,
-							textAlign: 'center',
+							lineHeight: 1.3,
+							color: '#666666',
+							textAlign: 'left',
+							padding: '2%',
 						}}
 					>
-						{name && (
-							<Typography paragraph style={{ fontSize: 18, marginBottom: 10 }}>
-								{name}
-							</Typography>
-						)}
-						<Typography
-							paragraph
-							dangerouslySetInnerHTML={createMarkup(message)}
-							style={{ marginBottom: 20 }}
-						/>
+						{name},
+					</Typography>
+					<Typography
+						paragraph
+						style={{
+							fontFamily: 'sans-serif',
+							fontSize: 16,
+							lineHeight: 1.3,
+							color: '#666666',
+							textAlign: 'left',
+							padding: '2%',
+						}}
+						dangerouslySetInnerHTML={createMarkup(message)}
+					/>
 
-						<Typography
-							paragraph
-							style={{ color: '#555555', fontSize: 16, marginTop: 20 }}
+					{/* Footer */}
+					<Typography
+						style={{
+							textAlign: 'center',
+							padding: '4% 0',
+							fontFamily: 'sans-serif',
+							fontSize: 13,
+							lineHeight: 1.2,
+							color: '#666666',
+						}}
+					>
+						You received this email because you opted in to our newsletter.
+						<br />
+						<br />
+						Stay connected on social media:
+						<a
+							href="https://facebook.com/example"
+							style={{ color: '#3b5998', textDecoration: 'none' }}
 						>
-							Regards,
-						</Typography>
-						<Typography style={{ color: '#555555', fontSize: 16 }}>
-							The Newsletter Team
-						</Typography>
-					</div>
+							Facebook
+						</a>
+						<br />
+						<br />
+						<a
+							href={unsubscribeLink}
+							style={{ color: '#e74c3c', textDecoration: 'underline' }}
+						>
+							Unsubscribe
+						</a>
+					</Typography>
 				</Paper>
 			</Grid>
 		</Grid>
 	);
 };
 
-export default PreviewEmail;
+export default NewsletterPreviewEmail;
