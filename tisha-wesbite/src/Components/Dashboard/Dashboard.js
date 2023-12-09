@@ -236,6 +236,24 @@ export default function Dashboard() {
 							<Link
 								color="inherit"
 								style={{ textDecoration: 'none' }}
+								onClick={handleUpdateEventinformation}
+							>
+								<Typography variant="subtitle2">
+									Update Event Information
+								</Typography>
+							</Link>
+						</ListItemButton>
+						<Divider sx={{ my: 1 }} />
+						<ListItemButton
+							sx={{
+								padding: '5px',
+								borderRadius: '8px',
+								color: 'Black',
+							}}
+						>
+							<Link
+								color="inherit"
+								style={{ textDecoration: 'none' }}
 								onClick={handleShowImagesURL}
 							>
 								<Typography variant="subtitle2">Images URL's</Typography>
@@ -255,24 +273,6 @@ export default function Dashboard() {
 								onClick={handleSubscriberShowData}
 							>
 								<Typography variant="subtitle2">Subscribers</Typography>
-							</Link>
-						</ListItemButton>
-						<Divider sx={{ my: 1 }} />
-						<ListItemButton
-							sx={{
-								padding: '5px',
-								borderRadius: '8px',
-								color: 'Black',
-							}}
-						>
-							<Link
-								color="inherit"
-								style={{ textDecoration: 'none' }}
-								onClick={handleUpdateEventinformation}
-							>
-								<Typography variant="subtitle2">
-									Update Event Information
-								</Typography>
 							</Link>
 						</ListItemButton>
 						<Divider sx={{ my: 1 }} />
