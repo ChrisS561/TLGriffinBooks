@@ -20,6 +20,7 @@ import Home from './Home';
 import ImageUrl from './ImageURL'; // Assuming you have the ImageURL component
 import { AppBar, Drawer } from '../../Style/Styling';
 import { Link } from 'react-router-dom';
+import UpdateEventInfo from './UpdateEventInfo';
 
 // Main Dashboard Component
 export default function Dashboard() {
@@ -30,6 +31,7 @@ export default function Dashboard() {
 	const [showImageURLData, setShowImageURLData] = React.useState(false);
 	const [showHome, setShowHome] = React.useState(true);
 	const [showImagesURL, setShowImagesURL] = React.useState(false);
+	const [showUpdateEventInfo, setShowUpdateEventInfo] = React.useState(false);
 	const [user, setUser] = React.useState(null);
 	const defaultTheme = createTheme();
 	const auth = getAuth();
@@ -102,7 +104,17 @@ export default function Dashboard() {
 	const handleImageUrlCloseData = () => {
 		setShowImagesURL(false);
 		setShowImageURLData(false);
-		setShowImagesURL(true)
+		setShowImagesURL(true);
+	};
+
+	const handleUpdateEventinformation = () => {
+		setSubscribers(false);
+		setShowNewsletter(false);
+		setShowSubscriberData(false);
+		setShowHome(false);
+		setShowImagesURL(false);
+		setShowImageURLData(false);
+		setShowUpdateEventInfo(true);
 	};
 
 	// Handle Signout
@@ -256,6 +268,24 @@ export default function Dashboard() {
 							<Link
 								color="inherit"
 								style={{ textDecoration: 'none' }}
+								onClick={handleUpdateEventinformation}
+							>
+								<Typography variant="subtitle2">
+									Update Event Information
+								</Typography>
+							</Link>
+						</ListItemButton>
+						<Divider sx={{ my: 1 }} />
+						<ListItemButton
+							sx={{
+								padding: '5px',
+								borderRadius: '8px',
+								color: 'Black',
+							}}
+						>
+							<Link
+								color="inherit"
+								style={{ textDecoration: 'none' }}
 								onClick={handleSignout}
 							>
 								<Typography variant="subtitle2">Signout</Typography>
@@ -278,6 +308,7 @@ export default function Dashboard() {
 					<Toolbar />
 					{showHome && <Home />}
 					{showNewsletter && <Newsletter />}
+					{showUpdateEventInfo && <UpdateEventInfo />}
 					{showSubscriberData ? (
 						<Box
 							sx={{
