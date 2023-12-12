@@ -375,7 +375,9 @@ app.post('/api/welcome', async (req, res) => {
                 <!-- Single Fluid Image, No Crop : BEGIN -->
                 <tr>
                   <td valign="middle" align="center">
-                    <img src="${functions.config().welcome.image_url}" alt="Exclusive Preview: T.L Griffin's Newsletter" height="300" width="600" align="center" border="0" style="margin: auto;" class="fluid">
+                    <img src="${
+											functions.config().welcome.image_url
+										}" alt="Exclusive Preview: T.L Griffin's Newsletter" height="300" width="600" align="center" border="0" style="margin: auto;" class="fluid">
                   </td>
                 </tr>
                 <!-- Single Fluid Image, No Crop : END -->
@@ -424,7 +426,7 @@ app.post('/api/welcome', async (req, res) => {
             <td style="text-align: center; padding: 4% 0; font-family: sans-serif; font-size: 13px; line-height: 1.2; color: #666666;">
               You received this email because you opted in to our newsletter.
               <br><br>Stay connected on social media:
-              <a href="https://facebook.com/example" style="color: #3b5998; text-decoration: none;">Facebook</a>
+              <a href="https://www.facebook.com/tisha.griffin.969" style="color: #3b5998; text-decoration: none;">Facebook</a>
               <br><br>
               <a href="${unsubscribeLink}" style="color: #e74c3c; text-decoration: underline;">Unsubscribe</a>
             </td>
