@@ -1,24 +1,26 @@
 const express = require('express');
 const cors = require('cors');
-const dotenv = require('dotenv');
+// const dotenv = require('dotenv').config();
 const sgMail = require('@sendgrid/mail');
-var admin = require('firebase-admin');
-dotenv.config();
+const admin = require('firebase-admin');
+const functions = require("firebase-functions")
+
+// dotenv.config();
 
 const app = express();
-const serviceAccount = require(process.env.SERVICE_ACCOUNT_NAME);
+const serviceAccount = require(functions.config().service.account_name);
 
 admin.initializeApp({
 	credential: admin.credential.cert(serviceAccount),
-	databaseURL: process.env.REACT_APP_AUTH_DOMAIN,
+	databaseURL: functions.config().react.app_auth_domain,
 });
 
-sgMail.setApiKey(process.env.REACT_APP_SENDGRID_API_KEY);
+sgMail.setApiKey(functions.config().react.app_sendgrid_api_key);
 
-const port = process.env.DEV_PORT || process.env.TEST_PORT;
+const port = functions.config().dev.port || functions.config().test.port;
 
 const corsOptions = {
-	origin: process.env.TEST_CLIENT_URL || process.env.DEV_CLIENT_ORIGIN_URL,
+	origin: functions.config().test.client_url || functions.config().dev.client_origin_url,
 	methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
 	credentials: true,
 	optionsSuccessStatus: 204,
@@ -43,16 +45,17 @@ app.use(express.json());
  *                      - error: String containing error details (if any).
  */
 app.post('/api/newsletter', async (req, res) => {
-	const unsubscribeLink = process.env.UNSUBSCRIBE_URL;
+	const unsubscribeLink = functions.config().unsubscribe.url;
 	const { name, message, subject, image } = req.body;
 	try {
+    const imageUrl = image || functions.config().welcome.image_url;
 		const snapshot = await admin.firestore().collection('users').get();
 		const newsletterEmails = snapshot.docs.map((doc) => doc.data().email);
 
 		const emailPromises = newsletterEmails.map((usersEmail) => {
 			const msg = {
 				to: usersEmail,
-				from: process.env.CLIENTS_EMAIL_ADDRESS,
+				from: functions.config().client.email_address,
 				subject: subject,
 				html: `
       <!DOCTYPE html>
@@ -165,7 +168,7 @@ app.post('/api/newsletter', async (req, res) => {
                 <!-- Dynamic Image : BEGIN -->
                 <tr>
                   <td valign="middle" align="center">
-                    <img src="${image}" alt="Exclusive Preview: T.L Griffin's Newsletter" height="300" width="600" align="center" border="0" style="margin: auto;" class="fluid">
+                    <img src="${imageUrl}" alt="Exclusive Preview: T.L Griffin's Newsletter" height="300" width="600" align="center" border="0" style="margin: auto;" class="fluid">
                   </td>
                 </tr>
                 <!-- Dynamic Image : END -->
@@ -244,13 +247,13 @@ app.post('/api/newsletter', async (req, res) => {
  *                      - error: String containing error details (if any).
  */
 app.post('/api/welcome', async (req, res) => {
-	const unsubscribeLink = process.env.UNSUBSCRIBE_URL;
+	const unsubscribeLink = functions.config().unsubscribe.url;
 	const authorsName = 'T.L Griffin';
 	const { firstname, email } = req.body;
 	try {
 		const msg = {
 			to: email,
-			from: process.env.CLIENTS_EMAIL_ADDRESS,
+			from: functions.config().client.email_address,
 			subject: 'Unlock Exclusive Stories and Updates!📚',
 			html: `<!DOCTYPE html>
 <html lang="en">
@@ -372,7 +375,7 @@ app.post('/api/welcome', async (req, res) => {
                 <!-- Single Fluid Image, No Crop : BEGIN -->
                 <tr>
                   <td valign="middle" align="center">
-                    <img src="${process.env.WELCOME_IMAGE_URL}" alt="Exclusive Preview: T.L Griffin's Newsletter" height="300" width="600" align="center" border="0" style="margin: auto;" class="fluid">
+                    <img src="${functions.config().welcome.image_url}" alt="Exclusive Preview: T.L Griffin's Newsletter" height="300" width="600" align="center" border="0" style="margin: auto;" class="fluid">
                   </td>
                 </tr>
                 <!-- Single Fluid Image, No Crop : END -->
@@ -448,13 +451,15 @@ Feel free to reply to this email with any thoughts, questions, or topics you'd l
 Best regards,
 ${authorsName}`,
 		};
+		await sgMail.send(msg);
 		res.json({ success: true });
-		return sgMail.send(msg);
 	} catch (error) {
 		res.json({ success: false, error: error.toString() });
 	}
 });
 
-app.listen(port, () => {
-	console.log(`Server is running on port ${port}`);
-});
+// app.listen(port, () => {
+// 	console.log(`Server is running on port ${port}`);
+// });
+
+exports.api = functions.https.onRequest(app);
