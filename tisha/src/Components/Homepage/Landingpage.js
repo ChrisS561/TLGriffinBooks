@@ -38,6 +38,7 @@ export default function Landingpage() {
 				alt="Background"
 				style={{ display: 'none' }}
 				onLoad={handleImageLoad}
+				loading='lazy'
 			/>
 			<Typography
 				className={fadeIn ? 'fadeIn 2s ease-in' : 'none'}
