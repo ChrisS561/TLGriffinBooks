@@ -3,7 +3,7 @@ import { Grid, Typography } from '@mui/material';
 import '../index.css';
 import Navbar from '../Components/Navigation/NavBar';
 import BookSigningPicture from '../Components/ImageDisplay/BookSigningPicture';
-import UpcomingEventsText from '../Pages/UpcomingEventsText';
+import UpcomingEventsText from './UpcomingEventsText';
 import Footer from '../Components/Footer/Footer';
 
 export default function UpcomingEvents() {
@@ -35,7 +35,7 @@ export default function UpcomingEvents() {
 						fontFamily: 'Inter, sans-serif',
 						fontSize: { xs: 21, sm: 25, lg: 25 },
 						paddingLeft: { xs: 2, sm: 4, md: 4 },
-						mt:{sm:15}
+						mt: { sm: 15 },
 					}}
 					gutterBottom
 				>
@@ -71,7 +71,7 @@ export default function UpcomingEvents() {
 					SIGNING
 				</Typography>
 			</Grid>
-			<Grid item xs={12} mt={{xs:10,sm:15}}>
+			<Grid item xs={12} mt={{ xs: 10, sm: 15 }}>
 				<UpcomingEventsText />
 			</Grid>
 			<Grid item xs={12}>
