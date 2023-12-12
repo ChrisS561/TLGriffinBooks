@@ -17,10 +17,10 @@ admin.initializeApp({
 
 sgMail.setApiKey(functions.config().react.app_sendgrid_api_key);
 
-const port = functions.config().dev.port || functions.config().test.port;
+// const port = functions.config().dev.port || functions.config().test.port;
 
 const corsOptions = {
-	origin: functions.config().test.client_url || functions.config().dev.client_origin_url,
+	origin: true,
 	methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
 	credentials: true,
 	optionsSuccessStatus: 204,
