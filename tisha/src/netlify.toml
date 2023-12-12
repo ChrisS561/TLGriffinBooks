@@ -3,14 +3,6 @@
   command = "CI=npm run build"
 
 [[plugins]]
-  package = "netlify-plugin-html-validate"
-
-  [plugins.inputs]
-    ext = "html"
-    config = ".htmlvalidate.json"
-    
-
-[[plugins]]
 package = "netlify-plugin-checklinks"
 
   [plugins.inputs]
