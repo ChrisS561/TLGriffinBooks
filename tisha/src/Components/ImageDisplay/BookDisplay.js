@@ -1,5 +1,4 @@
 import React from 'react';
-import BookPic from '../../Images/Bookpic.jpg';
 import '../../index.css';
 import { Paper } from '@mui/material';
 
@@ -34,14 +33,14 @@ export default function BookDisplay({
 				}}
 			>
 				<img
-					src={BookPic}
+					src="https://firebasestorage.googleapis.com/v0/b/tlgriffinbooks.appspot.com/o/Bookpic.jpg?alt=media&token=ba98885e-f06e-41e4-af0d-1c0b467546d6"
 					alt="Profile"
 					loading="lazy"
 					style={{
 						objectFit: 'cover',
 						height: '100%',
 						width: '100%',
-						maxWidth:"100%",
+						maxWidth: '100%',
 						display: 'block',
 					}}
 				/>

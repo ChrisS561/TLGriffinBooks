@@ -1,5 +1,4 @@
 import React from 'react';
-import AboutPic from '../../Images/AuntTisha.jpeg';
 import '../../index.css';
 import {  Box } from '@mui/material';
 
@@ -26,7 +25,7 @@ export default function AboutPicture({
 				}}
 			>
 				<img
-					src={AboutPic}
+					src="https://firebasestorage.googleapis.com/v0/b/tlgriffinbooks.appspot.com/o/Aboutme_Image.jpeg?alt=media&token=ad640cd9-2769-4f1a-8700-82d31cac171a"
 					alt="Profile"
 					loading="lazy"
 					style={{
