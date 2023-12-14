@@ -64,7 +64,7 @@ const Home = () => {
 			>
 				Client Manual:{' '}
 				<a
-					href="https://chrissmithjr.notion.site/Client-Manual-cf1cfbc87f024e75aea5c46cec72596d?pvs=4"
+					href={process.env.REACT_APP_CLIENT_MANUAL}
 					target="_blank"
 					rel="noopener noreferrer"
 				>
