@@ -1,5 +1,4 @@
 import React from 'react';
-import Booksigningpic from '../../Images/BookSigning.jpeg';
 import '../../index.css';
 import {  Box } from '@mui/material';
 
@@ -9,16 +8,16 @@ export default function BookSigningPicture() {
 		<>
 			<Box
 				sx={{
-					display: "flex",
+					display: 'flex',
 					// marginBottom:10,
-					marginTop:{xs:10,sm:25},
+					marginTop: { xs: 10, sm: 25 },
 					overflow: 'hidden',
 					justifyContent: 'center',
 					alignItems: 'center',
 				}}
 			>
 				<img
-					src={Booksigningpic}
+					src="https://firebasestorage.googleapis.com/v0/b/tlgriffinbooks.appspot.com/o/BookSigning.jpeg?alt=media&token=3306b793-74c3-415a-8621-653001f2b8ec"
 					alt="Profile"
 					loading="lazy"
 					style={{
