@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import backgroundpic from '../../Images/backgroundimage.jpeg';
 import { Box, Typography } from '@mui/material';
 import '../../index.css';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 
 const styles = {
-	backgroundImage: `url(${backgroundpic})`,
+	backgroundImage: `url('https://firebasestorage.googleapis.com/v0/b/tlgriffinbooks.appspot.com/o/LandingPage_Background.jpeg?alt=media&token=dc2734e1-da20-4e28-89bc-713e6f28c90e')`,
 	backgroundSize: 'cover',
 	backgroundPosition: 'center',
 	height: '100vh',
@@ -34,18 +33,18 @@ export default function Landingpage() {
 	return (
 		<div style={styles}>
 			<img
-				src={backgroundpic}
+				src="https://firebasestorage.googleapis.com/v0/b/tlgriffinbooks.appspot.com/o/LandingPage_Background.jpeg?alt=media&token=dc2734e1-da20-4e28-89bc-713e6f28c90e"
 				alt="Background"
 				style={{ display: 'none' }}
 				onLoad={handleImageLoad}
-				loading='lazy'
+				loading="lazy"
 			/>
 			<Typography
 				className={fadeIn ? 'fadeIn 2s ease-in' : 'none'}
 				sx={{
 					display: 'flex',
 					color: '#72320A',
-					width:"auto",
+					width: 'auto',
 					textTransform: 'capitalize',
 					fontWeight: 'bold',
 					textAlign: 'center',
