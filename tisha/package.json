@@ -22,6 +22,7 @@
 		"crypto-browserify": "^3.12.0",
 		"firebase": "^10.7.0",
 		"material-ui-popup-state": "^5.0.9",
+		"netlify-plugin-html-validate": "^1.1.1",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-router": "^6.15.0",
@@ -57,7 +58,10 @@
 		]
 	},
 	"devDependencies": {
+		"@netlify/plugin-lighthouse": "^5.0.0",
 		"dotenv": "^16.3.1",
-		"jest": "^27.5.1"
+		"jest": "^27.5.1",
+		"netlify-plugin-checklinks": "^4.1.1",
+		"netlify-plugin-minify-html": "^0.3.1"
 	}
 }

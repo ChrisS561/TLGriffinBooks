@@ -53,8 +53,25 @@ const Home = () => {
 			<Typography variant="subtitle1" gutterBottom sx={{ textAlign: 'center' }}>
 				Explore and manage your data here.
 			</Typography>
+
 			{/* Section for Links to Dashboards */}
 			<DashboardLinks dashboardInformation={dashboardInformation} />
+
+			{/* Link to Client Manual */}
+			<Typography
+				variant="h6"
+				sx={{ mt: 2, fontWeight: 'bold', textAlign: 'center' }}
+			>
+				Client Manual:{' '}
+				<a
+					href={process.env.REACT_APP_CLIENT_MANUAL}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					Open Client Manual
+				</a>
+			</Typography>
+
 			<Typography
 				variant="h6"
 				color="primary"

@@ -1,5 +1,5 @@
-# Author Website
-
+# T.L.Griffin Books 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a402a74f-9edb-4891-adc4-6851ab60c635/deploy-status)](https://app.netlify.com/sites/tlgriffinbooks/deploys//deploy-status?branch=main)
 # Description 
 This project is a dynamic and user-friendly website developed for our client, [Tisha Griffin], to showcase and promote her books. The website not only allows users to browse and explore the author's literary works but also facilitates the purchase of books seamlessly through integrated payment processing.
 

@@ -20,7 +20,7 @@ import Home from './Home';
 import ImageUrl from './ImageURL'; // Assuming you have the ImageURL component
 import { AppBar, Drawer } from '../../Style/Styling';
 import { Link } from 'react-router-dom';
-import UpdateEventInfo from './UpdateEventInfo';
+// import UpdateEventInfo from './UpdateEventInfo';
 
 // Main Dashboard Component
 export default function Dashboard() {
@@ -31,7 +31,7 @@ export default function Dashboard() {
 	const [showImageURLData, setShowImageURLData] = React.useState(false);
 	const [showHome, setShowHome] = React.useState(true);
 	const [showImagesURL, setShowImagesURL] = React.useState(false);
-	const [showUpdateEventInfo, setShowUpdateEventInfo] = React.useState(false);
+	// const [showUpdateEventInfo, setShowUpdateEventInfo] = React.useState(false);
 	const [user, setUser] = React.useState(null);
 	const defaultTheme = createTheme();
 	const auth = getAuth();
@@ -107,15 +107,15 @@ export default function Dashboard() {
 		setShowImagesURL(true);
 	};
 
-	const handleUpdateEventinformation = () => {
-		setSubscribers(false);
-		setShowNewsletter(false);
-		setShowSubscriberData(false);
-		setShowHome(false);
-		setShowImagesURL(false);
-		setShowImageURLData(false);
-		setShowUpdateEventInfo(true);
-	};
+	// const handleUpdateEventinformation = () => {
+	// 	setSubscribers(false);
+	// 	setShowNewsletter(false);
+	// 	setShowSubscriberData(false);
+	// 	setShowHome(false);
+	// 	setShowImagesURL(false);
+	// 	setShowImageURLData(false);
+	// 	setShowUpdateEventInfo(true);
+	// };
 
 	// Handle Signout
 	const handleSignout = () => {
@@ -226,7 +226,7 @@ export default function Dashboard() {
 							</Link>
 						</ListItemButton>
 						<Divider sx={{ my: 1 }} />
-						<ListItemButton
+						{/* <ListItemButton
 							sx={{
 								padding: '5px',
 								borderRadius: '8px',
@@ -243,7 +243,7 @@ export default function Dashboard() {
 								</Typography>
 							</Link>
 						</ListItemButton>
-						<Divider sx={{ my: 1 }} />
+						<Divider sx={{ my: 1 }} /> */}
 						<ListItemButton
 							sx={{
 								padding: '5px',
@@ -308,7 +308,7 @@ export default function Dashboard() {
 					<Toolbar />
 					{showHome && <Home />}
 					{showNewsletter && <Newsletter />}
-					{showUpdateEventInfo && <UpdateEventInfo />}
+					{/* {showUpdateEventInfo && <UpdateEventInfo />} */}
 					{showSubscriberData ? (
 						<Box
 							sx={{

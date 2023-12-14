@@ -1,2 +1,28 @@
 [build]
   command = "CI=npm run build"
+
+[[plugins]]
+  package = "netlify-plugin-checklinks"
+  [plugins.inputs]
+    entryPoints = ["*.html"]
+    recursive = true
+    pretty = true
+    checkExternal = false
+    followSourceMaps = false
+  # Ignore errors from the checklinks plugin
+  [plugins.onError]
+    ignore = true
+
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
+  # Ignore errors from the Lighthouse plugin
+  [plugins.onError]
+    ignore = true
+
+[[plugins]]
+  package = "netlify-plugin-minify-html"
+  [plugins.inputs]
+    contexts = ['production']
+  # Ignore errors from the minify HTML plugin
+  [plugins.onError]
+    ignore = true
