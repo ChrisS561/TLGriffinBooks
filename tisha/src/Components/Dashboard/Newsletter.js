@@ -71,18 +71,15 @@ export default function Newsletter() {
 					<ListItem sx={{ display: 'list-item' }}>
 						<strong>Name:</strong> The name or header you want your subscribers
 						to see. <br />
-						(e.g., "Dear Subscribers","Hello Readers")
-					</ListItem>
-					<ListItem sx={{ display: 'list-item' }}>
-						<strong>Email:</strong> Your email you want to use to send to the
-						subscribers. (Required*)
+						(e.g., "Dear Subscribers","Hello Readers")(Required*)
 					</ListItem>
 					<ListItem sx={{ display: 'list-item' }}>
 						<strong>Subject:</strong>The subject of your newsletter. (Required*)
 					</ListItem>
 					<ListItem sx={{ display: 'list-item' }}>
-						<strong>Image:</strong>Provide the URL of the image you want to
-						display in the newsletter.
+						<strong>Image:</strong> Please provide the URL of the image you want
+						to display in the newsletter. (Leaving it blank will use the default
+						image.)
 					</ListItem>
 					<ListItem sx={{ display: 'list-item' }}>
 						<strong>Message:</strong> The message of your newsletter.
