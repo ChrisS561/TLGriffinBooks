@@ -92,7 +92,7 @@ export default function Footer({ toolbarColor }) {
 												Contact Me
 											</Button>
 										</Grid>
-										<Grid item>
+										{/* <Grid item>
 											<Button
 												style={{
 													fontFamily: 'Inter, sans-serif',
@@ -105,7 +105,7 @@ export default function Footer({ toolbarColor }) {
 											>
 												User Manual
 											</Button>
-										</Grid>
+										</Grid> */}
 									</Grid>
 									<Typography
 										sx={{
