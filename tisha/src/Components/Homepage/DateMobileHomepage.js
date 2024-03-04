@@ -28,7 +28,7 @@ export default function DateMobileHomepage() {
 							fontSize: 35,
 						}}
 					>
-						DEC
+						Mar
 					</Typography>
 					<Typography
 						variant="h3"
@@ -41,7 +41,7 @@ export default function DateMobileHomepage() {
 							fontSize: 35,
 						}}
 					>
-						3
+						9
 					</Typography>
 				</Stack>
 			</Box>

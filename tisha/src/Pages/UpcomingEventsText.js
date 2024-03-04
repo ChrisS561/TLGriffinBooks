@@ -5,9 +5,11 @@ import '../index.css';
 export default function UpcomingEventsText() {
 	const standoutText = 'Mark your calendar';
 	const text = `
-   Get ready for a magical winter wonderland like no other! On December 3rd, from 2 PM to 7 PM, T.L. Griffin will be hosting an enchanting book signing at the Festive Frost Fair. This spectacular celebration is not to be missed, and there's something for everyone in the family!
-
-   While you're embracing the holiday spirit, make a stop at her book signing station, where she'll be ready to personalize copies of her latest book, A Winter's Tale, just for you. It's the perfect opportunity to get a signed copy and immerse yourself in a world of imagination and storytelling amid the twinkling lights and festive cheer.
+   Are you ready to dive into a realm of literary enchantment like never before? 
+   
+   Join me on Saturday, March 9th, 2023, from 4 PM to 6 PM, at the captivating Half Price Books located at 2506 W. Parmer Ln, Austin, TX, for an unforgettable book signing event. 
+   
+   Let's embark on this journey together as we explore the magic of storytelling and meet the author in person. See you there!"
    `;
 	return (
 		<Typography
