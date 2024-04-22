@@ -30,7 +30,7 @@ export default function DateHomepage() {
 							fontSize: { sm: 35, md: 48, lg: 60 },
 						}}
 					>
-						Mar
+						May
 					</Typography>
 					<Typography
 						variant="h3"
@@ -43,7 +43,7 @@ export default function DateHomepage() {
 							fontSize: { sm: 35, md: 48, lg: 60 },
 						}}
 					>
-						9
+						25
 					</Typography>
 				</Stack>
 			</Box>

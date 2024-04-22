@@ -118,7 +118,7 @@ export default function EventsHomepage() {
 									}}
 									gutterBottom
 								>
-									Austin, TX
+									Round Rock, TX
 								</Typography>
 
 								<Button
