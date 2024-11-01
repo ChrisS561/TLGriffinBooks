@@ -5,12 +5,24 @@ import '../index.css';
 export default function UpcomingEventsText() {
 	const standoutText = 'Mark your calendar';
 	const text = `
-   Are you ready to dive into a realm of literary enchantment like never before? 
-   
-   Join me on Saturday, Oct 5th, 2024, from 4 PM to 6 PM, at the captivating Half Price Books located at 2601 S I-35 Frontage Rd, Round Rock, TX 78664, for an unforgettable book signing event. 
-   
-   Let's embark on this journey together as we explore the magic of storytelling and meet the author in person. See you there!"
-   `;
+### More Details About the Book Signing
+
+**Event:** 14th Annual Women’s Health Motivation & Empowerment Conference
+
+**Location:** ACC Eastview Campus, 3401 Webberville Rd, Austin, TX
+
+**Date & Time:** November 2nd, 2024 from 8am - 4pm
+
+Join me at the 14th Annual Women’s Health Motivation & Empowerment Conference, where I will be signing copies of my latest book! This empowering event celebrates women's health and wellness, featuring inspiring speakers, workshops, and community engagement.
+
+**What to Expect at the Book Signing:**
+
+- **Meet & Greet:** I’d love to connect with you and hear your thoughts on the book!
+- **Personalized Signatures:** Get your book signed with a personal note.
+- **Discussion:** I’ll share insights into the book's journey and answer any questions you may have.
+
+**Don’t miss out!** Bring your friends and family, and join us in celebrating women’s empowerment and health. I can’t wait to see you there!
+`;
 	return (
 		<Typography
 			variant="body1"

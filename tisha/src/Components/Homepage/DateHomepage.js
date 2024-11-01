@@ -30,7 +30,7 @@ export default function DateHomepage() {
 							fontSize: { sm: 35, md: 48, lg: 60 },
 						}}
 					>
-						Oct
+						Nov
 					</Typography>
 					<Typography
 						variant="h3"
@@ -43,7 +43,7 @@ export default function DateHomepage() {
 							fontSize: { sm: 35, md: 48, lg: 60 },
 						}}
 					>
-						5th
+						2nd
 					</Typography>
 				</Stack>
 			</Box>
